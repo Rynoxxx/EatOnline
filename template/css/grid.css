@@ -1,0 +1,136 @@
+/* 
+    Created on : 29-dic-2015, 8.19.05
+    Author     : Rino
+*/
+
+/* GLOBAL LAYOUT */
+
+html {
+    height: 100%;
+    background: salmon;
+}
+
+body {
+    background: blueviolet;
+    padding-top: 20px;
+    height: 100%;
+}
+
+/* CONTAINER DELL'INTERA PAGINA */
+
+.container {
+    width: 90%;
+    margin: auto;
+    background: white;
+    padding: 10px;
+    height: 100%;
+}
+
+/* HEADER */
+
+.header {
+    margin-bottom: 10px;
+    position: relative;
+    border-radius: 5px;
+    background: cornsilk;
+    padding: 10px;
+}
+
+.header .logo {
+    display: inline-block;
+    height: 100px;
+}
+
+.header .title {
+    display: inline-block;
+    height: 100px;
+    vertical-align: top;
+    line-height: 100px;
+    font-size: 40px;
+}
+
+.header .search {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    width: 250px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+}
+
+.header .search input {
+    border: 1px solid red;
+    height:40px;
+    padding: 5px;
+    color: blue;
+    box-shadow: 0px 0px 4px #eee;
+}
+
+/* NAVIGATION BAR */
+
+.navbar {
+    padding: 5px;
+    background: green;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+.navbar li {
+    display: inline-block;
+    background: orange;
+    padding: 15px;
+    width: 50px;
+    text-align: center;
+}
+
+.navbar li:hover {
+    cursor: pointer;
+    background: white;
+}
+
+.navbar li a {
+    text-decoration: none;
+}
+
+/* MAIN */
+.main {
+    background: violet;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.subcontent {
+    float: right;
+    
+}
+
+.subcontent-box {
+    background: red;
+    border-radius: 5px;
+}
+
+.loginform {
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    
+}
+
+
+
+/* FOOTER */
+.footer {
+    background: brown;
+    text-align: center;
+    border-radius: 5px;
+}
+
+/* CONSENTE UN CAMBIAMENTO GRADUALE DELLO STATO DEGLI ELEMENTI */
+* {
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
