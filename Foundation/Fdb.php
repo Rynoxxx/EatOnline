@@ -108,6 +108,7 @@ class Fdb {
      */
 
     public function getObject() {
+        debug('-------->GET OBJECT, CLASSE FDB');
         $numero_righe = mysql_num_rows($this->_result);
         debug('Numero risultati:' . $numero_righe);
         if ($numero_righe > 0) {
@@ -195,6 +196,7 @@ class Fdb {
         $query = 'SELECT * ' .
                 'FROM `' . $this->_table . '` ' .
                 'WHERE `' . $this->_key . '` = \'' . $key . '\'';
+        debug('-------->FUNZIONE LOAD, CLASSE FDB');
         $this->query($query);
         return $this->getObject();
     }

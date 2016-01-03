@@ -9,7 +9,7 @@ class USession {
     
     public function __construct() {
         session_start();
-        debug($_SESSION);
+        //debug($_SESSION);
     }
     
     public function imposta_valore($chiave, $valore) {

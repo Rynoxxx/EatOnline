@@ -14,30 +14,31 @@ class CRegistrazione extends Controller {
      * Controlla se l'utente è loggato
      * @return boolean
      */
-    
     public function checkLogin() {
         $controller = $this->getController();
         $task = $this->getTask();
-        
+
         //Controlla se ci sono i dati di Logout nella REQUEST
         if ($controller == 'registrazione' && $task == 'logout') {
             $this->logout();
         }
-        
+
         //Controlla se ci sono i dati di Login nella REQUEST
         if ($controller == 'registrazione' && $task == 'autentica') {
             $this->login($_REQUEST['numero_tel'], $_REQUEST['password']);
         }
-        
+
         //Controlla se c'è un logged user nella SESSION
+        debug('Controlla se cè un logged user nella SESSION');
         $sessione = USingleton::getInstance('USession');
         $result = $sessione->leggi_valore('numero_tel');
-        if ($result!=NULL) {
+        debug($_SESSION);
+        if ($result != NULL) {
             return true;
         }
         return false;
     }
-    
+
     /*
      * Effettua il Login: controlla se una coppia numero_tel e password corrispondono ad un utente registrato e in tal caso
      * imposta la sessione per l'utente autenticato
@@ -55,19 +56,17 @@ class CRegistrazione extends Controller {
                     // Imposta la sessione per l'utente in questione
                     $session = USingleton::getInstance('USession');
                     $session->imposta_valore('numero_tel', $numero);
-                    return 'login effettuato';
-                    //return $utente;
+                    return $utente;
                 } else {
                     $view = USingleton::getInstance('VRegistrazione');
-                    $view->setErrore('UTENTE NON ATTIVO');                    
+                    $view->setErrore('UTENTE NON ATTIVO');
                 }
             } else {
                 $view = USingleton::getInstance('VRegistrazione');
-                $view->setErrore('PASSWORD ERRATA');    
+                $view->setErrore('PASSWORD ERRATA');
             }
         }
-        return 'UTENTE NON REGISTRATO';
-        //return false;
+        return false;
     }
 
     /*
@@ -77,7 +76,7 @@ class CRegistrazione extends Controller {
     public function logout() {
         $session = USingleton::getInstance('USession');
         $session->cancella_valore('numero_tel');
-        return "logout effettuato";
+        return true;
     }
 
     /*
@@ -89,45 +88,43 @@ class CRegistrazione extends Controller {
         $view->set_layout('modulo');
         return $view->processaTemplate();
     }
-    
+
     /**
      * Crea un oggetto della classe EUtente e lo memorizza nel database
      */
-    
     public function creaUtente() {
         $view = USingleton::getInstance('VRegistrazione');
         $dati_registrazione = $view->getDatiRegistrazione();
-        
+
         $utente = new EUtente();
         $FUtente = new FUtente();
         $result = $FUtente->load($dati_registrazione['numero_tel']);
         $registrato = false;
-        
-        if ($result==false) {
+
+        if ($result == false) {
             //Utente non esistente
-            /*if ($dati_registrazione['password'] == $dati_registrazione['password']) {
-                unset($dati_registrazione['password_1']);
-                $chiavi = array_keys($dati_registrazione);
-                $i = 0;
-                foreach ($dati_registrazione as $dato) {
-                    $utente->$chiavi[$i] = $dato;
-                    $i++;
-                }
-                $utente->generaCodiceAttivazione();
-                $FUtente->store($utente);*/
-                $registrato = true;
-            /*}
-            else {
-                $this->_errore = 'Le password immesse non coincidono';
-            }*/
-        }
-        else {
+            /* if ($dati_registrazione['password'] == $dati_registrazione['password']) {
+              unset($dati_registrazione['password_1']);
+              $chiavi = array_keys($dati_registrazione);
+              $i = 0;
+              foreach ($dati_registrazione as $dato) {
+              $utente->$chiavi[$i] = $dato;
+              $i++;
+              }
+              $utente->generaCodiceAttivazione();
+              $FUtente->store($utente); */
+            $registrato = true;
+            /* }
+              else {
+              $this->_errore = 'Le password immesse non coincidono';
+              } */
+        } else {
             //Utente già esistente
             $this->_errore = 'Utente già registrato';
         }
         return $this->checkReg($registrato);
     }
-    
+
     public function checkReg($registrato) {
         $view = USingleton::getInstance('VRegistrazione');
         if (!$registrato) {
@@ -138,8 +135,7 @@ class CRegistrazione extends Controller {
             $view->set_layout('modulo');
             $result.= $view->processaTemplate();
             return $result;
-        }
-        else {
+        } else {
             $view->set_layout('conferma');
             return $view->processaTemplate();
         }
@@ -159,14 +155,6 @@ class CRegistrazione extends Controller {
                 break;
             case 'salva':
                 return $this->creaUtente();
-                break;
-            case 'logout':
-                return $this->logout();
-                //return "logout effettuato";
-                break;
-            case 'autentica':
-                return $this->login($_REQUEST['numero_tel'], $_REQUEST['password']);
-                //return "login effettuato";
                 break;
         }
     }
