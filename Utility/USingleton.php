@@ -35,4 +35,9 @@ class USingleton
         return self::$instances[$c];
    }
 }
+
+function SS($name){
+  return USingleton::getInstance($name);
+}
+
 ?>
