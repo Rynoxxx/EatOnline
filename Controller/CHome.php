@@ -17,10 +17,10 @@ class CHome extends Controller {
         $registrato = $CRegistrazione->checkLogin();
         
         if ($registrato) {
-            echo 'stai loggato';
+            echo 'SEI LOGGATO!';
             $this->setLogged(true);
         }
-        else echo 'no no no';
+        else echo 'NON SEI LOGGATO!';
         
         
         $VHome = USingleton::getInstance('VHome');
@@ -57,7 +57,7 @@ class CHome extends Controller {
                 return $COrdine->smista();
                 break;
             default:
-                $ciao="ciao";
+                $ciao="ciao, case default dello switch CHome";
                 return $ciao;
                 /*$CRicerca = USingleton::getInstance('CRicerca');
                 return $CRicerca->Ultimi_arrivi();*/

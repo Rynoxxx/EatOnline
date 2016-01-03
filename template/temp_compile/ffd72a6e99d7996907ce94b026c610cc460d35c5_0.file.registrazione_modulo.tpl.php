@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2015-12-30 15:18:00
+<?php /* Smarty version 3.1.27, created on 2016-01-02 12:18:39
          compiled from "template\registrazione_modulo.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:205065683e79872c060_00137609%%*/
+/*%%SmartyHeaderCode:321765687b20f060049_25606185%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ffd72a6e99d7996907ce94b026c610cc460d35c5' => 
     array (
       0 => 'template\\registrazione_modulo.tpl',
-      1 => 1451485078,
+      1 => 1451732748,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '205065683e79872c060_00137609',
+  'nocache_hash' => '321765687b20f060049_25606185',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5683e798761949_75119743',
+  'unifunc' => 'content_5687b20f0c4402_97471747',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5683e798761949_75119743')) {
-function content_5683e798761949_75119743 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_5687b20f0c4402_97471747')) {
+function content_5687b20f0c4402_97471747 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '205065683e79872c060_00137609';
+$_smarty_tpl->properties['nocache_hash'] = '321765687b20f060049_25606185';
 ?>
 <html>
 
@@ -37,8 +37,8 @@ $_smarty_tpl->properties['nocache_hash'] = '205065683e79872c060_00137609';
             <fieldset>
                 <legend>&nbsp;Credenziali di accesso&nbsp;</legend>
                 <p>
-                    <label for="numero" class="left">Telefono:</label>
-                    <input type="text" name="numero" id="numero" class="field"/>
+                    <label for="numero_tel" class="left">Telefono:</label>
+                    <input type="text" name="numero_tel" id="numero_tel" class="field"/>
                 </p>
                 <p>
                     <label for="password" class="left">Password:</label>

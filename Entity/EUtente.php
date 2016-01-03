@@ -29,7 +29,7 @@ class EUtente {
      */
     
     public function generaCodiceAttivazione() {
-        $this->codice_attivazione=  mt_rand();
+        $this->codice_attivazione = mt_rand();
     }
     
     public function getCodiceAttivazione() {

@@ -6,14 +6,12 @@
 /* GLOBAL LAYOUT */
 
 html {
-    height: 100%;
     background: salmon;
 }
 
 body {
-    background: blueviolet;
+    background: brown;
     padding-top: 20px;
-    height: 100%;
 }
 
 /* CONTAINER DELL'INTERA PAGINA */
@@ -23,7 +21,6 @@ body {
     margin: auto;
     background: white;
     padding: 10px;
-    height: 100%;
 }
 
 /* HEADER */
@@ -98,12 +95,10 @@ body {
     background: violet;
     margin-bottom: 10px;
     border-radius: 5px;
-    height: 100%;
 }
 
 .subcontent {
-    float: right;
-    
+    margin-left: 71%;
 }
 
 .subcontent-box {
@@ -114,11 +109,18 @@ body {
 .loginform {
     background: white;
     border-radius: 5px;
-    padding: 5px;
-    
+    padding: 10px;
+    margin: 10px;
+    box-shadow: 0px 0px 10px;
 }
 
-
+/* CONTENT */
+.content{
+    width: 70%;
+    min-height: 500px;
+    background: yellow;
+    float: left;
+}
 
 /* FOOTER */
 .footer {

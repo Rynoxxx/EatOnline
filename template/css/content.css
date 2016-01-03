@@ -4,12 +4,31 @@
 */
 
 #error {color: red;}
+
 /* PAGETITLE */
-.main h1.pagetitle {margin:0 0 0.5em 0; padding:1px 0 1px 32px; background: url(../img/icon_pagetitle.gif) no-repeat; background-position:center left; color:rgb(255,255,255); font-weight:bold; font-size:220% !important /*Non-IE6*/; font-size:200% /*IE6*/;}
+
+.main h1.pagetitle {
+    margin:0 0 0.5em 0; 
+    padding:1px 0 1px 32px; 
+    background: url(../img/icon_pagetitle.gif) no-repeat; 
+    background-position:center left; 
+    color:rgb(255,255,255); 
+    font-weight:bold; 
+    font-size:220% !important /*Non-IE6*/; 
+    font-size:200% /*IE6*/;
+}
 
 /* HEADING -- Standard icon (1-Column / 2-Column) */
-.content h1 {margin:0; padding:5px 50px 12px 20px; border-bottom:solid 1px rgb(215,215,215); background: url(../img/icon_celltitle_level1.gif) no-repeat; background-position:632px 5px; color:rgb(75,75,75); font-weight:bold; font-size:220% !important /*Non-IE6*/; font-size:200% /*IE6*/;}
-.content-2col-box-leftcolumn h1, .content-2col-box-rightcolumn h1 {margin:0; padding:5px 50px 12px 20px; border-bottom:solid 1px rgb(215,215,215); background: url(../img/icon_celltitle_level1.gif) no-repeat; background-position:289px 3px; color:rgb(75,75,75); font-weight:bold; font-size:220% !important /*Non-IE6*/; font-size:200% /*IE6*/;}
+.content h1 {
+    margin:0; 
+    padding:5px 50px 12px 20px; 
+    border-bottom:solid 1px rgb(215,215,215); 
+    background: url(../img/icon_celltitle_level1.gif) no-repeat; 
+    background-position:632px 5px; color:rgb(75,75,75); 
+    font-weight:bold; 
+    font-size:220% !important /*Non-IE6*/; 
+    font-size:200% /*IE6*/;
+}
 
 .content h2 {clear:both; /*Start IE Hack*/ position:relative; z-index:1; top:-1px /* End IE Hack to remove vertical -1px margin bug otherwise produced by margin*/; margin: 0 20px 0 20px; padding:15px 35px 5px 0; border-top:solid 1px rgb(215,215,215); background: url(../img/icon_celltitle_level2.gif) no-repeat;  background-position:right 15px; color:rgb(75,75,75); font-weight:bold; font-size:180% !important /*Non-IE6*/; font-size:160% /*IE6*/;}
 .content h3 {margin:1.0em 0 -0.3em 0; padding:0 20px 0 20px; color:rgb(75,75,75); font-weight:bold; font-size:180% !important /*Non-IE6*/; font-size:160% /*IE6*/;}
@@ -23,22 +42,10 @@
 .content h1.contact {background: url(../img/icon_celltitle_contact.gif) no-repeat; background-position:616px 5px;}
 .content h1.login {background: url(../img/icon_celltitle_login.gif) no-repeat; background-position:635px 5px;}
 .content h1.search {background: url(../img/icon_celltitle_search.gif) no-repeat; background-position:631px 5px;}
-.content h1.video {background: url(../img/icon_celltitle_video.gif) no-repeat; background-position:637px 5px;}
-.content h1.audio {background: url(../img/icon_celltitle_audio.gif) no-repeat; background-position:631px 5px;}
 .content h1.webtemplate {background: url(../img/icon_celltitle_webtemplate.gif) no-repeat; background-position:632px 5px;}
 .content h1.document {background: url(../img/icon_celltitle_document.gif) no-repeat; background-position:635px 5px;}
 .content h1.blog {background: url(../img/icon_celltitle_blog.gif) no-repeat; background-position:639px 5px;}
 .content h1.forum {background: url(../img/icon_celltitle_forum.gif) no-repeat; background-position:635px 5px;}
-
-.content-2col-box-leftcolumn h1.contact, .content-2col-box-rightcolumn h1.contact {background: url(../img/icon_celltitle_contact.gif) no-repeat; background-position:273px 5px;}
-.content-2col-box-leftcolumn h1.login, .content-2col-box-rightcolumn h1.login {background: url(../img/icon_celltitle_login.gif) no-repeat; background-position:292px 5px;}
-.content-2col-box-leftcolumn h1.search, .content-2col-box-rightcolumn h1.search {background: url(../img/icon_celltitle_search.gif) no-repeat; background-position:288px 5px;}
-.content-2col-box-leftcolumn h1.video, .content-2col-box-rightcolumn h1.video {background: url(../img/icon_celltitle_video.gif) no-repeat; background-position:294px 5px;}
-.content-2col-box-leftcolumn h1.audio, .content-2col-box-rightcolumn h1.audio {background: url(../img/icon_celltitle_audio.gif) no-repeat; background-position:288px 5px;}
-.content-2col-box-leftcolumn h1.webtemplate, .content-2col-box-rightcolumn h1.webtemplate {background: url(../img/icon_celltitle_webtemplate.gif) no-repeat; background-position:289px 5px;}
-.content-2col-box-leftcolumn h1.document, .content-2col-box-rightcolumn h1.document {background: url(../img/icon_celltitle_document.gif) no-repeat; background-position:292px 5px;}
-.content-2col-box-leftcolumn h1.blog, .content-2col-box-rightcolumn h1.blog {background: url(../img/icon_celltitle_blog.gif) no-repeat; background-position:296px 5px;}
-.content-2col-box-leftcolumn h1.forum, .content-2col-box-rightcolumn h1.forum {background: url(../img/icon_celltitle_forum.gif) no-repeat; background-position:292px 5px;}
 
 /* HEADING -- No icon */
 .main h1.pagetitle-noicon {margin:0 0 0.5em 0; padding:1px 0 1px 0; background:none; color:rgb(255,255,255); font-weight:normal; font-size:220% !important /*Non-IE6*/; font-size:200% /*IE6*/;}
@@ -90,7 +97,6 @@
     empty-cells:show; 
     background-color:rgb(233,232,244);
 }
-.content-2col-nobox-leftcolumn table, .content-2col-nobox-rightcolumn table, .content-2col-box-leftcolumn table, .content-2col-box-rightcolumn table {clear:both; width:290px; margin:2.0em 0 0.2em 20px; table-layout:fixed; border-collapse:collapse; empty-cells:show; background-color:rgb(233,232,244);}
 
 .content table th.top {
     height:3.5em; 
@@ -194,20 +200,8 @@
     color:rgb(80,80,80);
 }
 
-.content-2col-nobox-leftcolumn .contactform, .content-2col-nobox-rightcolumn .contactform, .content-2col-box-leftcolumn .contactform, .content-2col-box-rightcolumn .contactform  {width:297px; margin:1.0em 10px 0 20px;}
-.content-2col-nobox-leftcolumn .contactform fieldset, .content-2col-nobox-rightcolumn .contactform fieldset, .content-2col-box-leftcolumn .contactform fieldset, .content-2col-box-rightcolumn .contactform fieldset {padding:10px 0 10px 0 !important /*Non-IE6*/; padding:0 /*IE6*/; margin:0 0 20px 0; border:solid 1px rgb(220,220,220);}
-.content-2col-nobox-leftcolumn .contactform fieldset legend, .content-2col-nobox-rightcolumn .contactform fieldset legend, .content-2col-box-leftcolumn .contactform fieldset legend, .content-2col-box-rightcolumn .contactform fieldset legend {margin:0 0 0 5px !important /*Non-IE*/; margin:0 0 20px 5px /*IE6*/; padding:0 2px 0 2px; color:rgb(80,80,80); font-weight:bold;  font-size:131%;}
-.content-2col-nobox-leftcolumn .contactform label.left, .content-2col-nobox-rightcolumn .contactform label.left, .content-2col-box-leftcolumn .contactform label.left, .content-2col-box-rightcolumn .contactform label.left {float:left; width:100px; margin:0; padding:2px; font-size:100%;}
-.content-2col-nobox-leftcolumn .contactform select.combo, .content-2col-nobox-rightcolumn .contactform select.combo, .content-2col-box-leftcolumn .contactform select.combo, .content-2col-box-rightcolumn .contactform select.combo {width:140px; padding:2px; border:solid 1px rgb(200,200,200); font-size:100%;}
-.content-2col-nobox-leftcolumn .contactform input.field, .content-2col-nobox-rightcolumn .contactform input.field, .content-2col-box-leftcolumn .contactform input.field, .content-2col-box-rightcolumn .contactform input.field {width:135px; padding:2px; border:solid 1px rgb(200,200,200); font-size:100%;}
-.content-2col-nobox-leftcolumn .contactform textarea, .content-2col-nobox-rightcolumn .contactform textarea, .content-2col-box-leftcolumn .contactform textarea, .content-2col-box-rightcolumn .contactform textarea {width:242px; padding:2px; border:solid 1px rgb(200,200,200); font-size:100%;}
-.content-2col-nobox-leftcolumn .contactform input.button, .content-2col-nobox-rightcolumn .contactform input.button, .content-2col-box-leftcolumn .contactform input.button, .content-2col-box-rightcolumn .contactform input.button {float:left; width:9.0em; margin-left:130px !important /*Non-IE6*/; margin-left:133px /*IE6*/; padding:3px !important /*Non-IE6*/; padding:2px /*IE6*/; background:rgb(230,230,230); border:solid 1px rgb(150,150,150); text-align:center; color:rgb(150,150,150); font-size:100%;}
-.content-2col-nobox-leftcolumn .contactform input.button:hover, .content-2col-nobox-rightcolumn .contactform input.button:hover, .content-2col-box-leftcolumn .contactform input.button:hover, .content-2col-box-rightcolumn .contactform input.button:hover {cursor:pointer; border:solid 1px rgb(80,80,80); background:rgb(220,220,220); color:rgb(80,80,80);}
-
 /* LOGIN FORM (1-Column / 2-Column)*/
 .content .loginform {width:636px; margin:1.0em 10px 0 20px;}
-.content-2col-nobox-leftcolumn .loginform, .content-2col-nobox-rightcolumn .loginform, .content-2col-box-leftcolumn .loginform, .content-2col-box-rightcolumn .loginform {width:297px; margin:1.0em 10px 0 20px;}
-
 .content .loginform p {clear:both; margin:0; padding:0;}
 .content .loginform fieldset {width:160px; border:none;}
 .content .loginform label.top {float:left; width:125px; margin:0 0 2px 0; font-size:110%;}
@@ -250,43 +244,6 @@
     color:rgb(80,80,80);
 }
 
-/* SEARCH FORM (1-Column / 2-Column)*/
-.content .searchform {width:636px; margin:1.0em 10px 0 20px;}
-.content-2col-nobox-leftcolumn .searchform, .content-2col-nobox-rightcolumn .searchform, .content-2col-box-leftcolumn .searchform, .content-2col-box-rightcolumn .searchform {width:297px; margin:1.0em 10px 0 20px;;}
-
-.content .searchform fieldset {border:none;}
-.content .searchform input.field {
-    float:left; 
-    width:158px; 
-    padding:3px 0 3px 0; 
-    border:1px solid rgb(200,200,200); 
-    font-size:120%;
-}
-.content .searchform input.button {
-    clear:both; 
-    float:left; 
-    width:3.0em; 
-    margin-top:0.5em; 
-    padding:1px; 
-    background:rgb(230,230,230); 
-    border:solid 1px rgb(150,150,150); 
-    text-align:center; 
-    color:rgb(150,150,150); 
-    font-size:120%;
-}
-.content .searchform input.button:hover {
-    cursor:pointer; 
-    border:solid 1px rgb(80,80,80); 
-    background:rgb(220,220,220); 
-    color:rgb(80,80,80);
-}
-
-/* MEDIA PLAYER (1-Column / 2-Column)*/
-.content .videoplayer {width:626px; height:367px; margin:10px 20px 10px 20px; border:solid 5px rgb(175,175,175);}
-.content-2col-nobox-leftcolumn .videoplayer, .content-2col-nobox-rightcolumn .videoplayer, .content-2col-box-leftcolumn .videoplayer, .content-2col-box-rightcolumn .videoplayer {width:283px; height:177px; margin:10px 20px 10px 20px; border:solid 5px rgb(175,175,175);}
-
-.content .audioplayer {width:626px; height:20px; margin:10px 20px 10px 20px; border:solid 5px rgb(175,175,175);}
-.content-2col-nobox-leftcolumn .audioplayer, .content-2col-nobox-rightcolumn .audioplayer, .content-2col-box-leftcolumn .audioplayer, .content-2col-box-rightcolumn .audioplayer {width:283px; height:20px; margin:10px 20px 10px 20px; border:solid 5px rgb(175,175,175);}
 
 /****************/
 /*  SUBCONTENT  */
@@ -328,8 +285,6 @@
 .subcontent h1.menu {background: url(../img/icon_celltitle_menu.gif) no-repeat; background-position:225px 5px;}
 .subcontent h1.login {background: url(../img/icon_celltitle_login.gif) no-repeat; background-position:229px 5px;}
 .subcontent h1.search {background: url(../img/icon_celltitle_search.gif) no-repeat; background-position:225px 5px;}
-.subcontent h1.video {background: url(../img/icon_celltitle_video.gif) no-repeat; background-position:231px 5px;}
-.subcontent h1.audio {background: url(../img/icon_celltitle_audio.gif) no-repeat; background-position:225px 5px;}
 .subcontent h1.webtemplate {background: url(../img/icon_celltitle_webtemplate.gif) no-repeat; background-position:226px 5px;}
 .subcontent h1.document {background: url(../img/icon_celltitle_document.gif) no-repeat; background-position:229px 5px;}
 .subcontent h1.blog {background: url(../img/icon_celltitle_blog.gif) no-repeat; background-position:233px 5px;}
@@ -340,7 +295,7 @@
 .subcontent h2.noicon {background:none;}
 
 /* PARAGRAPH TEXT */
-.subcontent p {margin:1.0em 0 1.0em 0; color:rgb(0,0,0); line-height:1.3em; padding: 0 20px 0 20px;  font-size:131% !important /*Non-IE6*/; font-size:115% /*IE6*/;}
+.subcontent p {}
 .subcontent p.details {margin:-0.2em 0 1.0em 0; line-height:1.0em; font-size:120% !important /*Non-IE6*/; font-size:110% /*IE6*/;}
 .subcontent blockquote {clear:both; margin:0 30px 0.6em 30px; font-size:90%;}
 
@@ -371,12 +326,21 @@
 .subcontent .contactform input.button:hover {cursor:pointer; border:solid 1px rgb(80,80,80); background:rgb(220,220,220); color:rgb(80,80,80);}
 
 /* LOGIN FORM */
-.subcontent .loginform {width:230px; margin:10px 20px 0 20px;}
-.subcontent .loginform p {clear:both; margin:0; padding:0;}
-.subcontent .loginform fieldset {width:160px; border:none;}
-.subcontent .loginform label.top {float:left; width:125px; margin:0 0 2px 0; font-size:110%;}
+.subcontent .loginform {}
+.subcontent .loginform p {
+    width: 100%;
+}
+.subcontent .loginform fieldset {}
+.subcontent .loginform label.top {}
 .subcontent .loginform label.right {float:left; width:125px; margin:5px 0 0 0; padding:0 0 0 3px; /*IE6*/; font-size:110%;}
-.subcontent .loginform input.field {width:158px; margin:0 0 5px 0; padding:0.1em 0 0.2em 0 !important /*Non-IE6*/; padding:0.2em 0 0.3em 0 /*IE6*/; border:solid 1px rgb(200,200,200); font-size:110%;}
+.subcontent .loginform input.field {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    margin: 5px;
+}
 .subcontent .loginform input.checkbox {float:left; margin:5px 0 0 0 !important /*Non-IE6*/; margin:2px 0 0 -3px /*IE6*/; border:none;}
 .subcontent .loginform input.button {float:left; width:5.0em; margin:10px 0 5px 0; padding:1px; background:rgb(230,230,230); border:solid 1px rgb(150,150,150); text-align:center; color:rgb(150,150,150); font-size:110%;}
 .subcontent .loginform input.button:hover {cursor:pointer; border:solid 1px rgb(80,80,80); background:rgb(220,220,220); color:rgb(80,80,80);}
@@ -414,10 +378,6 @@
 .sidemenu3 ul li ul {margin:2px 0 0 0; padding:0 10px 0 0; border:none;}
 .sidemenu3 ul li ul li {margin:0; padding:0 0 0 10px; background:none; font-size:100% !important /*Non-IE6*/; font-size:100% /*IE6*/;}
 .sidemenu3 ul li ul li a {font-weight:normal;}
-
-/* MEDIA PLAYER */
-.subcontent .videoplayer {width:224px; height:144px; margin:1.0em 20px 1.0em 20px; border:solid 5px rgb(175,175,175);}
-.subcontent .audioplayer {width:224px; height:20px; margin:1.0em 20px 1.0em 20px; border:solid 5px rgb(175,175,175);}
 
 
 /**********/

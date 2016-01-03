@@ -11,8 +11,8 @@
             <fieldset>
                 <legend>&nbsp;Credenziali di accesso&nbsp;</legend>
                 <p>
-                    <label for="numero" class="left">Telefono:</label>
-                    <input type="text" name="numero" id="numero" class="field"/>
+                    <label for="numero_tel" class="left">Telefono:</label>
+                    <input type="text" name="numero_tel" id="numero_tel" class="field"/>
                 </p>
                 <p>
                     <label for="password" class="left">Password:</label>
