@@ -18,7 +18,7 @@ class EUtente {
     public $password;
     public $email;
     public $via;
-    public $CAP;
+    public $cap;
     public $citta;
     public $codice_attivazione;
     public $stato=true;

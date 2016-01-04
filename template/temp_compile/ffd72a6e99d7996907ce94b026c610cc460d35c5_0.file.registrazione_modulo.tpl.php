@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-01-02 12:18:39
+<?php /* Smarty version 3.1.27, created on 2016-01-03 19:09:55
          compiled from "template\registrazione_modulo.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:321765687b20f060049_25606185%%*/
+/*%%SmartyHeaderCode:13305568963f34d5120_93783055%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,20 +9,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ffd72a6e99d7996907ce94b026c610cc460d35c5' => 
     array (
       0 => 'template\\registrazione_modulo.tpl',
-      1 => 1451732748,
+      1 => 1451844591,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '321765687b20f060049_25606185',
+  'nocache_hash' => '13305568963f34d5120_93783055',
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_5687b20f0c4402_97471747',
+  'unifunc' => 'content_568963f35329d5_92109686',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_5687b20f0c4402_97471747')) {
-function content_5687b20f0c4402_97471747 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_568963f35329d5_92109686')) {
+function content_568963f35329d5_92109686 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '321765687b20f060049_25606185';
+$_smarty_tpl->properties['nocache_hash'] = '13305568963f34d5120_93783055';
 ?>
 <html>
 
@@ -38,15 +38,15 @@ $_smarty_tpl->properties['nocache_hash'] = '321765687b20f060049_25606185';
                 <legend>&nbsp;Credenziali di accesso&nbsp;</legend>
                 <p>
                     <label for="numero_tel" class="left">Telefono:</label>
-                    <input type="text" name="numero_tel" id="numero_tel" class="field"/>
+                    <input type="text" name="numero_tel" id="numero_tel" class="field" value="3471173932"/>
                 </p>
                 <p>
                     <label for="password" class="left">Password:</label>
-                    <input type="password" name="password" id="password" class="field"/>
+                    <input type="password" name="password" id="password" class="field" value="bbb"/>
                 </p>
                 <p>
                     <label for="password_1" class="left">Ripeti Password:</label>
-                    <input type="password" name="password_1" id="password_1" class="field"/>
+                    <input type="password" name="password_1" id="password_1" class="field" value="bbb"/>
                 </p>
             </fieldset>
             

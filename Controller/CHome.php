@@ -40,7 +40,7 @@ class CHome extends Controller {
         // Impossta il breadcrumb in modo da far vedere 'controller' e 'task' coinvolti nella richiesta HTTP
         $controller = $this->getController();
         $task = $this->getTask();
-        $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . ' ------------------------ Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
+        $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . '******************** Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
         $VHome->impostaPaginaOspite();
         $VHome->mostraPagina();
 

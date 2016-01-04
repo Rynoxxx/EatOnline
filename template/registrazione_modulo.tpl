@@ -12,15 +12,15 @@
                 <legend>&nbsp;Credenziali di accesso&nbsp;</legend>
                 <p>
                     <label for="numero_tel" class="left">Telefono:</label>
-                    <input type="text" name="numero_tel" id="numero_tel" class="field"/>
+                    <input type="text" name="numero_tel" id="numero_tel" class="field" value="3471173932"/>
                 </p>
                 <p>
                     <label for="password" class="left">Password:</label>
-                    <input type="password" name="password" id="password" class="field"/>
+                    <input type="password" name="password" id="password" class="field" value="bbb"/>
                 </p>
                 <p>
                     <label for="password_1" class="left">Ripeti Password:</label>
-                    <input type="password" name="password_1" id="password_1" class="field"/>
+                    <input type="password" name="password_1" id="password_1" class="field" value="bbb"/>
                 </p>
             </fieldset>
             
