@@ -26,10 +26,21 @@ class UEmail {
         $this->_mail->Port = $config['smtp']['port'];  // Specifica la porta del server SMTP
         $this->_mail->SMTPSecure = 'tls';
         $this->_mail->SMTPDebug = '2';
-        //$this->_mail->SMTPAutoTLS = 'false';
+        
+        /*
+         * Queste due righe le ho aggiunte vedendo su:
+         * https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting
+         * inizialmente non le avevo messe
+         *
+        
+        $this->_mail->SMTPAutoTLS = 'false';
         $this->_mail->SMTPOptions = array(
             'ssl' => array('verify_peer' => false, 'verify_peer_name' => false, 'allow_self_signed' => true)
         );
+        
+        */
+          
+         
         $this->_mail->SMTPAuth = $config['smtp']['smtpauth']; // Abilita/disabilita l'autenticazione SMTP
         $this->_mail->Username = $config['smtp']['username']; // SMTP username
         $this->_mail->Password = $config['smtp']['password']; // SMTP password
