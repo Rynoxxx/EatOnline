@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-01-03 17:37:53
+<?php /* Smarty version 3.1.27, created on 2016-01-05 14:46:54
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1942456894e61d2ee19_70747924%%*/
+/*%%SmartyHeaderCode:18424568bc94e89c7e0_27035328%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1451838435,
+      1 => 1452001603,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1942456894e61d2ee19_70747924',
+  'nocache_hash' => '18424568bc94e89c7e0_27035328',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56894e61d832f5_30138809',
+  'unifunc' => 'content_568bc94e941753_53501805',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56894e61d832f5_30138809')) {
-function content_56894e61d832f5_30138809 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_568bc94e941753_53501805')) {
+function content_568bc94e941753_53501805 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1942456894e61d2ee19_70747924';
+$_smarty_tpl->properties['nocache_hash'] = '18424568bc94e89c7e0_27035328';
 ?>
 <!DOCTYPE html>
 <html>
@@ -75,7 +75,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1942456894e61d2ee19_70747924';
                 <!-- NAVUGATION ITEM -->
                 <ul>
                     <a href="index.php"><li>Home</li></a>
-                    <a href="index.php?controller=cibi"><li>Cibi</li></a>
+                    <a href="index.php?controller=cibo"><li>Cibi</li></a>
                     <a href="index.php"><li>Bevande</li></a>
                 </ul>
 

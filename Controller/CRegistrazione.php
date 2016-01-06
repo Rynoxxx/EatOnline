@@ -66,7 +66,8 @@ class CRegistrazione extends Controller {
                 $view->setErrore('PASSWORD ERRATA');
             }
         }
-        return false;
+        $view = USingleton::getInstance('VRegistrazione');
+        $view->setErrore('UTENTE NON REGISTRATO');
     }
 
     /*
@@ -106,11 +107,11 @@ class CRegistrazione extends Controller {
             //Utente non esistente
             if ($dati_registrazione['password'] == $dati_registrazione['password_1']) {
                 unset($dati_registrazione['password_1']);
-                
+
                 foreach ($dati_registrazione as $key => $value) {
                     $utente->$key = $dati_registrazione[$key];
                 }
-                
+
                 $utente->generaCodiceAttivazione();
                 $FUtente = new FUtente();
                 $result = $FUtente->store($utente);
@@ -159,19 +160,18 @@ class CRegistrazione extends Controller {
      * @param EUtente $utente
      * @return type
      */
-    
     public function emailAttivazione(EUtente $utente) {
         global $config;
         $view = USingleton::getInstance('VRegistrazione');
         $view->set_layout('email_attivazione');
         $view->assign('numero', $utente->numero_tel);
-        $view->assign('nome_cognome', $utente->nome.' '.$utente->cognome);
+        $view->assign('nome_cognome', $utente->nome . ' ' . $utente->cognome);
         $view->assign('codice_attivazione', $utente->getCodiceAttivazione());
         $view->assign('email_webmaster', $config['email_webmaster']);
         $view->assign('url', $config['url_eatonline']);
         $corpo_email = $view->processaTemplate();
         $email = USingleton::getInstance('UEmail');
-        return $email->invia_email($utente->email, $utente->nome.' '.$utente->cognome, 'Attivazione account EatOnline', $corpo_email);
+        return $email->invia_email($utente->email, $utente->nome . ' ' . $utente->cognome, 'Attivazione account EatOnline', $corpo_email);
     }
 
     /**

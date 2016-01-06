@@ -1,21 +1,20 @@
 <?php
 
-class CCibi extends Controller {
-    
+class CProdotto extends Controller {
+
     public function mostraProdotti() {
-        $view = USingleton::getInstance('VCibi');
+        $view = USingleton::getInstance('VCibo');
         $view->set_layout('default');
         return $view->processaTemplate();
     }
 
-
     public function smista() {
         switch ($this->getTask()) {
-            default :
-                return $this->mostraProdotti();
+            case 'cibo':
+                return $this->visualizzaCibi();
         }
     }
-    
+
 }
 
 ?>

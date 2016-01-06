@@ -37,7 +37,7 @@
                 <!-- NAVUGATION ITEM -->
                 <ul>
                     <a href="index.php"><li>Home</li></a>
-                    <a href="index.php?controller=cibi"><li>Cibi</li></a>
+                    <a href="index.php?controller=cibo"><li>Cibi</li></a>
                     <a href="index.php"><li>Bevande</li></a>
                 </ul>
 

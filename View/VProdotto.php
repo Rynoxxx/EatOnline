@@ -1,6 +1,6 @@
 <?php
 
-class VCibi extends View {
+class VProdotto extends View {
     
     private $_layout='default';
     
@@ -9,7 +9,7 @@ class VCibi extends View {
     }
     
     public function processaTemplate() {
-        $contenuto=  $this->fetch('cibi_'.$this->_layout.'.tpl');
+        $contenuto=  $this->fetch('prodotto_'.$this->_layout.'.tpl');
         return $contenuto;
     }
     

@@ -69,14 +69,12 @@ class CHome extends Controller {
                 $COrdine = USingleton::getInstance('COrdine');
                 return $COrdine->smista();
                 break;
-            case 'cibi':
-                $CCibi = USingleton::getInstance('CCibi');
-                return $CCibi->smista();
+            case 'cibo':
+                $CCibo = USingleton::getInstance('CCibo');
+                return $CCibo->smista();
             default:
                 $ciao = "case default dello switch CHome";
                 return $ciao;
-            /* $CRicerca = USingleton::getInstance('CRicerca');
-              return $CRicerca->Ultimi_arrivi(); */
         }
     }
 
