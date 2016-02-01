@@ -21,8 +21,8 @@
                     <fieldset>
 
                         <p>
-                            <label for="username" class="top" >Numero di telefono:</label>
-                            <input type="text" name="numero_tel" id="numero_tel" tabindex="1" class="field" value="3899365280"/>
+                            <label for="numero_tel" class="top" >Numero di telefono:</label>
+                            <input type="text" name="numero_tel" id="numero_tel" tabindex="1" class="field" value="3471173932"/>
                         </p>
 
                         <p>

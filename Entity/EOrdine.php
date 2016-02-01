@@ -6,7 +6,7 @@ class EOrdine {
     public $data;
     public $confermato;
     public $pagato;
-    public $utente;
+    public $utente; //Oggetto EUtente
     public $carta_credito; //Oggetto ECartaCredito
     public $_ordine_item = array(); //Array di oggetti EOrdineItem
 

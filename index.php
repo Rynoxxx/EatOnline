@@ -7,15 +7,13 @@
     </head>
     <body>
         <?php
-        
         require_once 'include/autoload.inc.php';
         require_once 'include/config.inc.php';
-        
-        $CHome=  USingleton::getInstance('CHome');
-        $CHome->impostaPagina();
-        
-        error_reporting(E_ALL); 
 
+        $CHome = USingleton::getInstance('CHome');
+        $CHome->impostaPagina();
+
+        error_reporting(E_ALL);
         ?>
     </body>
 </html>

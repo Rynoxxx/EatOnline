@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-01-05 14:46:54
+<?php /* Smarty version 3.1.27, created on 2016-02-01 19:23:15
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:18424568bc94e89c7e0_27035328%%*/
+/*%%SmartyHeaderCode:302456afa293957778_47938787%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1452001603,
+      1 => 1454350990,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18424568bc94e89c7e0_27035328',
+  'nocache_hash' => '302456afa293957778_47938787',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_568bc94e941753_53501805',
+  'unifunc' => 'content_56afa293a18bc8_88027751',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_568bc94e941753_53501805')) {
-function content_568bc94e941753_53501805 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56afa293a18bc8_88027751')) {
+function content_56afa293a18bc8_88027751 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '18424568bc94e89c7e0_27035328';
+$_smarty_tpl->properties['nocache_hash'] = '302456afa293957778_47938787';
 ?>
 <!DOCTYPE html>
 <html>
@@ -75,8 +75,11 @@ $_smarty_tpl->properties['nocache_hash'] = '18424568bc94e89c7e0_27035328';
                 <!-- NAVUGATION ITEM -->
                 <ul>
                     <a href="index.php"><li>Home</li></a>
-                    <a href="index.php?controller=cibo"><li>Cibi</li></a>
-                    <a href="index.php"><li>Bevande</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.primi_piatti"><li>Primi piatti</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.secondi_piatti"><li>Secondi piatti</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.contorni"><li>Contorni</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.pizze"><li>Pizze</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.bevande"><li>Bevande</li></a>
                 </ul>
 
             </div>

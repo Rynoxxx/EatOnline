@@ -37,8 +37,11 @@
                 <!-- NAVUGATION ITEM -->
                 <ul>
                     <a href="index.php"><li>Home</li></a>
-                    <a href="index.php?controller=cibo"><li>Cibi</li></a>
-                    <a href="index.php"><li>Bevande</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.primi_piatti"><li>Primi piatti</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.secondi_piatti"><li>Secondi piatti</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.contorni"><li>Contorni</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.pizze"><li>Pizze</li></a>
+                    <a href="index.php?controller=prodotto&task=lista.bevande"><li>Bevande</li></a>
                 </ul>
 
             </div>

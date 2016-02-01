@@ -3,7 +3,7 @@
 class ECategoria {
 
     public $id;
-    public $nome_categoria;
+    public $nome;
     public $descrizione;
     public $immagine;
 
@@ -11,16 +11,16 @@ class ECategoria {
         return $this->id;
     }
 
-    function getNome_categoria() {
-        return $this->nome_categoria;
+    function getNome() {
+        return $this->nome;
     }
 
     function getDescrizione() {
         return $this->descrizione;
     }
 
-    function setNome_categoria($nome_categoria) {
-        $this->nome_categoria = $nome_categoria;
+    function setNome($nome) {
+        $this->nome = $nome;
     }
 
     function setDescrizione($descrizione) {

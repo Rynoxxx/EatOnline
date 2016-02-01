@@ -1,17 +1,17 @@
 <?php
 
-/* 
+/*
  * Classe EUtente
  * @package Entity
  * @access public
  */
 
 class EUtente {
-    
     /*
      * Attributi della classe EUtente
      * @access private
      */
+
     public $nome;
     public $cognome;
     public $numero_tel;
@@ -21,30 +21,29 @@ class EUtente {
     public $cap;
     public $citta;
     public $codice_attivazione;
-    public $stato=true;
-    public $_ordini=array();
-    
+    public $stato = true;
+    public $_ordini = array();
+
     /*
      * Metodi della classe EUtente
      */
-    
+
     public function generaCodiceAttivazione() {
         $this->codice_attivazione = mt_rand();
     }
-    
+
     public function getCodiceAttivazione() {
         return $this->codice_attivazione;
     }
 
-
     public function getOrdini() {
         return $this->_ordini;
     }
-    
+
     public function isUserActivated() {
         return $this->stato;
     }
-    
+
     function getNome() {
         return $this->nome;
     }
@@ -52,7 +51,7 @@ class EUtente {
     function getCognome() {
         return $this->cognome;
     }
-    
+
     function getNumeroTel() {
         return $this->numero_tel;
     }
@@ -61,7 +60,6 @@ class EUtente {
         return $this->email;
     }
 
-    
     function getVia() {
         return $this->via;
     }
@@ -81,7 +79,7 @@ class EUtente {
     function setCognome($cognome) {
         $this->cognome = $cognome;
     }
-    
+
     function setNumeroTel($numero) {
         $this->numero_tel = $numero;
     }
@@ -102,8 +100,6 @@ class EUtente {
         $this->citta = $citta;
     }
 
-
 }
-
 ?>
 
