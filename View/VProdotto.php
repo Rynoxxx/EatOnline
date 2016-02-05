@@ -12,6 +12,10 @@ class VProdotto extends View {
         $contenuto = $this->fetch('prodotto_' . $this->_layout . '.tpl');
         return $contenuto;
     }
+    
+    public function impostaDati($chiave, $valore) {
+        $this->assign($chiave, $valore);
+    }
 
 }
 ?>

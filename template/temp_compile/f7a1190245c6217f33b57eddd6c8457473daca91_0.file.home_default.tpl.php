@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-01 19:23:15
+<?php /* Smarty version 3.1.27, created on 2016-02-06 00:31:03
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:302456afa293957778_47938787%%*/
+/*%%SmartyHeaderCode:393256b530b7be7482_73686669%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1454350990,
+      1 => 1454715061,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '302456afa293957778_47938787',
+  'nocache_hash' => '393256b530b7be7482_73686669',
   'variables' => 
   array (
     'title' => 0,
@@ -26,19 +26,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56afa293a18bc8_88027751',
+  'unifunc' => 'content_56b530b7c83503_00649417',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56afa293a18bc8_88027751')) {
-function content_56afa293a18bc8_88027751 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56b530b7c83503_00649417')) {
+function content_56b530b7c83503_00649417 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '302456afa293957778_47938787';
+$_smarty_tpl->properties['nocache_hash'] = '393256b530b7be7482_73686669';
 ?>
 <!DOCTYPE html>
 <html>
 
     <head>
-        <link rel="stylesheet" type="text/css" href="template/css/reset.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/grid.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/content.css"/>
         <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
@@ -46,33 +45,31 @@ $_smarty_tpl->properties['nocache_hash'] = '302456afa293957778_47938787';
     </head>
 
     <body>
-        <!-- CONTAINER PER L'INTERA PAGINA -->
-        <div class="container">
+        <!-- BEGIN WRAPPER -->
+        <div class="wrapper">
 
-
-            <!-- HEADER -->
+            <!-- BEGIN HEADER -->
             <div class="header">
-
-                <img class="logo" src="template/img/bg_logo.gif"/>
-                <div class="title">EatOnline</div>
-                <div class="breadcrumb">
+                <img id="logo" src="template/img/logo.gif"/>
+                
+                <div id="title">EatOnline</div>
+                
+                <div id="breadcrumb">
                     <p>> <?php echo $_smarty_tpl->tpl_vars['breadcrumb']->value;?>
 </p>
                     <?php if ($_smarty_tpl->tpl_vars['logged']->value) {?>
                         Ciao pirla!
                     <?php }?>
                 </div>
-                <div class="search">
+
+                <div id="searchform">
                     <input type="text" placeholder="Cerca..."/>
                 </div>
-
             </div>
+            <!-- END HEADER -->
 
-
-            <!-- NAVIGATION BAR -->
-            <div class="navbar">
-
-                <!-- NAVUGATION ITEM -->
+            <!-- BEGIN NAVIGATION -->
+            <div class="navigation">
                 <ul>
                     <a href="index.php"><li>Home</li></a>
                     <a href="index.php?controller=prodotto&task=lista.primi_piatti"><li>Primi piatti</li></a>
@@ -81,31 +78,28 @@ $_smarty_tpl->properties['nocache_hash'] = '302456afa293957778_47938787';
                     <a href="index.php?controller=prodotto&task=lista.pizze"><li>Pizze</li></a>
                     <a href="index.php?controller=prodotto&task=lista.bevande"><li>Bevande</li></a>
                 </ul>
-
             </div>
+            <!-- END NAVIGATION -->
 
-
-            <!-- MAIN SECTION -->
-            <div class="main">
-
-                <h1 class="pagetitle"><?php echo $_smarty_tpl->tpl_vars['content_title']->value;?>
+            <!-- BEGIN CENTRAL CONTAINER -->
+            <div class="central_container">
+                <h1><?php echo $_smarty_tpl->tpl_vars['content_title']->value;?>
 </h1>
+                
+                <!-- BEGIN LEFT COLUMN -->
+                <div class="leftcolumn">
+                    <?php echo $_smarty_tpl->tpl_vars['main_content']->value;?>
 
-                <!-- CONTENT -->
-                <div class="content">
-                    <h3><?php echo $_smarty_tpl->tpl_vars['main_content']->value;?>
-</h3>
                 </div>
+                <!-- END LEFT COLUMN -->
 
-                <!-- SUBCONTENT -->
-                <div class="subcontent">
+                <!-- BEGIN RIGHT COLUMN -->
+                <div class="rightcolumn">
                     <?php echo $_smarty_tpl->tpl_vars['right_content']->value;?>
 
-                    <div class="subcontent-box">
-                        <h1 class="menu">Menu</h1>
-                        <div class="sidemenu1">
-                            <ul>
-                                <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['i'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['i']);
+
+                    <ul>
+                        <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['i'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['i']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['name'] = 'i';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['tasti_laterali']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['show'] = true;
@@ -129,13 +123,13 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['index_next'] = $_smarty
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['total']);
 ?>
-                                    <li>
-                                        <a href="<?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['link'];?>
+                            <li>
+                                <a href="<?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['link'];?>
 "><?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['testo'];?>
 </a>
-                                        <?php if ($_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu'] != false) {?>
-                                            <ul>
-                                                <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['j'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['j']);
+                                <?php if ($_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu'] != false) {?>
+                                    <ul>
+                                        <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['j'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['j']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['name'] = 'j';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu']) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['show'] = true;
@@ -159,31 +153,30 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['index_next'] = $_smarty
 $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['j']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['j']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['total']);
 ?>
-                                                    <li><a href="<?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu'][$_smarty_tpl->getVariable('smarty')->value['section']['j']['index']]['link'];?>
+                                            <li><a href="<?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu'][$_smarty_tpl->getVariable('smarty')->value['section']['j']['index']]['link'];?>
 "><?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu'][$_smarty_tpl->getVariable('smarty')->value['section']['j']['index']]['testo'];?>
 </a></li>
-                                                    <?php endfor; endif; ?>
-                                            </ul>
-                                        <?php }?>
-                                    </li>
-                                <?php endfor; endif; ?>
-                            </ul>
-                        </div>
-                    </div>
+                                        <?php endfor; endif; ?>
+                                    </ul>
+                                <?php }?>
+                            </li>
+                        <?php endfor; endif; ?>
+                    </ul>
                 </div>
+                <!-- END RIGHT COLUMN -->
 
             </div>
+            <!-- END CENTRAL CONTAINER -->
 
-
-            <!-- FOOTER -->
+            <!-- BEGIN FOOTER -->
             <div class="footer">
                 <p>Copyright &copy; 2016 EatOnline&nbsp;&nbsp;|&nbsp;&nbsp;All Rights Reserved</p>
-                <p class="credits">Layout design by <a href="http://1234.info/" title="Designer Homepage">1234.info</a> | Modified by <a href="http://lamjex.com" title="Modifyer Homepage">Gennaro Manzo</a></p>
+                <p>Layout design by Gennaro Manzo</p>
             </div>
-            <div class="corner-page-bottom"></div>
-
+            <!-- END FOOTER -->
 
         </div>
+        <!-- END WRAPPER -->
     </body>
 
 </html><?php }

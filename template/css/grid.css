@@ -1,138 +1,90 @@
-/* 
-    Created on : 29-dic-2015, 8.19.05
-    Author     : Rino
-*/
-
-/* GLOBAL LAYOUT */
-
-html {
-    background: salmon;
-}
+* { padding: 0; margin: 0; }
 
 body {
-    background: rosybrown;
-    padding-top: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: #550000;
+    color: #ffffff;
 }
 
-/* CONTAINER DELL'INTERA PAGINA */
-
-.container {
-    width: 90%;
-    margin: auto;
-    background: white;
-    padding: 10px;
+.wrapper { 
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 982px;
 }
 
-/* HEADER */
+.central_container {
+    border-style: solid;
+    border-width: 1px;
+    border-color: #000000;
+    margin-bottom: 10px;
+    padding: 5px;
+    overflow: auto;
+    width: 100%;
+}
 
 .header {
-    margin-bottom: 10px;
     position: relative;
-    border-radius: 5px;
-    background: cornsilk;
-    padding: 10px;
-}
-
-.header .logo {
-    display: inline-block;
-    height: 100px;
-}
-
-.header .title {
-    display: inline-block;
-    height: 100px;
-    vertical-align: top;
-    line-height: 100px;
-    font-size: 40px;
-}
-
-.header .search {
-    position: absolute;
-    right: 5px;
-    top: 10px;
-    width: 250px;
-    height: 50px;
-    text-align: center;
-    line-height: 50px;
-}
-
-.header .search input {
-    border: 1px solid red;
-    height:40px;
+    border-radius: 8px;
+    background-color: #FFAAAA;
+    color: #red;
+    width: 100%;
     padding: 5px;
-    color: blue;
-    box-shadow: 0px 0px 4px #eee;
+    height: 110px;
+    margin: 10px 0px 5px 0px;
 }
 
-/* NAVIGATION BAR */
-
-.navbar {
+.navigation {
+    border-radius: 8px;
+    color: #801515;
     padding: 5px;
-    background: green;
-    margin-bottom: 10px;
-    border-radius: 5px;
+    margin: 0px 0px 10px 0px;
+    background-color: #FFAAAA;
+    width: 100%;
 }
 
-.navbar li {
-    display: inline-block;
-    background: orange;
-    padding: 15px;
-    width: 50px;
-    text-align: center;
+.navigation li {
+    display: inline;
+    margin-right: 5px;
 }
 
-.navbar li:hover {
-    cursor: pointer;
-    background: white;
+.rightcolumn {
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 8px;
+    display: inline;
+    background-color: #FFAAAA;
+    color: #000000;
+    margin:10px;
+    padding:2px;
+    width: 230px;
+    height: 200px;
+    float: right;
 }
 
-.navbar li a {
-    text-decoration: none;
-}
-
-/* MAIN */
-.main {
-    background: violet;
-    margin-bottom: 10px;
-    border-radius: 5px;
-}
-
-.subcontent {
-    margin-left: 71%;
-}
-
-.subcontent-box {
-    background: red;
-    border-radius: 5px;
-}
-
-.loginform {
-    background: white;
-    border-radius: 5px;
-    padding: 10px;
-    margin: 10px;
-    box-shadow: 0px 0px 10px;
-}
-
-/* CONTENT */
-.content{
-    width: 70%;
-    min-height: 500px;
-    background: yellow;
+.leftcolumn { 
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+    border-radius: 8px;
+    background-color: #FFAAAA;
     float: left;
+    color: #333;
+    margin: 10px;
+    padding: 2px;
+    width: 700px;
+    display: inline;
+    position: relative;
 }
 
-/* FOOTER */
-.footer {
-    background: brown;
+.footer { 
+    border-radius: 8px;
+    width: 982px;
+    clear: both;
+    background-color: #FFAAAA;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
     text-align: center;
-    border-radius: 5px;
-}
-
-/* CONSENTE UN CAMBIAMENTO GRADUALE DELLO STATO DEGLI ELEMENTI */
-* {
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+    color: #000000;
 }

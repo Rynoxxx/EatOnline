@@ -11,10 +11,9 @@ class CProdotto extends Controller {
         $id_categoria = $FCategoria->nameToId($categoria);
         $FProdotto = USingleton::getInstance('FProdotto');
         $prodotti = $FProdotto->prodottiCategoria($id_categoria);
-        foreach ($prodotti as $prodotto) {
-            $nome.=$prodotto->getNome() . '<br>';
-        }
-        return $nome;
+        $VProdotto = USingleton::getInstance('VProdotto');
+        $VProdotto->impostaDati('prodotti', $prodotti);
+        return $VProdotto->processaTemplate();
     }
 
     public function smista() {

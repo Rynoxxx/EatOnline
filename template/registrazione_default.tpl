@@ -10,7 +10,7 @@
         {/if}
 
         {if !$logged}
-            <h1 class="login">Login</h1>
+            <h1>Login</h1>
             <div class="loginform">
 
                 <form method="post" action="index.php">
