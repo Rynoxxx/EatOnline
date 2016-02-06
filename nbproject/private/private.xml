@@ -4,14 +4,14 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/xampp/htdocs/EatOnline/Controller/CProdotto.php</file>
-            <file>file:/C:/xampp/htdocs/EatOnline/View/View.php</file>
             <file>file:/C:/xampp/htdocs/EatOnline/Foundation/FProdotto.php</file>
-            <file>file:/C:/xampp/htdocs/EatOnline/View/VHome.php</file>
             <file>file:/C:/xampp/htdocs/EatOnline/template/prodotto_default.tpl</file>
-            <file>file:/C:/xampp/htdocs/EatOnline/View/VRegistrazione.php</file>
             <file>file:/C:/xampp/htdocs/EatOnline/Controller/CHome.php</file>
             <file>file:/C:/xampp/htdocs/EatOnline/Foundation/FCategoria.php</file>
+            <file>file:/C:/xampp/htdocs/EatOnline/template/css/grid.css</file>
             <file>file:/C:/xampp/htdocs/EatOnline/View/VProdotto.php</file>
+            <file>file:/C:/xampp/htdocs/EatOnline/template/css/content.css</file>
+            <file>file:/C:/xampp/htdocs/EatOnline/template/home_default.tpl</file>
         </group>
     </open-files>
 </project-private>

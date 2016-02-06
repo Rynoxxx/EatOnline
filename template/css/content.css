@@ -80,6 +80,7 @@
     display: inline-block;
     vertical-align: top;
     color: #550000;
+    box-shadow: 0px 8px 16px 0px #801515;
 }
 
 .content .item p#nome {
