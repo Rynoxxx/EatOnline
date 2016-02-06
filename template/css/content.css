@@ -31,16 +31,17 @@
 
 .header #searchform {
     position: absolute;
-    right: 0px;
+    right: 10px;
     top: 10px;
-    width: 140px;
-    height: 20px;
+    width: 150px;
+    height: 30px;
 }
 
 .header #searchform input {
     border: 1px solid #550000;
     height: 100%;
     width: 100%;
+    box-sizing: border-box;
     padding: 5px;
     color: #801515;
     box-shadow: 0px 0px 4px #801515;
@@ -54,15 +55,60 @@
     font-size: 15px;
 }
 
-.content li{
+.navigation li {
     display: inline;
+    margin-right: 5px;
+}
+
+.navigation a {
+    text-decoration: none;
 }
 
 .content .item {
+    position: relative;
+    border-style: solid;
     border-radius: 5px;
-    background-color: graytext;
-    height: 200px;
+    border-width: 1px;
+    border-color: #550000;
+    background-color: transparent;
+    height: 210px;
     width: 180px;
+    margin-top: 5px;
     margin-bottom: 5px;
+    margin-right: 5px;
+    margin-left: 5px;
     display: inline-block;
+    vertical-align: top;
+    color: #550000;
+}
+
+.content .item p#nome {
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.content .item p#ingredienti {
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.content .item p#prezzo {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}
+
+.content .item #foto {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    width: 85px;
+}
+
+.content .item #carrello {
+    width: 30px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
 }

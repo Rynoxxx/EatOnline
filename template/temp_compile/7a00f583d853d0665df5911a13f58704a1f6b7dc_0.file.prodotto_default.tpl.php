@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-05 23:29:33
+<?php /* Smarty version 3.1.27, created on 2016-02-06 03:21:58
          compiled from "template\prodotto_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1079856b5224d080ef5_38988378%%*/
+/*%%SmartyHeaderCode:2541356b558c6e32252_82998678%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,29 +9,28 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '7a00f583d853d0665df5911a13f58704a1f6b7dc' => 
     array (
       0 => 'template\\prodotto_default.tpl',
-      1 => 1454711319,
+      1 => 1454725316,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1079856b5224d080ef5_38988378',
+  'nocache_hash' => '2541356b558c6e32252_82998678',
   'variables' => 
   array (
     'prodotti' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56b5224d0f2178_52777357',
+  'unifunc' => 'content_56b558c6eaca23_23478681',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56b5224d0f2178_52777357')) {
-function content_56b5224d0f2178_52777357 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56b558c6eaca23_23478681')) {
+function content_56b558c6eaca23_23478681 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1079856b5224d080ef5_38988378';
+$_smarty_tpl->properties['nocache_hash'] = '2541356b558c6e32252_82998678';
 ?>
 <div class="content">
-    <?php if (!isset($_smarty_tpl->tpl_vars['cane'])) $_smarty_tpl->tpl_vars['cane'] = new Smarty_Variable(null);if ($_smarty_tpl->tpl_vars['cane']->value = !false) {?>
-        <ul>
-            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['i'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['i']);
+    <?php if ((count($_smarty_tpl->tpl_vars['prodotti']->value)) != 0) {?>
+        <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['i'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['i']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['name'] = 'i';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['prodotti']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['show'] = true;
@@ -56,17 +55,16 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['first']      = ($_smart
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['total']);
 ?>
                 <div class="item">
-                    <li>
-                        <?php echo $_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]->getNome();?>
-
-                        <?php echo $_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]->getIngredienti();?>
-
-                        <?php echo $_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]->getPrezzo();?>
-
-                    </li>
+                    <p id="nome"><?php echo $_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]->getNome();?>
+</p>  
+                    <p><img id="foto" src="template/img/prodotti/primi/carbonara.jpg"/></p>
+                    <p id="ingredienti"><b>Ingredienti:</b> <?php echo $_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]->getIngredienti();?>
+</p>
+                    <p id="prezzo"><b>Prezzo:</b> <?php echo $_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]->getPrezzo();?>
+ &euro;</p>
+                    <img id="carrello" src="template/img/carrello.png"/>
                 </div>
-            <?php endfor; endif; ?>
-        </ul>
+        <?php endfor; endif; ?>
     <?php }?>
 </div><?php }
 }
