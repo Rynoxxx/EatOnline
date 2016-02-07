@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-07 01:41:50
+<?php /* Smarty version 3.1.27, created on 2016-02-07 01:45:45
          compiled from "template\prodotto_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:564756b692cef2c489_43204093%%*/
+/*%%SmartyHeaderCode:1192756b693b9237770_40612964%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'b7129b2b24fa3ba7bea46819cc5a51e75eae4f69' => 
     array (
       0 => 'template\\prodotto_list.tpl',
-      1 => 1454805591,
+      1 => 1454805793,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '564756b692cef2c489_43204093',
+  'nocache_hash' => '1192756b693b9237770_40612964',
   'variables' => 
   array (
     'prodotti' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56b692cf057172_86851043',
+  'unifunc' => 'content_56b693b92ac3d7_85781350',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56b692cf057172_86851043')) {
-function content_56b692cf057172_86851043 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56b693b92ac3d7_85781350')) {
+function content_56b693b92ac3d7_85781350 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '564756b692cef2c489_43204093';
+$_smarty_tpl->properties['nocache_hash'] = '1192756b693b9237770_40612964';
 ?>
 <div class="content">
   <?php if ((count($_smarty_tpl->tpl_vars['prodotti']->value)) != 0) {?>
@@ -54,7 +54,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['index_next'] = $_smarty
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['total']);
 ?>
-          <?php echo $_smarty_tpl->getSubTemplate ("prodotto_default.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array(), 0);
+          <?php echo $_smarty_tpl->getSubTemplate ("prodotto_default.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('prodotto'=>$_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]), 0);
 ?>
 
       <?php endfor; endif; ?>
