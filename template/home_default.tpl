@@ -4,6 +4,7 @@
     <head>
         <link rel="stylesheet" type="text/css" href="template/css/grid.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/content.css"/>
+        <link rel="stylesheet" type="text/css" href="template/css/menu.css"/>
         <title>{$title}</title>
     </head>
 
@@ -14,9 +15,9 @@
             <!-- BEGIN HEADER -->
             <div class="header">
                 <img id="logo" src="template/img/logo.gif"/>
-                
+
                 <div id="title">EatOnline</div>
-                
+
                 <div id="breadcrumb">
                     <p>> {$breadcrumb}</p>
                     {if $logged}
@@ -32,13 +33,19 @@
 
             <!-- BEGIN NAVIGATION -->
             <div class="navigation">
-                <ul>
-                    <a href="index.php"><li>Home</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.primi_piatti"><li>Primi piatti</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.secondi_piatti"><li>Secondi piatti</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.contorni"><li>Contorni</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.pizze"><li>Pizze</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.bevande"><li>Bevande</li></a>
+                <ul id="nav">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="hsubs" href="#">Cibi</a>
+                        <ul class="subs">
+                            <li><a href="index.php?controller=prodotto&task=lista.primi_piatti">Primi piatti</a></li>
+                            <li><a href="index.php?controller=prodotto&task=lista.secondi_piatti">Secondi piatti</a></li>
+                            <li><a href="index.php?controller=prodotto&task=lista.contorni">Contorni</a></li>
+                            <li><a href="index.php?controller=prodotto&task=lista.pizze">Pizze</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.php?controller=prodotto&task=lista.bevande">Bevande</a></li>
+                    <li><a href="#">Carrello</a></li>
+                    <li><a href="#">Contatti</a></li>
                 </ul>
             </div>
             <!-- END NAVIGATION -->
@@ -46,7 +53,7 @@
             <!-- BEGIN CENTRAL CONTAINER -->
             <div class="central_container">
                 <h1>{$content_title}</h1>
-                
+
                 <!-- BEGIN LEFT COLUMN -->
                 <div class="leftcolumn">
                     {$main_content}
@@ -65,7 +72,7 @@
                                     <ul>
                                         {section name=j loop=$tasti_laterali[i].submenu}
                                             <li><a href="{$tasti_laterali[i].submenu[j].link}">{$tasti_laterali[i].submenu[j].testo}</a></li>
-                                        {/section}
+                                            {/section}
                                     </ul>
                                 {/if}
                             </li>

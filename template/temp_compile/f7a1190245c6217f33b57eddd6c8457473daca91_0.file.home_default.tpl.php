@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-06 00:31:03
+<?php /* Smarty version 3.1.27, created on 2016-02-07 01:37:23
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:393256b530b7be7482_73686669%%*/
+/*%%SmartyHeaderCode:1027456b691c33aaa37_42914622%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1454715061,
+      1 => 1454805385,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '393256b530b7be7482_73686669',
+  'nocache_hash' => '1027456b691c33aaa37_42914622',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56b530b7c83503_00649417',
+  'unifunc' => 'content_56b691c344d7f8_75893688',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56b530b7c83503_00649417')) {
-function content_56b530b7c83503_00649417 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56b691c344d7f8_75893688')) {
+function content_56b691c344d7f8_75893688 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '393256b530b7be7482_73686669';
+$_smarty_tpl->properties['nocache_hash'] = '1027456b691c33aaa37_42914622';
 ?>
 <!DOCTYPE html>
 <html>
@@ -40,6 +40,7 @@ $_smarty_tpl->properties['nocache_hash'] = '393256b530b7be7482_73686669';
     <head>
         <link rel="stylesheet" type="text/css" href="template/css/grid.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/content.css"/>
+        <link rel="stylesheet" type="text/css" href="template/css/menu.css"/>
         <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
     </head>
@@ -51,9 +52,9 @@ $_smarty_tpl->properties['nocache_hash'] = '393256b530b7be7482_73686669';
             <!-- BEGIN HEADER -->
             <div class="header">
                 <img id="logo" src="template/img/logo.gif"/>
-                
+
                 <div id="title">EatOnline</div>
-                
+
                 <div id="breadcrumb">
                     <p>> <?php echo $_smarty_tpl->tpl_vars['breadcrumb']->value;?>
 </p>
@@ -70,13 +71,19 @@ $_smarty_tpl->properties['nocache_hash'] = '393256b530b7be7482_73686669';
 
             <!-- BEGIN NAVIGATION -->
             <div class="navigation">
-                <ul>
-                    <a href="index.php"><li>Home</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.primi_piatti"><li>Primi piatti</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.secondi_piatti"><li>Secondi piatti</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.contorni"><li>Contorni</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.pizze"><li>Pizze</li></a>
-                    <a href="index.php?controller=prodotto&task=lista.bevande"><li>Bevande</li></a>
+                <ul id="nav">
+                    <li><a href="index.php">Home</a></li>
+                    <li><a class="hsubs" href="#">Cibi</a>
+                        <ul class="subs">
+                            <li><a href="index.php?controller=prodotto&task=lista.primi_piatti">Primi piatti</a></li>
+                            <li><a href="index.php?controller=prodotto&task=lista.secondi_piatti">Secondi piatti</a></li>
+                            <li><a href="index.php?controller=prodotto&task=lista.contorni">Contorni</a></li>
+                            <li><a href="index.php?controller=prodotto&task=lista.pizze">Pizze</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index.php?controller=prodotto&task=lista.bevande">Bevande</a></li>
+                    <li><a href="#">Carrello</a></li>
+                    <li><a href="#">Contatti</a></li>
                 </ul>
             </div>
             <!-- END NAVIGATION -->
@@ -85,7 +92,7 @@ $_smarty_tpl->properties['nocache_hash'] = '393256b530b7be7482_73686669';
             <div class="central_container">
                 <h1><?php echo $_smarty_tpl->tpl_vars['content_title']->value;?>
 </h1>
-                
+
                 <!-- BEGIN LEFT COLUMN -->
                 <div class="leftcolumn">
                     <?php echo $_smarty_tpl->tpl_vars['main_content']->value;?>
@@ -156,7 +163,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['last']       = ($_smart
                                             <li><a href="<?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu'][$_smarty_tpl->getVariable('smarty')->value['section']['j']['index']]['link'];?>
 "><?php echo $_smarty_tpl->tpl_vars['tasti_laterali']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]['submenu'][$_smarty_tpl->getVariable('smarty')->value['section']['j']['index']]['testo'];?>
 </a></li>
-                                        <?php endfor; endif; ?>
+                                            <?php endfor; endif; ?>
                                     </ul>
                                 <?php }?>
                             </li>
