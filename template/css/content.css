@@ -1,10 +1,10 @@
 /* Consente un cambiamento graduale dello stato degli elementi */
-* {
+/* {
     -webkit-transition: all 200ms ease-in-out;
     -moz-transition: all 200ms ease-in-out;
     -o-transition: all 200ms ease-in-out;
     transition: all 200ms ease-in-out;
-}
+}*/
 
 .loginform {
     background: white;
@@ -51,7 +51,7 @@
     box-shadow: 0px 0px 4px #801515;
 }
 
-.header #breadcrumb { 
+.header #breadcrumb {
     position: absolute;
     bottom: 10px;
     left: 10px;
