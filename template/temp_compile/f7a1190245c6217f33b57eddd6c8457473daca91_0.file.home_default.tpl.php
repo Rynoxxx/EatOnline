@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-07 01:37:23
+<?php /* Smarty version 3.1.27, created on 2016-02-08 18:33:16
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1027456b691c33aaa37_42914622%%*/
+/*%%SmartyHeaderCode:131056b8d15c9c0589_93985789%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1454805385,
+      1 => 1454952793,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1027456b691c33aaa37_42914622',
+  'nocache_hash' => '131056b8d15c9c0589_93985789',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56b691c344d7f8_75893688',
+  'unifunc' => 'content_56b8d15ca68df9_47677784',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56b691c344d7f8_75893688')) {
-function content_56b691c344d7f8_75893688 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56b8d15ca68df9_47677784')) {
+function content_56b8d15ca68df9_47677784 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1027456b691c33aaa37_42914622';
+$_smarty_tpl->properties['nocache_hash'] = '131056b8d15c9c0589_93985789';
 ?>
 <!DOCTYPE html>
 <html>
@@ -64,7 +64,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1027456b691c33aaa37_42914622';
                 </div>
 
                 <div id="searchform">
-                    <input type="text" placeholder="Cerca..."/>
+                    <input type="text" placeholder="Cerca cibi e bevande..."/>
                 </div>
             </div>
             <!-- END HEADER -->

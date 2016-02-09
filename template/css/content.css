@@ -31,13 +31,14 @@
     left: 130px;
     font-size: 40px;
     color: #801515;
+    text-shadow: 4px 3px 3px #333;
 }
 
 .header #searchform {
     position: absolute;
     right: 10px;
     top: 10px;
-    width: 150px;
+    width: 180px;
     height: 30px;
 }
 
@@ -57,15 +58,7 @@
     left: 10px;
     color: #801515;
     font-size: 15px;
-}
-
-.navigation li {
-    display: inline;
-    margin-right: 5px;
-}
-
-.navigation a {
-    text-decoration: none;
+    font-weight: bold;
 }
 
 .content .item {
@@ -76,11 +69,11 @@
     border-color: #550000;
     background-color: transparent;
     height: 210px;
-    width: 180px;
+    width: 188px;
     margin-top: 5px;
     margin-bottom: 5px;
-    margin-right: 5px;
-    margin-left: 5px;
+    margin-right: 8px;
+    margin-left: 8px;
     display: inline-block;
     vertical-align: top;
     color: #550000;
@@ -108,7 +101,9 @@
 .content .item #foto {
     margin-top: 8px;
     margin-bottom: 8px;
-    width: 85px;
+    width: 90px;
+    height: 65px;
+    box-shadow: 3px 3px 3px #333;
 }
 
 .content .item #carrello {
@@ -116,4 +111,22 @@
     position: absolute;
     bottom: 10px;
     right: 10px;
+}
+
+.content .interline_space {
+    height: 10px;
+}
+
+.navig_pages {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.navig_pages a{
+    text-decoration: none;
+    color: #550000;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 5px;
+    text-shadow: 3px 2px 3px #333;
 }

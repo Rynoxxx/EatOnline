@@ -70,8 +70,8 @@ class CHome extends Controller {
                 $CProdotto = USingleton::getInstance('CProdotto');
                 return $CProdotto->smista();
             default:
-                $ciao = "case default dello switch CHome";
-                return $ciao;
+                $CProdotto = USingleton::getInstance('CProdotto');
+                return $CProdotto->randomItems();
         }
     }
 

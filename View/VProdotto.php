@@ -12,9 +12,20 @@ class VProdotto extends View {
         $contenuto = $this->fetch('prodotto_' . $this->_layout . '.tpl');
         return $contenuto;
     }
-    
+
     public function impostaDati($chiave, $valore) {
         $this->assign($chiave, $valore);
+    }
+
+    /**
+     * Ritorna il numero della pagina, passato tramite GET o POST. Usato per la visualizzazione dei prodotti
+     * @return int
+     */
+    public function getPage() {
+        if (isset($_REQUEST['page'])) {
+            return $_REQUEST['page'];
+        } else
+            return 0;
     }
 
 }

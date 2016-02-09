@@ -26,7 +26,7 @@
                 </div>
 
                 <div id="searchform">
-                    <input type="text" placeholder="Cerca..."/>
+                    <input type="text" placeholder="Cerca cibi e bevande..."/>
                 </div>
             </div>
             <!-- END HEADER -->
