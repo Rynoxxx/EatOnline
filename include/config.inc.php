@@ -20,9 +20,9 @@ $config['smarty']['cache_dir']='template/temp_cache';
  */
 
 $config['mysql']['user']='root';
-$config['mysql']['password']='rino87';
+$config['mysql']['password']='0761eripsa';
 $config['mysql']['host']='localhost';
-$config['mysql']['database']='eatonline';        
+$config['mysql']['database']='eatonline';
 
 $config['debug']=true;
 function debug($var) {
@@ -48,4 +48,3 @@ $config['email_webmaster']='gennaro.m87@gmail.com';
 $config['url_eatonline']='http://localhost/EatOnline/';
 
 ?>
-

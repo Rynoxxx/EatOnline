@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.1
+-- version 4.0.10deb1
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Creato il: Feb 09, 2016 alle 21:49
--- Versione del server: 10.1.9-MariaDB
--- Versione PHP: 5.6.15
+-- Host: localhost
+-- Generato il: Feb 10, 2016 alle 00:50
+-- Versione del server: 5.5.46-0ubuntu0.14.04.2
+-- Versione PHP: 5.5.9-1ubuntu4.14
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8mb4 */;
+/*!40101 SET NAMES utf8 */;
 
 --
 -- Database: `eatonline`
@@ -23,15 +23,35 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `carta`
+--
+
+CREATE TABLE IF NOT EXISTS `carta` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `numero` varchar(50) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dump dei dati per la tabella `carta`
+--
+
+INSERT INTO `carta` (`id`, `numero`) VALUES
+(1, '54561111323212312');
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `categoria`
 --
 
-CREATE TABLE `categoria` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `categoria` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(20) NOT NULL,
   `descrizione` varchar(40) NOT NULL,
-  `immagine` varchar(80) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `immagine` varchar(80) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
 
 --
 -- Dump dei dati per la tabella `categoria`
@@ -47,18 +67,67 @@ INSERT INTO `categoria` (`id`, `nome`, `descrizione`, `immagine`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struttura della tabella `ordine`
+--
+
+CREATE TABLE IF NOT EXISTS `ordine` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `data` bigint(20) NOT NULL,
+  `pagato` tinyint(1) NOT NULL,
+  `confermato` tinyint(1) NOT NULL,
+  `id_utente` varchar(50) NOT NULL,
+  `id_carta` int(11) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dump dei dati per la tabella `ordine`
+--
+
+INSERT INTO `ordine` (`id`, `data`, `pagato`, `confermato`, `id_utente`, `id_carta`) VALUES
+(1, 1455054883, 0, 0, '3471173932', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Struttura della tabella `ordine_prodotto`
+--
+
+CREATE TABLE IF NOT EXISTS `ordine_prodotto` (
+  `id_ordine` int(11) NOT NULL,
+  `id_prodotto` int(11) NOT NULL,
+  `quantita` int(11) NOT NULL,
+  PRIMARY KEY (`id_ordine`,`id_prodotto`),
+  KEY `id_ordine` (`id_ordine`),
+  KEY `id_prodotto` (`id_prodotto`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dump dei dati per la tabella `ordine_prodotto`
+--
+
+INSERT INTO `ordine_prodotto` (`id_ordine`, `id_prodotto`, `quantita`) VALUES
+(1, 2, 1),
+(1, 6, 1),
+(1, 26, 2),
+(5, 0, 2);
+
+-- --------------------------------------------------------
+
+--
 -- Struttura della tabella `prodotto`
 --
 
-CREATE TABLE `prodotto` (
-  `id` int(11) NOT NULL,
+CREATE TABLE IF NOT EXISTS `prodotto` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `id_categoria` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
   `ingredienti` varchar(200) NOT NULL,
   `prezzo` double NOT NULL,
   `disponibile` tinyint(1) NOT NULL,
-  `immagine` varchar(200) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+  `immagine` varchar(200) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
 
 --
 -- Dump dei dati per la tabella `prodotto`
@@ -99,7 +168,7 @@ INSERT INTO `prodotto` (`id`, `id_categoria`, `nome`, `ingredienti`, `prezzo`, `
 -- Struttura della tabella `utente`
 --
 
-CREATE TABLE `utente` (
+CREATE TABLE IF NOT EXISTS `utente` (
   `numero_tel` varchar(20) NOT NULL,
   `nome` varchar(20) NOT NULL,
   `cognome` varchar(20) NOT NULL,
@@ -109,7 +178,8 @@ CREATE TABLE `utente` (
   `citta` varchar(40) NOT NULL,
   `cap` varchar(5) NOT NULL,
   `codice_attivazione` varchar(40) NOT NULL,
-  `stato` tinyint(1) NOT NULL
+  `stato` tinyint(1) NOT NULL,
+  PRIMARY KEY (`numero_tel`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -119,42 +189,6 @@ CREATE TABLE `utente` (
 INSERT INTO `utente` (`numero_tel`, `nome`, `cognome`, `password`, `email`, `via`, `citta`, `cap`, `codice_attivazione`, `stato`) VALUES
 ('3471173932', 'Rino', 'Manzo', 'bbb', 'gennaro.m87@gmail.com', '', '', '', '419507338', 1);
 
---
--- Indici per le tabelle scaricate
---
-
---
--- Indici per le tabelle `categoria`
---
-ALTER TABLE `categoria`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indici per le tabelle `prodotto`
---
-ALTER TABLE `prodotto`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indici per le tabelle `utente`
---
-ALTER TABLE `utente`
-  ADD PRIMARY KEY (`numero_tel`);
-
---
--- AUTO_INCREMENT per le tabelle scaricate
---
-
---
--- AUTO_INCREMENT per la tabella `categoria`
---
-ALTER TABLE `categoria`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
---
--- AUTO_INCREMENT per la tabella `prodotto`
---
-ALTER TABLE `prodotto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

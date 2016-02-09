@@ -160,10 +160,10 @@ class Fdb {
         foreach ($object as $key => $value) {
             /*
              * Se la prima lettera della $key (uno degli attributi dell'oggetto letti tramite il foreach)
-             * è diverso dal carattere underscore e se lo stesso attributo $key non corrisponde a una chiave 
+             * è diverso dal carattere underscore e se lo stesso attributo $key non corrisponde a una chiave
              * primaria della tabella in questione ($this->_key) autoincrementale, allora entra nell'if.
              */
-            if (!($this->_auto_increment && $key == $this->_key) && substr($key, 0, 1) != '_') {
+            if (!($this->_auto_increment && $this->isKey($key)) && substr($key, 0, 1) != '_') {
                 if ($i == 0) {
                     $fields.='`' . $key . '`';
                     $values.='\'' . $value . '\'';
@@ -193,10 +193,21 @@ class Fdb {
      */
 
     public function load($key) {
-        $query = 'SELECT * ' .
-                'FROM `' . $this->_table . '` ' .
-                'WHERE `' . $this->_key . '` = \'' . $key . '\'';
         debug('-------->FUNZIONE LOAD, CLASSE FDB');
+        if(func_num_args()>1){
+          $query = 'SELECT * ' .
+                  'FROM `' . $this->_table . '` WHERE ' ;
+                  for($i = 0; $i < count(func_get_args()) ; $i++){
+                     $query.= '`'. $this->_key[$i] .'` = \'' . func_get_args()[$i] . '\'';
+                     if($i <count(func_get_args())-1 ){
+                       $query .= ' AND ';
+                     }
+                  }
+        }else{
+          $query = 'SELECT * ' .
+                  'FROM `' . $this->_table . '` ' .
+                  'WHERE `' . $this->_key . '` = \'' . $key . '\'';
+        }
         $this->query($query);
         return $this->getObject();
     }
@@ -210,8 +221,19 @@ class Fdb {
     public function delete(& $object) {
         $arrayObject = get_object_vars($object);
         $query = 'DELETE ' .
-                'FROM `' . $this->_table . '` ' .
-                'WHERE `' . $this->_key . '` = \'' . $arrayObject[$this->_key] . '\'';
+                'FROM `' . $this->_table . '` WHERE ';
+
+        if(is_array($this->_key)){
+          for($i = 0; $i < count($this->_key) ; $i++){
+             $query.= '`'. $this->_key[$i] .'` = \'' . $arrayObject[$this->_key[$i]] . '\'';
+             if($i <count($this->_key)-1 ){
+               $query .= ' AND ';
+             }
+          }
+        }else{
+          $query .= '`' . $this->_key . '` = \'' . $arrayObject[$this->_key] . '\'';
+        }
+
         unset($object);
         return $this->query($query);
     }
@@ -226,7 +248,7 @@ class Fdb {
         $i = 0;
         $fields = '';
         foreach ($object as $key => $value) {
-            if (!($key == $this->_key) && substr($key, 0, 1) != '_') {
+            if (!$this->isKey($key) && substr($key, 0, 1) != '_') {
                 if ($i == 0) {
                     $fields.='`' . $key . '` = \'' . $value . '\'';
                 } else {
@@ -236,8 +258,30 @@ class Fdb {
             }
         }
         $arrayObject = get_object_vars($object);
-        $query = 'UPDATE `' . $this->_table . '` SET ' . $fields . ' WHERE `' . $this->_key . '` = \'' . $arrayObject[$this->_key] . '\'';
+        $query = 'UPDATE `' . $this->_table . '` SET ' . $fields . ' WHERE ';
+
+        if(is_array($this->_key)){
+          for($i = 0; $i < count($this->_key) ; $i++){
+             $query.= '`'. $this->_key[$i] .'` = \'' . $arrayObject[$this->_key[$i]] . '\'';
+             if($i <count($this->_key)-1 ){
+               $query .= ' AND ';
+             }
+          }
+        }else{
+          $query .= '`' . $this->_key . '` = \'' . $arrayObject[$this->_key] . '\'';
+        }
+
+
         return $this->query($query);
+    }
+
+
+    public function isKey($key){
+      if(is_array($this->_key)){
+        return in_array($key, $this->_key);
+      }else{
+        return $key == $this->_key;
+      }
     }
 
     /*

@@ -44,7 +44,7 @@
                         </ul>
                     </li>
                     <li><a href="index.php?controller=prodotto&task=lista.bevande">Bevande</a></li>
-                    <li><a href="#">Carrello</a></li>
+                    <li><a href="index.php?controller=carrello&task=default">Carrello</a></li>
                     <li><a href="#">Contatti</a></li>
                 </ul>
             </div>

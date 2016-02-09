@@ -13,9 +13,7 @@ class VProdotto extends View {
         return $contenuto;
     }
 
-    public function impostaDati($chiave, $valore) {
-        $this->assign($chiave, $valore);
-    }
+  
 
     /**
      * Ritorna il numero della pagina, passato tramite GET o POST. Usato per la visualizzazione dei prodotti
@@ -30,4 +28,3 @@ class VProdotto extends View {
 
 }
 ?>
-

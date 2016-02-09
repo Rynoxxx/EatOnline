@@ -1,19 +1,19 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-08 18:33:16
-         compiled from "template\home_default.tpl" */ ?>
+<?php /* Smarty version 3.1.27, created on 2016-02-10 00:32:09
+         compiled from "template/home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:131056b8d15c9c0589_93985789%%*/
+/*%%SmartyHeaderCode:160468017956ba76f9a0d3c4_15845980%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'f7a1190245c6217f33b57eddd6c8457473daca91' => 
+    '5891140332f350f3e88cd791c4b76908ea912031' => 
     array (
-      0 => 'template\\home_default.tpl',
-      1 => 1454952793,
+      0 => 'template/home_default.tpl',
+      1 => 1455060726,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '131056b8d15c9c0589_93985789',
+  'nocache_hash' => '160468017956ba76f9a0d3c4_15845980',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56b8d15ca68df9_47677784',
+  'unifunc' => 'content_56ba76f9a2fb40_04472323',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56b8d15ca68df9_47677784')) {
-function content_56b8d15ca68df9_47677784 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56ba76f9a2fb40_04472323')) {
+function content_56ba76f9a2fb40_04472323 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '131056b8d15c9c0589_93985789';
+$_smarty_tpl->properties['nocache_hash'] = '160468017956ba76f9a0d3c4_15845980';
 ?>
 <!DOCTYPE html>
 <html>
@@ -82,7 +82,7 @@ $_smarty_tpl->properties['nocache_hash'] = '131056b8d15c9c0589_93985789';
                         </ul>
                     </li>
                     <li><a href="index.php?controller=prodotto&task=lista.bevande">Bevande</a></li>
-                    <li><a href="#">Carrello</a></li>
+                    <li><a href="index.php?controller=carrello&task=default">Carrello</a></li>
                     <li><a href="#">Contatti</a></li>
                 </ul>
             </div>
@@ -186,6 +186,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['j']['last']       = ($_smart
         <!-- END WRAPPER -->
     </body>
 
-</html><?php }
+</html>
+<?php }
 }
 ?>

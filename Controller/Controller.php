@@ -1,23 +1,23 @@
 <?php
 
-/* 
+/*
  * Classe Controller
  * @package Controller
  * @access public
  */
 
 class Controller {
-    
+
     protected $logged = false;
 
     public function setLogged($logged){
         $this->logged = $logged;
     }
-    
+
     public function isLogged(){
         return $this->logged;
     }
-    
+
     /*
      * Restituisce il CONTROLLER passato tramite richiesta
      * GET o POST
@@ -28,7 +28,7 @@ class Controller {
         else
             return false;
     }
-    
+
     /*
      * Restituisce il TASK passato tramite richiesta
      * GET o POST
@@ -39,7 +39,15 @@ class Controller {
         else
             return false;
     }
+
+    /**
+     * Tempo corrente in millisecondi
+     */
+    public function getCurrentTime(){
+        list($usec, $sec) = explode(" ", microtime());
+        $t = ((float)$usec + (float)$sec);
+        return intval($t);
+    }
 }
 
 ?>
-

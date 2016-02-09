@@ -156,3 +156,36 @@
     position: absolute;
     left: 130px;
 }
+
+/* CARRELLO */
+
+.carrello{}
+.carrello table{
+    width:100%;
+}
+.carrello table td{
+    border:1px solid #333;
+}
+.carrello table td.buttons a{
+   background: white;
+   display:inline-block;
+   font-size:20px;
+   width:35px;
+   height:35px;
+   text-align:center;
+   line-height:35px;
+   text-decoration:none;
+   box-shadow:0px 0px 5px #aaa;
+}
+.carrello table td.buttons a:hover{
+    cursor:pointer;
+    box-shadow:none;
+    background:#ddd;
+}
+.carrello table td.quantita {
+    font-size:30px;
+}
+.carrello .item{}
+.carrello .item img{
+    height: 50px;
+}
