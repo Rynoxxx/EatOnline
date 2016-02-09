@@ -1,6 +1,6 @@
 <html>
 
-    <h1 class="contact">Modulo di registrazione</h1>
+    <h1>Modulo di registrazione</h1>
     <div class="contactform">
         
         <form method="post" action="index.php">

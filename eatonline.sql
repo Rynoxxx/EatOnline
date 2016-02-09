@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Creato il: Feb 01, 2016 alle 23:36
+-- Creato il: Feb 09, 2016 alle 21:49
 -- Versione del server: 10.1.9-MariaDB
 -- Versione PHP: 5.6.15
 
@@ -65,13 +65,33 @@ CREATE TABLE `prodotto` (
 --
 
 INSERT INTO `prodotto` (`id`, `id_categoria`, `nome`, `ingredienti`, `prezzo`, `disponibile`, `immagine`) VALUES
-(1, 1, 'Spaghetti alla carbonara', 'Uova, guanciale, pepe nero, sale, olio extravergine d''oliva.', 8.5, 0, ''),
-(2, 1, 'Fettuccine alla pecorara', 'Guanciale, uova, pecorino, ricotta.', 7.5, 0, ''),
-(3, 1, 'Pappardelle al cinghiale', 'Prezzemolo, olio extravergine d''oliva, cinghiale, pomodorini pachino.', 8.5, 0, ''),
-(4, 2, 'Tagliata di pollo', 'Pollo, glassa di aceto balsamico, rucola.', 10, 0, ''),
-(5, 2, 'Cotoletta di vitello', 'Carne di vitello, uova, farina 00, sale, olio di semi di girasole.', 0, 0, ''),
-(6, 4, 'Margherita', 'Passata di pomodoro, mozzarella, basilico, sale, olio extravergine di oliva.', 0, 0, ''),
-(7, 4, 'Diavola', 'Passata di pomodoro, salame piccante, sale, olio extravergine di oliva.', 0, 0, '');
+(1, 1, 'Spaghetti alla carbonara', 'Uova, guanciale, pepe nero, sale, olio extravergine d''oliva.', 8.5, 0, 'primi/carbonara.jpg'),
+(2, 1, 'Fettuccine alla pecorara', 'Guanciale, uova, pecorino, ricotta.', 7.5, 0, 'primi/fettuccine_alla_pecorara.jpg'),
+(3, 1, 'Lasagne al ragù', 'Basilico, olio extravergine d''oliva, macinato di bocino, passata di pomodoro.', 8.5, 0, 'primi/lasagne_ragu.jpg'),
+(4, 2, 'Tagliata di pollo', 'Pollo, glassa di aceto balsamico, rucola.', 10, 0, 'secondi/tagliata_di_pollo.jpg'),
+(5, 2, 'Cotoletta di vitello', 'Carne di vitello, uova, farina 00, sale, olio di semi di girasole.', 10, 0, 'secondi/cotoletta_di_vitello.jpg'),
+(6, 4, 'Margherita', 'Passata di pomodoro, mozzarella, basilico, sale, olio extravergine di oliva.', 6, 0, 'pizze/margherita.jpg'),
+(7, 4, 'Diavola', 'Passata di pomodoro, salame piccante, sale, olio extravergine di oliva.', 7, 0, 'pizze/diavola.jpg'),
+(8, 1, 'Cannelloni ripieni', 'Uova, farina 00, pomodoro, carne di vitello,basilico', 10, 0, 'primi/cannelloni_ripieni.jpg'),
+(9, 1, 'Gnocchi alla sorrentina', 'Patate, farina 00, basilico, pomodoro, mozzarella, olio extravergine d''oliva', 7.5, 0, 'primi/gnocchi_sorrentina.jpg'),
+(10, 1, 'Gnocchi ai gamberetti con zafferano', 'Patete, farina 00, olio etravergine, zafferano, gamberetti', 8.5, 0, 'primi/gnocchi_zafferano_gamberetti.png'),
+(11, 1, 'Linguine allo scoglio', 'prezzemolo, Olio extravergine d''oliva, aglio, vongole, cozze, fasolari', 9, 0, 'primi/linguine_allo_scoglio.jpg'),
+(12, 1, 'Linguine al nero di seppia', 'Seppie(con la sacca del nero), aglio, olio extravergine, prezzemolo, pepe nero, vino bianco', 9, 0, 'primi/linguine_nero_seppia.jpg'),
+(13, 1, 'Spaghetti al pesto', 'Olio extravergine d''oliva, aglio, pesto di basilico, pinoli, sale', 7, 0, 'primi/spaghetti_pesto.jpg'),
+(14, 1, 'Tagliatelle al tartufo', 'Olio extravergine d''oliva, aglio, prezzemolo, tartufo nero, pepe nero', 8.5, 0, 'primi/tagliatelle_tartufo.jpg'),
+(15, 1, 'Pappardelle ai funghi', 'Olio extravergine d''oliva, aglio, prezzemolo, funghi porcini, funghi champignon', 8.5, 0, 'primi/pappardelle_funghi.jpg'),
+(16, 1, 'Riso freddo', 'Olio extravergine d''oliva, cipolla, sale, olive nere, bresaola, pomodorini pachino ', 6, 0, 'primi/riso_freddo_bresaola.jpg'),
+(17, 1, 'Penne all''arrabbiata', 'Olio extravergine d''oliva, sale, aglio, peperoncino piccante fresco, pomodorini pachino, prezzemolo', 7, 0, 'primi/penne_arrabbiata.jpg'),
+(18, 4, '4 Formaggi', 'Olio extravergine d''oliva, basilico, mozzarella, gorgonzola, provola, pecorino', 7.5, 0, 'pizze/4formaggi.jpg'),
+(19, 3, 'Insalata mista', 'Insalata verde, radicchio, pomodori, tonno, cipolla, olive, uova soda, olio extravergine d''oliva', 5, 0, 'contorni/insalata_mista.jpg'),
+(20, 3, 'Patate al forno', 'Patate, rosmarino, aglio, sale, olio extravergine d''oliva', 4, 0, 'contorni/patate_forno.jpg'),
+(21, 3, 'Olive ascolane', 'Olive nere, pepe nero, prezzemolo, macinato di bovino, aglio, olio di semi di girasole', 4, 0, 'contorni/olive_ascolane.jpg'),
+(22, 3, 'Patatine fritte', 'Patate, sale, olio di semi di girasole', 4, 0, 'contorni/patatine_fritte.jpg'),
+(23, 5, 'Coca Cola 1,5 lt', 'Acqua, zucchero, colorante (E 150D), aromi naturali, caffeina, acido fosforico (E 338)', 2, 0, 'bevande/cocacola.jpg'),
+(24, 5, 'Nastro Azzurro 66 cl', 'Acqua, orzo, luppolo, lievito', 3, 0, 'bevande/nastroazzurro.jpg'),
+(25, 5, 'Fanta 1,5 lt', 'Acqua, zucchero, succo d''arancia, anidride carbonica, acido citrico, aromi naturali', 2, 0, 'bevande/fanta.jpg'),
+(26, 5, 'Pasetti TESTAROSSA', 'Uva Montepulciano, bisolfiti', 20, 0, 'bevande/testarossa.jpg'),
+(27, 5, 'Ramì Di Majo Norante', 'Uva Falanghina, bisolfiti', 18, 0, 'bevande/rami.jpg');
 
 -- --------------------------------------------------------
 
@@ -134,7 +154,7 @@ ALTER TABLE `categoria`
 -- AUTO_INCREMENT per la tabella `prodotto`
 --
 ALTER TABLE `prodotto`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

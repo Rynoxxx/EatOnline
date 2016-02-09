@@ -130,3 +130,29 @@
     margin-right: 5px;
     text-shadow: 3px 2px 3px #333;
 }
+
+.contactform {
+    padding: 10px;
+    text-align: left;
+}
+
+.contactform fieldset {
+    padding: 10px;
+    margin-bottom: 10px;
+    position: relative;
+    border-color: #550000;
+}
+
+.contactform fieldset legend {
+    font-weight: bold;
+    text-align: center;
+}
+
+.contactform fieldset p {
+    margin-bottom: 10px;
+}
+
+.contactform input {
+    position: absolute;
+    left: 130px;
+}
