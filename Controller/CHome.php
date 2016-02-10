@@ -60,12 +60,6 @@ class CHome extends Controller {
             case 'registrazione':
                 $CRegistrazione = USingleton::getInstance('CRegistrazione');
                 return $CRegistrazione->smista();
-            case 'ricerca':
-                $CRicerca = USingleton::getInstance('CRicerca');
-                return $CRicerca->smista();
-            case 'ordine':
-                $COrdine = USingleton::getInstance('COrdine');
-                return $COrdine->smista();
             case 'prodotto':
                 $CProdotto = USingleton::getInstance('CProdotto');
                 return $CProdotto->smista();

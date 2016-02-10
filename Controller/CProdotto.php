@@ -1,8 +1,8 @@
 <?php
 
 class CProdotto extends Controller {
-    
-    private $_items_for_page=9;
+
+    private $_items_for_page = 9;
 
     /*
      * Questa funzione ha come argomento la categoria da visualizzare.
@@ -15,9 +15,9 @@ class CProdotto extends Controller {
         $FProdotto = USingleton::getInstance('FProdotto');
         $prodotti = $FProdotto->categoryItems($id_categoria);
         $VProdotto = USingleton::getInstance('VProdotto');
-        $limit = $VProdotto->getPage()*$this->_items_for_page.' , '.$this->_items_for_page;
-        $num_items = count($prodotti); 
-        $num_pages = ceil($num_items/$this->_items_for_page);
+        $limit = $VProdotto->getPage() * $this->_items_for_page . ' , ' . $this->_items_for_page;
+        $num_items = count($prodotti);
+        $num_pages = ceil($num_items / $this->_items_for_page);
         $displayed_items = $FProdotto->categoryItems($id_categoria, $limit);
         $VProdotto->impostaDati('num_pages', $num_pages);
         $VProdotto->impostaDati('prodotti', $displayed_items);
@@ -25,12 +25,12 @@ class CProdotto extends Controller {
         $VProdotto->set_layout('list');
         return $VProdotto->processaTemplate();
     }
-    
+
     public function randomItems() {
         $FProdotto = USingleton::getInstance('FProdotto');
         $items = $FProdotto->allItems();
         $rand_id = array_rand($items, $this->_items_for_page);
-        for ($i=0; $i<$this->_items_for_page; $i++) {
+        for ($i = 0; $i < $this->_items_for_page; $i++) {
             $displayed_items[$i] = $items[$rand_id[$i]];
         }
         $VProdotto = USingleton::getInstance('VProdotto');

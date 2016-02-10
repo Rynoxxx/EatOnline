@@ -2,9 +2,9 @@
 
 class EOrdineProdotto {
 
-    public $id_ordine; //ID dell'ordine di appartenenza
     public $id_prodotto;
-    public $quantita; //Oggetto della classe EProdotto
+    public $id_ordine; //ID dell'ordine di appartenenza
+    public $quantita; 
 
     function getIdProdotto(){
       return $this->id_prodotto;

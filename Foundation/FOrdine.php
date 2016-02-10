@@ -11,21 +11,22 @@ class FOrdine extends Fdb {
     }
 
     /**
-     * Ritorna un Ordine in base all Id Utente. Ritorna solo il primo Ordine Non Confermato
+     * Ritorna un Ordine in base all'id Utente (in questo caso il numero di telefono dell'utente).
+     * Ritorna solo il primo Ordine NON Confermato ($ordini[0])
      * @param type $id_utente
      * @return type
      */
     public function ultimoOrdine($id_utente) {
         $query = 'SELECT * FROM ' . $this->_table . ' WHERE id_utente = \'' . $id_utente . '\' AND confermato=\'0\' ';
         $this->query($query);
-        $prodotti = $this->getObjectArray();
-        return $prodotti[0];
+        $ordini = $this->getObjectArray();
+        return $ordini[0];
     }
 
     /**
      * Aggiunge un prodotto ad un ordine
-     * @param [type] $id_ordine   [description]
-     * @param [type] $id_prodotto [description]
+     * @param type $id_ordine
+     * @param type $id_prodotto
      */
     public function addProdotto($id_ordine,$id_prodotto){
       $FOrdineProdotto = USingleton::getInstance('FOrdineProdotto');
@@ -44,9 +45,8 @@ class FOrdine extends Fdb {
 
     /**
      * Rimuove un prodotto da un ordine
-     * @param  [type] $id_ordine   [description]
-     * @param  [type] $id_prodotto [description]
-     * @return [type]              [description]
+     * @param type $id_ordine
+     * @param type $id_prodotto
      */
     public function removeProdotto($id_ordine,$id_prodotto){
       $FOrdineProdotto = USingleton::getInstance('FOrdineProdotto');
@@ -62,9 +62,9 @@ class FOrdine extends Fdb {
     }
 
     /**
-     * Lista prodotti di un ordine
-     * @param  [type] $id_ordine [description]
-     * @return [type]            [description]
+     * Ritorna la lista dei prodotti appartenenti a un determinato ordine.
+     * @param type $id_ordine
+     * @return type
      */
     public function getOrdineProdotti($id_ordine){
       $FOrdineProdotto = USingleton::getInstance('FOrdineProdotto');

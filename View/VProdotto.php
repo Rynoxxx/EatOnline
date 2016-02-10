@@ -16,7 +16,7 @@ class VProdotto extends View {
   
 
     /**
-     * Ritorna il numero della pagina, passato tramite GET o POST. Usato per la visualizzazione dei prodotti
+     * Ritorna il numero della pagina, passato tramite GET o POST. Usato per l'impaginazione dei prodotti
      * @return int
      */
     public function getPage() {

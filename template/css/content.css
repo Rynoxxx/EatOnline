@@ -160,6 +160,7 @@
 /* CARRELLO */
 
 .carrello{}
+
 .carrello table{
     width:100%;
 }
@@ -184,8 +185,10 @@
 }
 .carrello table td.quantita {
     font-size:30px;
+    font-weight: bold;
 }
 .carrello .item{}
+
 .carrello .item img{
     height: 50px;
 }

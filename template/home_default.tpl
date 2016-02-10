@@ -5,6 +5,9 @@
         <link rel="stylesheet" type="text/css" href="template/css/grid.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/content.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/menu.css"/>
+        <script src="js/lib/jquery-2.2.0.min.js"></script>
+        <script src="js/carrello.js"></script>
+
         <title>{$title}</title>
     </head>
 

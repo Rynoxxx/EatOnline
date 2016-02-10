@@ -5,8 +5,8 @@ class EOrdine {
     public $id;
     public $data;
     public $confermato;
-    public $pagato;
-    public $id_utente; //Oggetto EUtente
+    public $pagato; //Non viene usato
+    public $id_utente; //Numero di telefono dell'utente che ha fatto l'ordine
     public $id_carta; //Oggetto ECartaCredito
     public $_ordine_item = array(); //Array di oggetti EOrdineItem
 
