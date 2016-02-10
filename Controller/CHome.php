@@ -12,14 +12,15 @@ class CHome extends Controller {
      */
 
     public function impostaPagina() {
+
         $CRegistrazione = USingleton::getInstance('CRegistrazione');
         $registrato = $CRegistrazione->checkLogin();
 
         if ($registrato) {
-            echo 'SEI LOGGATO!';
+            debug('SEI LOGGATO!');
             $this->setLogged(true);
         } else
-            echo 'NON SEI LOGGATO!';
+            debug('NON SEI LOGGATO!');
 
         // Recupera dalla sessione il controller e il task precedenti
         $sessione = USingleton::getInstance('USession');
@@ -33,16 +34,21 @@ class CHome extends Controller {
         }
 
         // Imposta il contenuto della pagina
-        $VHome = USingleton::getInstance('VHome');
         $contenuto = $this->smista();
-        $VHome->impostaContenuto($contenuto);
 
         // Imposta il breadcrumb in modo da far vedere 'controller' e 'task' coinvolti nella richiesta HTTP
         $controller = $this->getController();
-        $task = $this->getTask();
-        $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . '******************** Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
-        $VHome->impostaPaginaOspite();
-        $VHome->mostraPagina();
+
+        //Se non è AJAX risponde la pagina web secondo il flusso normale, altrimenti non risponde niente (pagina bianca)
+        if(!$this->isAjax()){
+          $VHome = USingleton::getInstance('VHome');
+          $VHome->impostaContenuto($contenuto);
+          $task = $this->getTask();
+          $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . '******************** Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
+
+          $VHome->impostaPaginaOspite();
+          $VHome->mostraPagina();
+        }
 
         // Salva nella sessione l'attuale controller e il relativo task
         $controller = $this->getController();

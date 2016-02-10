@@ -48,6 +48,23 @@ class Controller {
         $t = ((float)$usec + (float)$sec);
         return intval($t);
     }
+
+    /**
+     * Controlla se è una chiamata fatta con Ajax
+     * @return boolean [description]
+     */
+    public function isAjax(){
+        return isset($_REQUEST['ajax']);
+    }
+
+    /**
+     * Scrive un oggetto PHP in formato JSON
+     * @param  [type] $obj [description]
+     * @return [type]      [description]
+     */
+    public function respondeAjaxObject($obj){
+        echo json_encode($obj);
+    }
 }
 
 ?>

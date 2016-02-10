@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-10 00:32:09
+<?php /* Smarty version 3.1.27, created on 2016-02-11 00:40:33
          compiled from "template/home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:160468017956ba76f9a0d3c4_15845980%%*/
+/*%%SmartyHeaderCode:120652849356bbca71048144_29699468%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5891140332f350f3e88cd791c4b76908ea912031' => 
     array (
       0 => 'template/home_default.tpl',
-      1 => 1455060726,
+      1 => 1455147540,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '160468017956ba76f9a0d3c4_15845980',
+  'nocache_hash' => '120652849356bbca71048144_29699468',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56ba76f9a2fb40_04472323',
+  'unifunc' => 'content_56bbca7106e374_59407592',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56ba76f9a2fb40_04472323')) {
-function content_56ba76f9a2fb40_04472323 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bbca7106e374_59407592')) {
+function content_56bbca7106e374_59407592 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '160468017956ba76f9a0d3c4_15845980';
+$_smarty_tpl->properties['nocache_hash'] = '120652849356bbca71048144_29699468';
 ?>
 <!DOCTYPE html>
 <html>
@@ -41,6 +41,13 @@ $_smarty_tpl->properties['nocache_hash'] = '160468017956ba76f9a0d3c4_15845980';
         <link rel="stylesheet" type="text/css" href="template/css/grid.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/content.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/menu.css"/>
+        <?php echo '<script'; ?>
+ src="js/lib/jquery-2.2.0.min.js"><?php echo '</script'; ?>
+>
+        <?php echo '<script'; ?>
+ src="js/main.js"><?php echo '</script'; ?>
+>
+
         <title><?php echo $_smarty_tpl->tpl_vars['title']->value;?>
 </title>
     </head>
