@@ -1,5 +1,17 @@
 $(document).ready(function() {
 
+  animationGrow = function(element,time) {
+    time = time? time: 300;
+    element.addClass("animated");
+    element.addClass("grow");
+    setTimeout(function(){
+      element.removeClass("grow");
+      setTimeout(function(){
+        element.removeClass("animated");
+      },time)
+    },time);
+  };
+
   ajax = function(controller, task, callback) {
     var customUrl = "index.php?controller=" + controller + "&task=" + task + "&ajax";
     $.ajax({
@@ -10,7 +22,7 @@ $(document).ready(function() {
         callback();
       }
     });
-  }
+  };
 
   //Aggiunge un prodotto chiamando in AJAX il controller Carrello con il task AGGIUNGI
   addProdotto = function(id) {
@@ -19,6 +31,7 @@ $(document).ready(function() {
       var quantita = quantita_element.text();
       quantita++;
       quantita_element.text(quantita);
+      animationGrow(quantita_element);
     });
   };
 
@@ -30,6 +43,7 @@ $(document).ready(function() {
       quantita--;
       if (quantita > 0) {
         quantita_element.text(quantita);
+        animationGrow(quantita_element);
       } else {
         $("#prodotto-" + id).hide();
       }

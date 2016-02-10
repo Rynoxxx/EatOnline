@@ -6,7 +6,7 @@
   <td class="prezzo"><b>Prezzo:</b> {$prodotto->getPrezzo()} &euro;</td>
   <td class="quantita">{$prodotto->_quantita}</td>
   <td class="buttons">
-    <a  onclick="addProdotto({$prodotto->getId()})" class="inc-button">+</a>
-    <a  onclick="removeProdotto({$prodotto->getId()})" class="inc-button">-</a>
+    <button  onclick="addProdotto({$prodotto->getId()})" class="inc-button">+</button>
+    <button  onclick="removeProdotto({$prodotto->getId()})" class="inc-button">-</button>
   </td>
 </tr>
