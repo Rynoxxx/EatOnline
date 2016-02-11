@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-10 01:04:58
+<?php /* Smarty version 3.1.27, created on 2016-02-11 01:14:30
          compiled from "template\carrello_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1507856ba7eaa96bad1_55213271%%*/
+/*%%SmartyHeaderCode:2364756bbd26634d5c5_38894788%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ae65a8f35263df8b16349a50066555153d8b2892' => 
     array (
       0 => 'template\\carrello_default.tpl',
-      1 => 1455061963,
+      1 => 1455149455,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1507856ba7eaa96bad1_55213271',
+  'nocache_hash' => '2364756bbd26634d5c5_38894788',
   'variables' => 
   array (
     'prodotti' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56ba7eaaa122b1_97646321',
+  'unifunc' => 'content_56bbd2664ffcd5_23505771',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56ba7eaaa122b1_97646321')) {
-function content_56ba7eaaa122b1_97646321 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bbd2664ffcd5_23505771')) {
+function content_56bbd2664ffcd5_23505771 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1507856ba7eaa96bad1_55213271';
+$_smarty_tpl->properties['nocache_hash'] = '2364756bbd26634d5c5_38894788';
 ?>
 <div class="carrello">
   <h1>CARRELLO</h1>

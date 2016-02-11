@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-10 23:44:31
+<?php /* Smarty version 3.1.27, created on 2016-02-11 20:58:38
          compiled from "template\carrello_prodotto.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:2050756bbbd4f4bbe19_03695552%%*/
+/*%%SmartyHeaderCode:437456bce7ee783bb1_52671421%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,40 +9,45 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6b2ce2c3b730f6aa5b0f7180f025c87157396bb2' => 
     array (
       0 => 'template\\carrello_prodotto.tpl',
-      1 => 1455129490,
+      1 => 1455220687,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2050756bbbd4f4bbe19_03695552',
+  'nocache_hash' => '437456bce7ee783bb1_52671421',
   'variables' => 
   array (
     'prodotto' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56bbbd4f55ea54_79852308',
+  'unifunc' => 'content_56bce7ee80fb95_85263226',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56bbbd4f55ea54_79852308')) {
-function content_56bbbd4f55ea54_79852308 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bce7ee80fb95_85263226')) {
+function content_56bce7ee80fb95_85263226 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '2050756bbbd4f4bbe19_03695552';
+$_smarty_tpl->properties['nocache_hash'] = '437456bce7ee783bb1_52671421';
 ?>
-<tr class="prodotto item">
-    <td class="nome"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getNome();?>
+<tr id="prodotto-<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getId();?>
+" class="prodotto item">
+  <td class="nome"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getNome();?>
 </td>
-    <td class="image">
-        <img id="foto" src="template/img/prodotti/<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getImmagine();?>
-"/>
-    </td>
-    <td class="prezzo"><b>Prezzo:</b> <?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getPrezzo();?>
+  <td class="image">
+    <img id="foto" src="template/img/prodotti/<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getImmagine();?>
+" />
+  </td>
+  <td class="prezzo">Prezzo: <?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getPrezzo();?>
  &euro;</td>
-    <td class="quantita"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value->_quantita;?>
+  <td class="subTotale">Sub Totale: <?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getPrezzo()*$_smarty_tpl->tpl_vars['prodotto']->value->_quantita;?>
+ &euro;</td>
+  <td class="quantita"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value->_quantita;?>
 </td>
-    <td class="buttons"><a  href="index.php?controller=carrello&task=aggiungi.<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getId();?>
-" class="inc-button">+</a>
-    <a  href="index.php?controller=carrello&task=elimina.<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getId();?>
-" class="inc-button">-</a></td>
+  <td class="buttons">
+    <button  onclick="addProdotto(<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getId();?>
+)" class="inc-button">+</button>
+    <button  onclick="removeProdotto(<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getId();?>
+)" class="inc-button">-</button>
+  </td>
 </tr>
 <?php }
 }

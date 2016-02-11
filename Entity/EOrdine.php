@@ -50,8 +50,8 @@ class EOrdine {
         $this->pagato = $pagato;
     }
 
-    function setUtente($utente) {
-        $this->utente = $utente;
+    function setId_utente($id_utente) {
+        $this->id_utente = $id_utente;
     }
 
     function setCarta_credito($carta_credito) {
