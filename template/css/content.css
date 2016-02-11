@@ -204,6 +204,6 @@
     height: 50px;
 }
 
-.carrello .subTotale, .prezzo {
+.carrello .subTotale, .prezzo, .nome {
     font-weight: bold;
 }
