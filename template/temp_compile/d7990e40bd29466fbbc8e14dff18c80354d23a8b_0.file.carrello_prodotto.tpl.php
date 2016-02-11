@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-11 00:50:50
+<?php /* Smarty version 3.1.27, created on 2016-02-11 22:11:10
          compiled from "template/carrello_prodotto.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:163912797156bbccdacf3678_02811707%%*/
+/*%%SmartyHeaderCode:160274446556bcf8ee1f8878_51097729%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd7990e40bd29466fbbc8e14dff18c80354d23a8b' => 
     array (
       0 => 'template/carrello_prodotto.tpl',
-      1 => 1455148246,
+      1 => 1455225033,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '163912797156bbccdacf3678_02811707',
+  'nocache_hash' => '160274446556bcf8ee1f8878_51097729',
   'variables' => 
   array (
     'prodotto' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56bbccdad04376_12097081',
+  'unifunc' => 'content_56bcf8ee216ae4_78926214',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56bbccdad04376_12097081')) {
-function content_56bbccdad04376_12097081 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bcf8ee216ae4_78926214')) {
+function content_56bcf8ee216ae4_78926214 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '163912797156bbccdacf3678_02811707';
+$_smarty_tpl->properties['nocache_hash'] = '160274446556bcf8ee1f8878_51097729';
 ?>
 <tr id="prodotto-<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getId();?>
 " class="prodotto item">
@@ -36,7 +36,9 @@ $_smarty_tpl->properties['nocache_hash'] = '163912797156bbccdacf3678_02811707';
     <img id="foto" src="template/img/prodotti/<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getImmagine();?>
 " />
   </td>
-  <td class="prezzo"><b>Prezzo:</b> <?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getPrezzo();?>
+  <td class="prezzo">Prezzo: <?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getPrezzo();?>
+ &euro;</td>
+  <td class="subTotale">Sub Totale: <?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getPrezzo()*$_smarty_tpl->tpl_vars['prodotto']->value->_quantita;?>
  &euro;</td>
   <td class="quantita"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value->_quantita;?>
 </td>

@@ -1,209 +1,207 @@
 /* Consente un cambiamento graduale dello stato degli elementi */
+
 .animated {
-    -webkit-transition: all 200ms ease-in-out;
-    -moz-transition: all 200ms ease-in-out;
-    -o-transition: all 200ms ease-in-out;
-    transition: all 200ms ease-in-out;
+  -webkit-transition: all 200ms ease-in-out;
+  -moz-transition: all 200ms ease-in-out;
+  -o-transition: all 200ms ease-in-out;
+  transition: all 200ms ease-in-out;
 }
-
-.grow{
-  transform:scale(1.2);
-  -webkit-transform:scale(1.2);
+.grow {
+  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
 }
-
-
 .loginform {
-    background: white;
-    border-radius: 5px;
-    padding: 5px;
-    margin: 6px;
-    box-shadow: 0px 5px 10px 0px;
+  background: white;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 6px;
+  box-shadow: 0px 5px 10px 0px;
 }
-
 .loginform fieldset {
-    border: none;
+  border: none;
 }
-
 .header #logo {
-    position: absolute;
-    top: 10px;
-    left: 10px;
-    width: 70px;
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 70px;
 }
-
 .header #title {
-    position: absolute;
-    top: 10px;
-    left: 130px;
-    font-size: 40px;
-    color: #801515;
-    text-shadow: 4px 3px 3px #333;
+  position: absolute;
+  top: 10px;
+  left: 130px;
+  font-size: 40px;
+  color: #801515;
+  text-shadow: 4px 3px 3px #333;
 }
-
 .header #searchform {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-    width: 180px;
-    height: 30px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 180px;
+  height: 30px;
 }
-
 .header #searchform input {
-    border: 1px solid #550000;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
-    padding: 5px;
-    color: #801515;
-    box-shadow: 0px 0px 4px #801515;
+  border: 1px solid #550000;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  color: #801515;
+  box-shadow: 0px 0px 4px #801515;
 }
-
 .header #breadcrumb {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    color: #801515;
-    font-size: 15px;
-    font-weight: bold;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #801515;
+  font-size: 15px;
+  font-weight: bold;
 }
-
 .content .item {
-    position: relative;
-    border-style: solid;
-    border-radius: 5px;
-    border-width: 1px;
-    border-color: #550000;
-    background-color: transparent;
-    height: 210px;
-    width: 188px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    margin-right: 8px;
-    margin-left: 8px;
-    display: inline-block;
-    vertical-align: top;
-    color: #550000;
-    box-shadow: 0px 8px 16px 0px #801515;
+  position: relative;
+  border-style: solid;
+  border-radius: 5px;
+  border-width: 1px;
+  border-color: #550000;
+  background-color: transparent;
+  height: 210px;
+  width: 188px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  margin-right: 8px;
+  margin-left: 8px;
+  display: inline-block;
+  vertical-align: top;
+  color: #550000;
+  box-shadow: 0px 8px 16px 0px #801515;
 }
-
 .content .item p.nome {
-    margin-top: 10px;
-    font-size: 15px;
-    font-weight: bold;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: bold;
 }
-
 .content .item p.ingredienti {
-    text-align: justify;
-    margin-left: 10px;
-    margin-right: 10px;
+  text-align: justify;
+  margin-left: 10px;
+  margin-right: 10px;
 }
-
 .content .item p.prezzo {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
 }
-
 .content .item .foto {
-    margin-top: 8px;
-    margin-bottom: 8px;
-    width: 90px;
-    height: 65px;
-    box-shadow: 3px 3px 3px #333;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  width: 90px;
+  height: 65px;
+  box-shadow: 3px 3px 3px #333;
 }
-
 .content .item img.carrello {
-    width: 35px;
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
+  width: 35px;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
 }
-
 .content .item img.carrello:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
-
 .content .interline_space {
-    height: 10px;
+  height: 10px;
 }
-
 .navig_pages {
-    padding: 10px;
-    margin-top: 20px;
+  padding: 10px;
+  margin-top: 20px;
 }
-
-.navig_pages a{
-    text-decoration: none;
-    color: #550000;
-    font-weight: bold;
-    font-size: 20px;
-    margin-right: 5px;
-    text-shadow: 3px 2px 3px #333;
+.navig_pages a {
+  text-decoration: none;
+  color: #550000;
+  font-weight: bold;
+  font-size: 20px;
+  margin-right: 5px;
+  text-shadow: 3px 2px 3px #333;
 }
-
 .contactform {
-    padding: 10px;
-    text-align: left;
+  padding: 10px;
+  text-align: left;
 }
-
 .contactform fieldset {
-    padding: 10px;
-    margin-bottom: 10px;
-    position: relative;
-    border-color: #550000;
+  padding: 10px;
+  margin-bottom: 10px;
+  position: relative;
+  border-color: #550000;
 }
-
 .contactform fieldset legend {
-    font-weight: bold;
-    text-align: center;
+  font-weight: bold;
+  text-align: center;
 }
-
 .contactform fieldset p {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
-
 .contactform input {
-    position: absolute;
-    left: 130px;
+  position: absolute;
+  left: 130px;
 }
 
 /* CARRELLO */
 
-.carrello{}
-
-.carrello table{
-    width:100%;
+.carrello {}
+.carrello table {
+  width: 100%;
 }
-.carrello table td{
-    border:1px solid #333;
+.carrello table td {
+  border: 1px solid #333;
 }
-.carrello table td.buttons button{
-   background: white;
-   display:inline-block;
-   font-size:20px;
-   width:35px;
-   height:35px;
-   text-align:center;
-   line-height:35px;
-   text-decoration:none;
-   box-shadow:0px 0px 5px #aaa;
-   border:none;
+.carrello table td.buttons button {
+  background: white;
+  display: inline-block;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  line-height: 35px;
+  text-decoration: none;
+  box-shadow: 0px 0px 5px #aaa;
+  border: none;
 }
-.carrello table td.buttons button:hover{
-    cursor:pointer;
-    box-shadow:none;
-    background:#ddd;
+.carrello table td.buttons button:hover {
+  cursor: pointer;
+  box-shadow: none;
+  background: #ddd;
 }
 .carrello table td.quantita {
-    font-size:30px;
-    font-weight: bold;
+  font-size: 30px;
+  font-weight: bold;
 }
-.carrello .item{}
-
-.carrello .item img{
-    height: 50px;
+.carrello .item {}
+.carrello .item img {
+  height: 50px;
 }
-
 .carrello .subTotale, .prezzo, .nome {
-    font-weight: bold;
+  font-weight: bold;
+}
+.popup {
+  opacity: 0.8;
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    background: white;
+    z-index: 1000;
+    top: 100px;
+    left: 100px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px #333;
+    background: #FFAAAA;
+    border: 1px solid #880000;
+}
+.popup .title {
+    color: black;
+    background: #880000;
+    color: white;
+    padding: 10px;
+}
+.popup .content {
+    color: black;
+    padding: 10px;
 }

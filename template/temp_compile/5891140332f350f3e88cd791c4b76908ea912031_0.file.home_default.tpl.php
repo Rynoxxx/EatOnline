@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-11 00:40:33
+<?php /* Smarty version 3.1.27, created on 2016-02-11 22:19:23
          compiled from "template/home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:120652849356bbca71048144_29699468%%*/
+/*%%SmartyHeaderCode:47421435256bcfadb527f06_25516026%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5891140332f350f3e88cd791c4b76908ea912031' => 
     array (
       0 => 'template/home_default.tpl',
-      1 => 1455147540,
+      1 => 1455225467,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '120652849356bbca71048144_29699468',
+  'nocache_hash' => '47421435256bcfadb527f06_25516026',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56bbca7106e374_59407592',
+  'unifunc' => 'content_56bcfadb5525d7_46318239',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56bbca7106e374_59407592')) {
-function content_56bbca7106e374_59407592 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bcfadb5525d7_46318239')) {
+function content_56bcfadb5525d7_46318239 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '120652849356bbca71048144_29699468';
+$_smarty_tpl->properties['nocache_hash'] = '47421435256bcfadb527f06_25516026';
 ?>
 <!DOCTYPE html>
 <html>
@@ -55,7 +55,12 @@ $_smarty_tpl->properties['nocache_hash'] = '120652849356bbca71048144_29699468';
     <body>
         <!-- BEGIN WRAPPER -->
         <div class="wrapper">
-
+            <div id="popup" class="popup">
+              <h1 class="title">Title</h1>
+              <p class="content">
+                Contenuto
+              </p>
+            </div>
             <!-- BEGIN HEADER -->
             <div class="header">
                 <img id="logo" src="template/img/logo.gif"/>
