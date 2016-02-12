@@ -3,15 +3,18 @@
 class COrdine extends Controller {
 
     public function prodottiRimasti() {
+        $session = USingleton::getInstance('USession');
+        $numero_tel = $session->leggi_valore('numero_tel');
         $FOrdine = USingleton::getInstance('FOrdine');
-        $ordine = $FOrdine->ritornaOrdine();
+        $ordine = $FOrdine->ritornaOrdine($numero_tel);
         $id_ordine = $ordine->getId();
         $FOrdineProdotto = USingleton::getInstance('FOrdineProdotto');
         $prodottiOrdinati = $FOrdineProdotto->getProdottiByOrdine($id_ordine);
-        if(count($prodottiOrdinati)==0) {
-            return 0;
+        if($prodottiOrdinati==FALSE) {
+            $numero = 0;
         }
-        else return count($prodottiOrdinati);
+        else $numero = count($prodottiOrdinati);
+        $this->respondeAjaxObject(array('result' => $numero));
     }
 
     public function smista() {
