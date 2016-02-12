@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-11 20:58:38
+<?php /* Smarty version 3.1.27, created on 2016-02-11 22:46:45
          compiled from "template\carrello_prodotto.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:437456bce7ee783bb1_52671421%%*/
+/*%%SmartyHeaderCode:3268956bd0145386271_62531401%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,24 +9,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6b2ce2c3b730f6aa5b0f7180f025c87157396bb2' => 
     array (
       0 => 'template\\carrello_prodotto.tpl',
-      1 => 1455220687,
+      1 => 1455227061,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '437456bce7ee783bb1_52671421',
+  'nocache_hash' => '3268956bd0145386271_62531401',
   'variables' => 
   array (
     'prodotto' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56bce7ee80fb95_85263226',
+  'unifunc' => 'content_56bd01453a96d0_33913305',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56bce7ee80fb95_85263226')) {
-function content_56bce7ee80fb95_85263226 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bd01453a96d0_33913305')) {
+function content_56bd01453a96d0_33913305 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '437456bce7ee783bb1_52671421';
+$_smarty_tpl->properties['nocache_hash'] = '3268956bd0145386271_62531401';
 ?>
 <tr id="prodotto-<?php echo $_smarty_tpl->tpl_vars['prodotto']->value->getId();?>
 " class="prodotto item">

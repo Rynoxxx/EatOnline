@@ -12,14 +12,16 @@
     </head>
 
     <body>
+
+        <div id="popup" class="popup">
+            <h1 class="title">Title</h1>
+            <p class="content">
+                Contenuto
+            </p>
+        </div>
+        
         <!-- BEGIN WRAPPER -->
         <div class="wrapper">
-            <div id="popup" class="popup">
-              <h1 class="title">Title</h1>
-              <p class="content">
-                Contenuto
-              </p>
-            </div>
             <!-- BEGIN HEADER -->
             <div class="header">
                 <img id="logo" src="template/img/logo.gif"/>

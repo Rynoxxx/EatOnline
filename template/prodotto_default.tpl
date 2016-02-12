@@ -5,6 +5,5 @@
     </p>
     <p class="ingredienti"><b>Ingredienti:</b> {$prodotto->getIngredienti()|truncate:100:" [...]"}</p>
     <p class="prezzo"><b>Prezzo:</b> {$prodotto->getPrezzo()} &euro;</p>
-    <!--<a  href="index.php?controller=carrello&task=aggiungi.{$prodotto->getId()}"></a>-->
     <img onclick="addItem({$prodotto->getId()})" class="carrello" src="template/img/carrello.png"/>
 </div>

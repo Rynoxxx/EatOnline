@@ -72,6 +72,9 @@ class CHome extends Controller {
             case 'carrello':
                 $CCarrello = USingleton::getInstance('CCarrello');
                 return $CCarrello->smista();
+            case 'ordine':
+                $COrdine = USingleton::getInstance('COrdine');
+                return $COrdine->smista();
             default:
                 $CProdotto = USingleton::getInstance('CProdotto');
                 return $CProdotto->randomItems();
