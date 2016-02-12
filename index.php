@@ -1,21 +1,11 @@
-<!DOCTYPE html>
+<?php
+  require_once 'include/autoload.inc.php';
+  require_once 'include/config.inc.php';
 
-<html>
-    <head>
-        <meta charset="UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        require_once 'include/autoload.inc.php';
-        require_once 'include/config.inc.php';
+  if (isset($_REQUEST['ajax'])) {
+      $config['debug'] = false;
+  }
 
-        if (isset($_REQUEST['ajax'])) {
-            $config['debug'] = false;
-        }
-
-        $CHome = USingleton::getInstance('CHome');
-        $CHome->impostaPagina();
-        ?>
-    </body>
-</html>
+  $CHome = USingleton::getInstance('CHome');
+  $CHome->impostaPagina();
+?>

@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-11 22:19:23
+<?php /* Smarty version 3.1.27, created on 2016-02-12 02:10:25
          compiled from "template/home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:47421435256bcfadb527f06_25516026%%*/
+/*%%SmartyHeaderCode:138594838156bd31019fdaf6_42016845%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5891140332f350f3e88cd791c4b76908ea912031' => 
     array (
       0 => 'template/home_default.tpl',
-      1 => 1455225467,
+      1 => 1455236421,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '47421435256bcfadb527f06_25516026',
+  'nocache_hash' => '138594838156bd31019fdaf6_42016845',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56bcfadb5525d7_46318239',
+  'unifunc' => 'content_56bd3101a13e61_38267868',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56bcfadb5525d7_46318239')) {
-function content_56bcfadb5525d7_46318239 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bd3101a13e61_38267868')) {
+function content_56bd3101a13e61_38267868 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '47421435256bcfadb527f06_25516026';
+$_smarty_tpl->properties['nocache_hash'] = '138594838156bd31019fdaf6_42016845';
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,14 +53,16 @@ $_smarty_tpl->properties['nocache_hash'] = '47421435256bcfadb527f06_25516026';
     </head>
 
     <body>
+
+        <div id="popup" class="popup">
+            <h1 class="title">Title</h1>
+            <p class="content">
+                Contenuto
+            </p>
+        </div>
+        
         <!-- BEGIN WRAPPER -->
         <div class="wrapper">
-            <div id="popup" class="popup">
-              <h1 class="title">Title</h1>
-              <p class="content">
-                Contenuto
-              </p>
-            </div>
             <!-- BEGIN HEADER -->
             <div class="header">
                 <img id="logo" src="template/img/logo.gif"/>

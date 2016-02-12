@@ -12,6 +12,6 @@
 
     </table>
     {if ($prodotti|@count)!=0}
-        <input class="conferma" type="button" value="Conferma Ordine"> 
+        <input class="conferma" type="button" value="Conferma Ordine" onclick="elementiRimasti()"> 
     {/if}
 </div>

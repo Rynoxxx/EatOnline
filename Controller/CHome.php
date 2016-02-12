@@ -49,7 +49,7 @@ class CHome extends Controller {
           $VHome->impostaPaginaOspite();
           $VHome->mostraPagina();
         }
-
+        
         // Salva nella sessione l'attuale controller e il relativo task
         $controller = $this->getController();
         $task = $this->getTask();

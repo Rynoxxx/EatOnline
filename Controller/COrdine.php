@@ -14,7 +14,8 @@ class COrdine extends Controller {
             $numero = 0;
         }
         else $numero = count($prodottiOrdinati);
-        $this->respondeAjaxObject(array('result' => $numero));
+        $obj = array('result' => $numero,'id_ordine'=>$id_ordine, 'id_utente' => $numero_tel);
+        $this->respondeAjaxObject($obj);
     }
 
     public function smista() {
@@ -27,4 +28,3 @@ class COrdine extends Controller {
 
 }
 ?>
-

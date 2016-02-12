@@ -147,11 +147,12 @@
 /* CARRELLO */
 
 .carrello {
-    
+    color: black;
 }
 
 .carrello table {
     width: 100%;
+    color: black;
 }
 .carrello table td {
     border: 1px solid #333;

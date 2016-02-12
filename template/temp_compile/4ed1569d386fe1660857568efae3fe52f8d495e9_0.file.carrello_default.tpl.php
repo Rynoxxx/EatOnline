@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-10 00:49:44
+<?php /* Smarty version 3.1.27, created on 2016-02-12 02:11:40
          compiled from "template/carrello_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:181067965056ba7b18da0044_73726835%%*/
+/*%%SmartyHeaderCode:196477754656bd314cbb2836_30980662%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,30 +9,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4ed1569d386fe1660857568efae3fe52f8d495e9' => 
     array (
       0 => 'template/carrello_default.tpl',
-      1 => 1455061781,
+      1 => 1455239496,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '181067965056ba7b18da0044_73726835',
+  'nocache_hash' => '196477754656bd314cbb2836_30980662',
   'variables' => 
   array (
     'prodotti' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56ba7b18db01a7_05194758',
+  'unifunc' => 'content_56bd314cbc56d0_60227892',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56ba7b18db01a7_05194758')) {
-function content_56ba7b18db01a7_05194758 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56bd314cbc56d0_60227892')) {
+function content_56bd314cbc56d0_60227892 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '181067965056ba7b18da0044_73726835';
+$_smarty_tpl->properties['nocache_hash'] = '196477754656bd314cbb2836_30980662';
 ?>
 <div class="carrello">
-  <h1>CARRELLO</h1>
-  <table>
-    <?php if ((count($_smarty_tpl->tpl_vars['prodotti']->value)) != 0) {?>
-        <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['i'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['i']);
+    <h1>CARRELLO</h1>
+    <table>
+        <?php if ((count($_smarty_tpl->tpl_vars['prodotti']->value)) != 0) {?>
+            <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['i'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['i']);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['name'] = 'i';
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['prodotti']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['show'] = true;
@@ -56,16 +56,19 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['index_next'] = $_smarty
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == 1);
 $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['i']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['total']);
 ?>
-            <?php echo $_smarty_tpl->getSubTemplate ("carrello_prodotto.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('prodotto'=>$_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]), 0);
+                <?php echo $_smarty_tpl->getSubTemplate ("carrello_prodotto.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, $_smarty_tpl->cache_lifetime, array('prodotto'=>$_smarty_tpl->tpl_vars['prodotti']->value[$_smarty_tpl->getVariable('smarty')->value['section']['i']['index']]), 0);
 ?>
 
-        <?php endfor; endif; ?>
-    <?php }?>
-    <?php if ((count($_smarty_tpl->tpl_vars['prodotti']->value)) == 0) {?>
-        <h2>Il tuo carrello è vuoto!</h2>
-    <?php }?>
+            <?php endfor; endif; ?>
+        <?php }?>
+        <?php if ((count($_smarty_tpl->tpl_vars['prodotti']->value)) == 0) {?>
+            <h2>Il tuo carrello è vuoto!</h2>
+        <?php }?>
 
-  </table>
+    </table>
+    <?php if ((count($_smarty_tpl->tpl_vars['prodotti']->value)) != 0) {?>
+        <input class="conferma" type="button" value="Conferma Ordine" onclick="elementiRimasti()"> 
+    <?php }?>
 </div>
 <?php }
 }

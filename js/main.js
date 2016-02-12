@@ -32,7 +32,7 @@ $(document).ready(function () {
             context: document.body
         }).done(function (result) {
             if (callback) {
-                callback();
+                callback(result);
             }
         });
     };
@@ -90,10 +90,12 @@ $(document).ready(function () {
             showPopup($("#item-" + id), "Prodotto aggiunto!", "Il prodotto " + nome + " è stato aggiunto al carrello");
         });
     };
-    
+
     elementiRimasti = function(id) {
-        ajax1("ordine", "prodottiRimasti", function () {
-            
+        ajax1("ordine", "prodottiRimasti", function (result) {
+            console.log("Result",result);
+            var response = JSON.parse(result);
+            console.log("Response",response);
         });
     };
 
