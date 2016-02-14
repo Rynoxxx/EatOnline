@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="template/css/content.css"/>
         <link rel="stylesheet" type="text/css" href="template/css/menu.css"/>
         <script src="js/lib/jquery-2.2.0.min.js"></script>
+        <script src="js/lib/jquery.validate.js"></script>
         <script src="js/main.js"></script>
 
         <title>{$title}</title>
@@ -19,7 +20,7 @@
                 Contenuto
             </p>
         </div>
-        
+
         <!-- BEGIN WRAPPER -->
         <div class="wrapper">
             <!-- BEGIN HEADER -->
@@ -55,6 +56,10 @@
                     </li>
                     <li><a href="index.php?controller=prodotto&task=lista.bevande">Bevande</a></li>
                     <li><a href="index.php?controller=carrello&task=default">Carrello</a></li>
+                    {if !$logged}
+                        <li><a href="index.php?controller=registrazione&task=registra">Registrati</a></li>
+                        <li><a href="index.php?controller=prodotto&task=lista.bevande">Attivati</a></li>
+                    {/if}
                     <li><a href="#">Contatti</a></li>
                 </ul>
             </div>

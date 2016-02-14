@@ -1,4 +1,5 @@
 <div class="content">
+    <div class="content_title">{$content_title}</div>
     {if ($prodotti|@count)!=0}
         {section name=i loop=$prodotti}
             {include file="prodotto_default.tpl" prodotto=$prodotti[i] }

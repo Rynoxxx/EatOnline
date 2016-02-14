@@ -36,25 +36,27 @@ class CHome extends Controller {
         // Imposta il contenuto della pagina
         $contenuto = $this->smista();
 
-        // Imposta il breadcrumb in modo da far vedere 'controller' e 'task' coinvolti nella richiesta HTTP
-        $controller = $this->getController();
-
-        //Se non è AJAX risponde la pagina web secondo il flusso normale, altrimenti non risponde niente (pagina bianca)
-        if(!$this->isAjax()){
-          $VHome = USingleton::getInstance('VHome');
-          $VHome->impostaContenuto($contenuto);
-          $task = $this->getTask();
-          $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . '******************** Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
-
-          $VHome->impostaPaginaOspite();
-          $VHome->mostraPagina();
-        }
-        
-        // Salva nella sessione l'attuale controller e il relativo task
         $controller = $this->getController();
         $task = $this->getTask();
-        $sessione->imposta_valore('prevController', $controller);
-        $sessione->imposta_valore('prevTask', $task);
+
+        //Se non è AJAX risponde la pagina web secondo il flusso normale, altrimenti non risponde niente (pagina bianca)
+        if (!$this->isAjax()) {
+            $VHome = USingleton::getInstance('VHome');
+            $VHome->impostaContenuto($contenuto);
+            // Imposta il breadcrumb in modo da far vedere 'controller' e 'task' coinvolti nella richiesta HTTP
+            $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . '******************** Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
+            $VHome->impostaPaginaOspite();
+            $VHome->mostraPagina();
+        }
+
+        // Salva nella sessione l'attuale controller e il relativo task
+        if ($this->isAjax()) {
+            $sessione->imposta_valore('prevController', $previousController);
+            $sessione->imposta_valore('prevTask', $previousTask);
+        } else {
+            $sessione->imposta_valore('prevController', $controller);
+            $sessione->imposta_valore('prevTask', $task);
+        }
     }
 
     /*

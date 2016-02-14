@@ -59,8 +59,7 @@ class Controller {
 
     /**
      * Scrive un oggetto PHP in formato JSON
-     * @param  [type] $obj [description]
-     * @return [type]      [description]
+     * @param type $obj
      */
     public function respondeAjaxObject($obj){
         echo json_encode($obj);

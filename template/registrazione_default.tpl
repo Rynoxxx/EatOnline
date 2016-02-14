@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 
-    <div class="subcontent-box">
+    <div class="container_log">
 
         
 
@@ -21,12 +21,12 @@
                     <fieldset>
 
                         <p>
-                            <label for="numero_tel" class="top" >Numero di telefono:</label>
+                            <label for="numero_tel" class="loginform_label" >Numero di telefono:</label>
                             <input type="text" name="numero_tel" id="numero_tel" tabindex="1" class="field" value="3471173932"/>
                         </p>
 
                         <p>
-                            <label for="password" class="top">Password:</label>
+                            <label for="password" class="loginform_label">Password:</label>
                             <input type="password" name="password" id="password" tabindex="1" class="field"/>
                         </p>
 
@@ -38,6 +38,9 @@
                 </form>
             </div>
         {else} 
+            <div class="loginform">
+                <p>Ciao</p>
+                <p>Hai tot elementi nel carrello</p>
             <form method="get" action="index.php">
                 
                 <input type="hidden" name="controller" value="registrazione"/>
@@ -45,6 +48,7 @@
                 <button type="submit">Logout</button>
                     
             </form>
+            </div>
         {/if}
         
 

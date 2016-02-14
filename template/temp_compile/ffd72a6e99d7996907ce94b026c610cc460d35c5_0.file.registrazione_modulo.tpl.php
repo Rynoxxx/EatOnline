@@ -1,7 +1,35 @@
+<?php /* Smarty version 3.1.27, created on 2016-02-14 05:09:32
+         compiled from "template\registrazione_modulo.tpl" */ ?>
+<?php
+/*%%SmartyHeaderCode:2166756bffdfc753e50_73562141%%*/
+if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ffd72a6e99d7996907ce94b026c610cc460d35c5' => 
+    array (
+      0 => 'template\\registrazione_modulo.tpl',
+      1 => 1455422968,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2166756bffdfc753e50_73562141',
+  'has_nocache_code' => false,
+  'version' => '3.1.27',
+  'unifunc' => 'content_56bffdfc7a7655_91823493',
+),false);
+/*/%%SmartyHeaderCode%%*/
+if ($_valid && !is_callable('content_56bffdfc7a7655_91823493')) {
+function content_56bffdfc7a7655_91823493 ($_smarty_tpl) {
+
+$_smarty_tpl->properties['nocache_hash'] = '2166756bffdfc753e50_73562141';
+?>
 <html>
 
     <head>
-        <script src="js/validation_reg.js"></script>
+        <?php echo '<script'; ?>
+ src="js/validation_reg.js"><?php echo '</script'; ?>
+>
     </head>
 
     <div class="contactform">
@@ -62,4 +90,6 @@
 
     </div>
 
-</html>
+</html><?php }
+}
+?>

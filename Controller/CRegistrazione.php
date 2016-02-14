@@ -65,9 +65,10 @@ class CRegistrazione extends Controller {
                 $view = USingleton::getInstance('VRegistrazione');
                 $view->setErrore('PASSWORD ERRATA');
             }
+        } else {
+            $view = USingleton::getInstance('VRegistrazione');
+            $view->setErrore('UTENTE NON REGISTRATO');
         }
-        $view = USingleton::getInstance('VRegistrazione');
-        $view->setErrore('UTENTE NON REGISTRATO');
     }
 
     /*
@@ -204,6 +205,30 @@ class CRegistrazione extends Controller {
         }
     }
 
+    /**
+     * Utilizzata da ajax per capire se c'è un utente loggato
+     */
+    public function checkLog() {
+        $sessione = USingleton::getInstance('USession');
+        $numero = $sessione->leggi_valore('numero_tel');
+        if ($numero) {
+            return $this->respondeAjaxObject($numero);
+        } else {
+            return $this->respondeAjaxObject(false);
+        }
+    }
+    
+    public function checkRegistered() {
+        $numero = $_POST['numero_tel'];
+        $res = $this->checkUtente($numero);
+        //$this->respondeAjaxObject($num);
+        if ($res == FALSE) {
+            echo 'true';
+        } else {
+            echo 'false';
+        }
+    }
+
     /*
      * A seconda del task, questo metodo smista le richieste ai vari metodi della classe.
      */
@@ -212,13 +237,14 @@ class CRegistrazione extends Controller {
         switch ($this->getTask()) {
             case 'registra':
                 return $this->moduloRegistrazione();
-                break;
             case 'attivazione':
                 return $this->checkAttivazione();
-                break;
             case 'salva':
                 return $this->creaUtente();
-                break;
+            case 'isLogged':
+                return $this->checkLog();
+            case 'isRegistered':
+                return $this->checkRegistered();
         }
     }
 

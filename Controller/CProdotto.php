@@ -20,6 +20,9 @@ class CProdotto extends Controller {
         $num_pages = ceil($num_items / $this->_items_for_page);
         $displayed_items = $FProdotto->categoryItems($id_categoria, $limit);
         $VProdotto->impostaDati('num_pages', $num_pages);
+        $categ_rpl = str_replace("_", " ", $categoria);
+        $categ_rpl_up = ucfirst($categ_rpl);
+        $VProdotto->impostaDati('content_title', $categ_rpl_up);
         $VProdotto->impostaDati('prodotti', $displayed_items);
         $VProdotto->impostaDati('task', $this->getTask());
         $VProdotto->set_layout('list');
@@ -35,6 +38,7 @@ class CProdotto extends Controller {
         }
         $VProdotto = USingleton::getInstance('VProdotto');
         $VProdotto->impostaDati('num_pages', 1);
+        $VProdotto->impostaDati('content_title', "Home");
         $VProdotto->impostaDati('prodotti', $displayed_items);
         $VProdotto->impostaDati('task', $this->getTask());
         $VProdotto->set_layout('list');

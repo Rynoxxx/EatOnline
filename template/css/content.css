@@ -10,16 +10,58 @@
     transform: scale(1.2);
     -webkit-transform: scale(1.2);
 }
+
+.container_log h1 {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #550000;
+}
+
 .loginform {
     background: white;
     border-radius: 5px;
-    padding: 5px;
-    margin: 6px;
     box-shadow: 0px 5px 10px 0px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 94%;
+    margin: auto;
 }
+
 .loginform fieldset {
     border: none;
 }
+
+.loginform input {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding: 3px;
+    border: 0px;
+    border-bottom: solid 1px #550000;
+    width: 90%;
+    height: 28px;
+}
+
+.loginform .field {
+    color: #550000;
+}
+
+.loginform .loginform_label {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.loginform button {
+    padding: 3px;
+    box-shadow: 2px 2px 2px 0px #333;
+}
+
+.loginform button:hover {
+    cursor: pointer;
+}
+
 .header #logo {
     position: absolute;
     top: 10px;
@@ -58,6 +100,20 @@
     font-size: 15px;
     font-weight: bold;
 }
+
+.content {
+    text-align: center;
+}
+
+.content .content_title {
+    color: #550000;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
 .content .item {
     position: relative;
     border-style: solid;
@@ -122,10 +178,19 @@
     margin-right: 5px;
     text-shadow: 3px 2px 3px #333;
 }
+
+/* CONTACT FORM */
+
 .contactform {
     padding: 10px;
-    text-align: left;
 }
+
+.contactform h1 {
+    margin: auto;
+    margin-bottom: 12px;
+    text-align: center;
+}
+
 .contactform fieldset {
     padding: 10px;
     margin-bottom: 10px;
@@ -135,27 +200,57 @@
 .contactform fieldset legend {
     font-weight: bold;
     text-align: center;
+    font-size: 15px;
 }
 .contactform fieldset p {
     margin-bottom: 10px;
 }
 .contactform input {
     position: absolute;
-    left: 130px;
+    left: 140px;
+    padding: 2px;
+}
+
+.contactform form .label_form_reg {
+    font-size: 15px;
+    font-weight: bold;
+    color: #550000;
+}
+
+.contactform .form_button {
+    padding: 5px;
+    box-shadow: 2px 2px 2px 0px #333;
+}
+
+#form_reg label.error{
+    color: #FF4B04;
+    position: absolute;
+    left: 320px;
+    font-weight: bold;
+    margin-top: 4px;
+    font-style: italic;
 }
 
 /* CARRELLO */
 
 .carrello {
     color: black;
+    text-align: center;
+}
+
+.carrello h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 .carrello table {
     width: 100%;
     color: black;
 }
+
 .carrello table td {
     border: 1px solid #333;
+    text-align: center;
 }
 .carrello table td.buttons button {
     background: white;
@@ -186,15 +281,29 @@
     font-weight: bold;
 }
 
-.carrello .conferma {
+.carrello #totale {
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 10px;
+    border: solid 1px #333;
+    width: 250px;
+}
+
+.carrello #conferma {
     padding: 5px;
     margin-top: 10px;
     margin-bottom: 5px;
     box-shadow: 1px 1px 5px #aaa;
 }
 
-.carrello .conferma:hover {
+.carrello #conferma:hover {
     cursor: pointer;
+}
+
+.carrello #forajax {
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* POPUP */
