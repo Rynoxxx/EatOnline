@@ -1,7 +1,7 @@
 <html>
 
     <head>
-        <script src="js/validation_reg.js"></script>
+        <script src="js/validation_reg2.js"></script>
     </head>
 
     <div class="contactform">

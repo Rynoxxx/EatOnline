@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-09 22:32:40
+<?php /* Smarty version 3.1.27, created on 2016-02-14 22:33:41
          compiled from "template/registrazione_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:188084825456ba5af83491f0_20083693%%*/
+/*%%SmartyHeaderCode:184769809656c0f2b5bdf7c8_54267746%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '9944cf891788fac1531c2fedac6e81f3f5d4350d' => 
     array (
       0 => 'template/registrazione_default.tpl',
-      1 => 1454716434,
+      1 => 1455485291,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '188084825456ba5af83491f0_20083693',
+  'nocache_hash' => '184769809656c0f2b5bdf7c8_54267746',
   'variables' => 
   array (
     'errore' => 0,
@@ -21,18 +21,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56ba5af8358352_68147730',
+  'unifunc' => 'content_56c0f2b5be6628_88635133',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56ba5af8358352_68147730')) {
-function content_56ba5af8358352_68147730 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c0f2b5be6628_88635133')) {
+function content_56c0f2b5be6628_88635133 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '188084825456ba5af83491f0_20083693';
+$_smarty_tpl->properties['nocache_hash'] = '184769809656c0f2b5bdf7c8_54267746';
 ?>
 <!DOCTYPE html>
 <html>
 
-    <div class="subcontent-box">
+    <div class="container_log">
 
         
 
@@ -53,12 +53,12 @@ $_smarty_tpl->properties['nocache_hash'] = '188084825456ba5af83491f0_20083693';
                     <fieldset>
 
                         <p>
-                            <label for="numero_tel" class="top" >Numero di telefono:</label>
+                            <label for="numero_tel" class="loginform_label" >Numero di telefono:</label>
                             <input type="text" name="numero_tel" id="numero_tel" tabindex="1" class="field" value="3471173932"/>
                         </p>
 
                         <p>
-                            <label for="password" class="top">Password:</label>
+                            <label for="password" class="loginform_label">Password:</label>
                             <input type="password" name="password" id="password" tabindex="1" class="field"/>
                         </p>
 
@@ -70,6 +70,9 @@ $_smarty_tpl->properties['nocache_hash'] = '188084825456ba5af83491f0_20083693';
                 </form>
             </div>
         <?php } else { ?> 
+            <div class="loginform">
+                <p>Ciao</p>
+                <p>Hai tot elementi nel carrello</p>
             <form method="get" action="index.php">
                 
                 <input type="hidden" name="controller" value="registrazione"/>
@@ -77,6 +80,7 @@ $_smarty_tpl->properties['nocache_hash'] = '188084825456ba5af83491f0_20083693';
                 <button type="submit">Logout</button>
                     
             </form>
+            </div>
         <?php }?>
         
 
