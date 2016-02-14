@@ -192,7 +192,7 @@
 }
 
 .contactform fieldset {
-    padding: 10px;
+    padding: 8px;
     margin-bottom: 10px;
     position: relative;
     border-color: #550000;
@@ -202,19 +202,24 @@
     text-align: center;
     font-size: 15px;
 }
-.contactform fieldset p {
-    margin-bottom: 10px;
-}
+
 .contactform input {
-    position: absolute;
-    left: 140px;
+    
+    float: left;
+    margin-left: 15px;
     padding: 2px;
 }
 
 .contactform form .label_form_reg {
+    display: inline-block;
+    width: 140px;
+    float: left;
+    clear: left;
+    text-align: right;
     font-size: 15px;
     font-weight: bold;
     color: #550000;
+    margin-bottom: 20px;
 }
 
 .contactform .form_button {
@@ -225,7 +230,7 @@
 #form_reg label.error{
     color: #FF4B04;
     position: absolute;
-    left: 320px;
+    left: 345px;
     font-weight: bold;
     margin-top: 4px;
     font-style: italic;

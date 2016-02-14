@@ -14,46 +14,39 @@
 
             <fieldset>
                 <legend>&nbsp;Credenziali di accesso&nbsp;</legend>
-                <p>
+                
                     <label for="numero_tel" class="label_form_reg">Telefono:</label>
                     <input type="text" name="numero_tel" id="numero_tel" class="field"/>
-                </p>
-                <p>
+                
                     <label for="password" class="label_form_reg">Password:</label>
                     <input type="password" name="password" id="password" class="field"/>
-                </p>
-                <p>
+               
                     <label for="password_1" class="label_form_reg">Ripeti Password:</label>
                     <input type="password" name="password_1" id="password_1" class="field"/>
-                </p>
+                
             </fieldset>
 
             <fieldset>
                 <legend>&nbsp;Dati anagrafici&nbsp;</legend>
-                <p>
+                
                     <label for="nome" class="label_form_reg">Nome:</label>
                     <input type="text" name="nome" id="nome" class="field"/>
-                </p>
-                <p>
+                
                     <label for="cognome" class="label_form_reg">Cognome:</label>
                     <input type="text" name="cognome" id="cognome" class="field"/>
-                </p>
-                <p>
+               
                     <label for="via" class="label_form_reg">Via:</label>
                     <input type="text" name="via" id="via" class="field"/>
-                </p>
-                <p>
+               
                     <label for="citta" class="label_form_reg">Citt&agrave;:</label>
                     <input type="text" name="citta" id="citta" class="field"/>
-                </p>
-                <p>
+               
                     <label for="cap" class="label_form_reg">CAP:</label>
                     <input type="text" name="cap" id="cap" class="field"/>
-                </p>
-                <p>
+               
                     <label for="email" class="label_form_reg">Email:</label>
                     <input type="text" name="email" id="email" class="field"/>
-                </p>
+                
             </fieldset>
 
             <p><button type="submit" name="submit" id="submit_reg" class="form_button">Registrati</button></p>
