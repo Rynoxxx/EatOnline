@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-15 00:53:25
+<?php /* Smarty version 3.1.27, created on 2016-02-15 17:55:20
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1631256c113750eb9d1_99865477%%*/
+/*%%SmartyHeaderCode:2814156c202f8ceef67_82775316%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1455422818,
+      1 => 1455554946,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1631256c113750eb9d1_99865477',
+  'nocache_hash' => '2814156c202f8ceef67_82775316',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c11375132d16_50808613',
+  'unifunc' => 'content_56c202f8db2454_21248115',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c11375132d16_50808613')) {
-function content_56c11375132d16_50808613 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c202f8db2454_21248115')) {
+function content_56c202f8db2454_21248115 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1631256c113750eb9d1_99865477';
+$_smarty_tpl->properties['nocache_hash'] = '2814156c202f8ceef67_82775316';
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,6 +46,9 @@ $_smarty_tpl->properties['nocache_hash'] = '1631256c113750eb9d1_99865477';
 >
         <?php echo '<script'; ?>
  src="js/lib/jquery.validate.js"><?php echo '</script'; ?>
+>
+         <?php echo '<script'; ?>
+ src="js/lib/mustache.min.js"><?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
  src="js/main.js"><?php echo '</script'; ?>
@@ -123,7 +126,10 @@ $_smarty_tpl->properties['nocache_hash'] = '1631256c113750eb9d1_99865477';
 
                 <!-- BEGIN RIGHT COLUMN -->
                 <div class="rightcolumn">
-                    <?php echo $_smarty_tpl->tpl_vars['right_content']->value;?>
+                    <?php echo $_smarty_tpl->tpl_vars['right_content']->value['modulo_login'];?>
+
+                    
+                    <?php echo $_smarty_tpl->tpl_vars['right_content']->value['carrello_laterale'];?>
 
 
                     <ul>

@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html>
 
-    <div class="container_log">
+    <div class="container_side_items">
 
-        
+
 
         {if $errore!=NULL}
             <p>{$errore}</p>
         {/if}
 
         {if !$logged}
+            <img class ="img_side_content" src="template/img/login.png"/>
             <h1>Login</h1>
             <div class="loginform">
 
@@ -38,20 +39,21 @@
                 </form>
             </div>
         {else} 
+            <img class ="img_side_content" src="template/img/login.png"/>
+            <h1>Ciao {$utente.nome}</h1>
             <div class="loginform">
-                <p>Ciao {$numero_utente}</p>
-                <p>Hai tot elementi nel carrello</p>
+                <p>Ciao {$utente.nome} {$utente.cognome}</p>
                 
-            <form method="get" action="index.php">
-                
-                <input type="hidden" name="controller" value="registrazione"/>
-                <input type="hidden" name="task" value="logout"/>
-                <button type="submit">Logout</button>
-                    
-            </form>
+                <form method="get" action="index.php">
+
+                    <input type="hidden" name="controller" value="registrazione"/>
+                    <input type="hidden" name="task" value="logout"/>
+                    <button type="submit">Logout</button>
+
+                </form>
             </div>
         {/if}
-        
+
 
     </div>
 

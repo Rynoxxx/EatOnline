@@ -7,6 +7,7 @@
         <link rel="stylesheet" type="text/css" href="template/css/menu.css"/>
         <script src="js/lib/jquery-2.2.0.min.js"></script>
         <script src="js/lib/jquery.validate.js"></script>
+         <script src="js/lib/mustache.min.js"></script>
         <script src="js/main.js"></script>
 
         <title>{$title}</title>
@@ -77,7 +78,9 @@
 
                 <!-- BEGIN RIGHT COLUMN -->
                 <div class="rightcolumn">
-                    {$right_content}
+                    {$right_content.modulo_login}
+                    
+                    {$right_content.carrello_laterale}
 
                     <ul>
                         {section name=i loop=$tasti_laterali}

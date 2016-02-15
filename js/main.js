@@ -41,6 +41,7 @@ $(document).ready(function () {
     addProdotto = function (id) {
         ajax1("carrello", "aggiungi." + id, function () {
             var quantita_element = $("#prodotto-" + id).find("td.quantita");
+            var quantita_element_lat = $("#carr_laterale_prodotto-" + id).find("td.quantita");
             var quantita = quantita_element.text();
             quantita++;
 
@@ -58,9 +59,13 @@ $(document).ready(function () {
             var prezzo_num = parseFloat(prezzo);
             tot = tot + prezzo_num;
 
+            var tot_element_lat = $("#totale_lat");
+
             quantita_element.text(quantita);
+            quantita_element_lat.text(quantita);
             str_subTot_element.text("Sub Totale: " + subTot + " \u20ac");
             str_tot_element.text("Totale: " + tot + " \u20ac");
+            tot_element_lat.text("Totale spesa: " + tot + " \u20ac");
             animationGrow(quantita_element);
         });
     };
@@ -69,6 +74,7 @@ $(document).ready(function () {
     removeProdotto = function (id) {
         ajax1("carrello", "elimina." + id, function () {
             var quantita_element = $("#prodotto-" + id).find("td.quantita");
+            var quantita_element_lat = $("#carr_laterale_prodotto-" + id).find("td.quantita");
             var quantita = quantita_element.text();
             quantita--;
 
@@ -86,16 +92,22 @@ $(document).ready(function () {
             var prezzo_num = parseFloat(prezzo);
             tot = tot - prezzo_num;
 
+            var tot_element_lat = $("#totale_lat");
+
             if (quantita > 0) {
                 quantita_element.text(quantita);
+                quantita_element_lat.text(quantita);
                 str_subTot_element.text("Sub Totale: " + subTot + " \u20ac");
                 str_tot_element.text("Totale: " + tot + " \u20ac");
+                tot_element_lat.text("Totale spesa: " + tot + " \u20ac");
                 animationGrow(quantita_element);
             } else {
                 $("#prodotto-" + id).hide();
+                $("#carr_laterale_prodotto-" + id).hide();
                 str_tot_element.text("Totale: " + tot + " \u20ac");
+                tot_element_lat.text("Totale spesa: " + tot + " \u20ac");
                 $.ajax({
-                    url: "index.php?controller=ordine&task=info&ajax",
+                    url: "index.php?controller=ordine&task=infoOrdine&ajax",
                     context: document.body
                 }).done(function (result) {
                     var dati = JSON.parse(result);
@@ -103,7 +115,10 @@ $(document).ready(function () {
                     if (dati.num_elementi_carrello === 0) {
                         $("#conferma").hide();
                         $("#totale").hide();
+                        $("#totale_lat").hide();
+                        $("#table_carr_lat").hide();
                         $("#forajax").text("Hai svuotato il tuo carrello!");
+                        $("#forajax_lat").text("Non ci sono prodotti nel carrello!");
                     }
                 });
             }
@@ -116,14 +131,6 @@ $(document).ready(function () {
      * effettuato l'acquisto (questo perchè viene effettuata la chiama in AJAX con controller Carrello e con il task
      * AGGIUNGI).
      */
-    addItemd = function (id) {
-        ajax1("carrello", "aggiungi." + id, function () {
-            var nome_element = $("#item-" + id).find("p.nome");
-            var nome = nome_element.text();
-            showPopup($("#item-" + id), "Prodotto aggiunto!", "Il prodotto " + nome + " è stato aggiunto al carrello");
-        });
-    };
-
     addItem = function (id) {
         ajax1("registrazione", "isLogged", function (result) {
             var res = JSON.parse(result);
@@ -134,6 +141,9 @@ $(document).ready(function () {
                 }).done(function () {
                     var nome_element = $("#item-" + id).find("p.nome");
                     var nome = nome_element.text();
+
+                    addItemSide(id);
+
                     showPopup($("#item-" + id), "Prodotto aggiunto!", "Il prodotto " + nome + " è stato aggiunto al carrello");
                 });
             } else {
@@ -143,12 +153,28 @@ $(document).ready(function () {
         });
     };
 
+    addItemSide = function (id) {
+        $.ajax({
+            url: "index.php?controller=ordine&task=infoOrdine&ajax",
+            context: document.body
+        }).done(function (result) {
+            $("#forajax_lat").empty();
+            $("#totale_lat").empty();
+            var dati = JSON.parse(result);
+            $.get('js/template/CarrelloItem.tmpl', function (template) {
+                var html = Mustache.to_html(template, dati);
+                $("#forajax_lat").append(html);
+                $("#totale_lat").append(dati.totale + " \u20ac");
+            });
+        });
+    };
+
     /**
      * Raccoglie tutte le informazioni relative a un ordine
      * @returns {undefined}
      */
     info = function () {
-        ajax1("ordine", "info", function (result) {
+        ajax1("ordine", "infoOrdine", function (result) {
             console.log("Result", result);
             var response = JSON.parse(result);
             console.log("Response", response);

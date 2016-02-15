@@ -64,8 +64,8 @@ class EUtente {
         return $this->via;
     }
 
-    function getCAP() {
-        return $this->CAP;
+    function getCap() {
+        return $this->cap;
     }
 
     function getCitta() {

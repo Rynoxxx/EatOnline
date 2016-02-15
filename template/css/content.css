@@ -11,7 +11,19 @@
     -webkit-transform: scale(1.2);
 }
 
-.container_log h1 {
+.container_side_items {
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.container_side_items img.img_side_content {
+    width: 40px;
+    position: absolute;
+    top: 2px;
+    left: 8px;
+}
+
+.container_side_items h1 {
     text-align: center;
     margin-top: 10px;
     margin-bottom: 5px;
@@ -25,8 +37,14 @@
     text-align: center;
     padding-top: 10px;
     padding-bottom: 10px;
-    width: 94%;
+    width: 100%;
     margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.loginform table td {
+    text-align: center;
 }
 
 .loginform fieldset {
@@ -60,6 +78,13 @@
 
 .loginform button:hover {
     cursor: pointer;
+}
+
+.loginform table td{
+    color: black;
+    border: 1px solid #550000;
+    font-weight: bold;
+    font-size: 11px;
 }
 
 .header #logo {
@@ -204,7 +229,7 @@
 }
 
 .contactform input {
-    
+
     float: left;
     margin-left: 15px;
     padding: 2px;
@@ -309,6 +334,28 @@
 .carrello #forajax {
     font-weight: bold;
     font-size: 20px;
+}
+
+/* CARRELLO LATERALE */
+
+.loginform table#table_carr_lat td {
+    border: 0;
+}
+
+.loginform table#table_carr_lat td.nome_colonna {
+    border-bottom: solid 1px #550000;
+}
+
+.carrello #forajax_lat {
+    font-weight: bold;
+    font-size: 10px;
+}
+
+#totale_lat {
+    font-weight: bold;
+    font-size: 15px;
+    margin: auto;
+    margin-top: 10px;
 }
 
 /* POPUP */

@@ -47,9 +47,11 @@ class CHome extends Controller {
             $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . '******************** Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
 
             if ($loggato) {
-                $numero_utente = $sessione->leggi_valore('numero_tel');
-                debug($numero_utente);
-                $VHome->impostaPaginaLoggato($numero_utente);
+                $CUtente = USingleton::getInstance('CUtente');
+                $utente = $CUtente->infoUtente();
+                $COrdine = USingleton::getInstance('COrdine');
+                $ordine = $COrdine->infoOrdine();
+                $VHome->impostaPaginaLoggato($utente, $ordine);
             } else {
                 $VHome->impostaPaginaOspite();
             }
@@ -85,6 +87,9 @@ class CHome extends Controller {
             case 'ordine':
                 $COrdine = USingleton::getInstance('COrdine');
                 return $COrdine->smista();
+            case 'utente':
+                $CUtente = USingleton::getInstance('CUtente');
+                return $CUtente->smista();
             default:
                 $CProdotto = USingleton::getInstance('CProdotto');
                 return $CProdotto->randomItems();
