@@ -14,9 +14,9 @@ class CHome extends Controller {
     public function impostaPagina() {
 
         $CRegistrazione = USingleton::getInstance('CRegistrazione');
-        $registrato = $CRegistrazione->checkLogin();
+        $loggato = $CRegistrazione->checkLogin();
 
-        if ($registrato) {
+        if ($loggato) {
             debug('SEI LOGGATO!');
             $this->setLogged(true);
         } else
@@ -45,7 +45,15 @@ class CHome extends Controller {
             $VHome->impostaContenuto($contenuto);
             // Imposta il breadcrumb in modo da far vedere 'controller' e 'task' coinvolti nella richiesta HTTP
             $VHome->assign('breadcrumb', 'Controller: ' . $controller . ' , Task: ' . $task . '******************** Previous Controller: ' . $previousController . ' , Previous Task: ' . $previousTask);
-            $VHome->impostaPaginaOspite();
+
+            if ($loggato) {
+                $numero_utente = $sessione->leggi_valore('numero_tel');
+                debug($numero_utente);
+                $VHome->impostaPaginaLoggato($numero_utente);
+            } else {
+                $VHome->impostaPaginaOspite();
+            }
+
             $VHome->mostraPagina();
         }
 

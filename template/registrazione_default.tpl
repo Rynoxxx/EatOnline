@@ -39,8 +39,9 @@
             </div>
         {else} 
             <div class="loginform">
-                <p>Ciao</p>
+                <p>Ciao {$numero_utente}</p>
                 <p>Hai tot elementi nel carrello</p>
+                
             <form method="get" action="index.php">
                 
                 <input type="hidden" name="controller" value="registrazione"/>

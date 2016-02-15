@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-13 05:44:26
+<?php /* Smarty version 3.1.27, created on 2016-02-15 01:04:49
          compiled from "template\registrazione_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1940256beb4aa1fe859_50251391%%*/
+/*%%SmartyHeaderCode:2849556c11621668d62_59329304%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,25 +9,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3131819b595ac3e3a9d57e7eb803b4a6018e71eb' => 
     array (
       0 => 'template\\registrazione_default.tpl',
-      1 => 1455338659,
+      1 => 1455494686,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1940256beb4aa1fe859_50251391',
+  'nocache_hash' => '2849556c11621668d62_59329304',
   'variables' => 
   array (
     'errore' => 0,
     'logged' => 0,
+    'numero_utente' => 0,
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56beb4aa265c23_11459175',
+  'unifunc' => 'content_56c116216d1a15_66332335',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56beb4aa265c23_11459175')) {
-function content_56beb4aa265c23_11459175 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c116216d1a15_66332335')) {
+function content_56c116216d1a15_66332335 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1940256beb4aa1fe859_50251391';
+$_smarty_tpl->properties['nocache_hash'] = '2849556c11621668d62_59329304';
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,7 +72,8 @@ $_smarty_tpl->properties['nocache_hash'] = '1940256beb4aa1fe859_50251391';
             </div>
         <?php } else { ?> 
             <div class="loginform">
-                <p>Ciao</p>
+                <p>Ciao <font color=red>f<?php echo $_smarty_tpl->tpl_vars['numero_utente']->value;?>
+</font></p>
                 <p>Hai tot elementi nel carrello</p>
             <form method="get" action="index.php">
                 

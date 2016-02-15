@@ -228,11 +228,11 @@
 }
 
 #form_reg label.error{
+    float: left;
     color: #FF4B04;
-    position: absolute;
-    left: 345px;
     font-weight: bold;
     margin-top: 4px;
+    margin-left: 10px;
     font-style: italic;
 }
 

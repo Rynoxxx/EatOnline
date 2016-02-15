@@ -57,6 +57,16 @@ class VHome extends View {
         $this->aggiungiTastoRegistrazione();
     }
     
+    public function impostaPaginaLoggato($numero_utente) {
+        $this->assign('title', 'EatOnline');
+        $this->assign('content_title', 'Benvenuto ' . $numero_utente);
+        $this->assign('numero_utente', $numero_utente);
+        $this->assign('main_content', $this->_main_content);
+        $this->assign('menu', $this->_main_button);
+        $this->aggiungiModuloLogin();
+    }
+
+
     /*
      * Aggiunge i tasti per la registrazione e l'attivazione
      * Per utenti non registrati o autenticati
