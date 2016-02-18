@@ -45,6 +45,8 @@
 
             <!-- BEGIN NAVIGATION -->
             <div class="navigation">
+              <div class="bif-left"></div>
+              <div class="bif-right"></div>
                 <ul id="nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a class="hsubs" href="#">Cibi</a>

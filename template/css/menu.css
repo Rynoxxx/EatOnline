@@ -2,13 +2,12 @@
     list-style: none outside none;
     margin: 0;
     padding: 0;
-}
+} 
 #nav {
     font-family: "Lucida Sans Unicode",Verdana,Arial,sans-serif;
     font-size: 13px;
-    height: 34px;
+    height: 36px;
     list-style: none outside none;
-    margin: 10px auto;
     text-shadow: 0 -1px 3px #202020;
     width: 992px;
     background:#034500;

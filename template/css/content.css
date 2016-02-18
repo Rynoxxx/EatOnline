@@ -135,6 +135,7 @@
   color: #white;
   font-size: 15px;
   font-weight: bold;
+  display: none;
 }
 .content {
   text-align: center;
