@@ -22,6 +22,8 @@ class View extends Smarty {
         //initalization
         $CHome = USingleton::getInstance('CHome');
         $this->assign('logged', $CHome->isLogged());
+        $this->assign('admin', $CHome->isAdmin());
+
     }
 
 

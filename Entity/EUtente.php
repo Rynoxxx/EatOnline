@@ -41,7 +41,11 @@ class EUtente {
     }
 
     public function isUserActivated() {
-        return $this->stato;
+        return $this->stato > 0;
+    }
+
+    public function isUserAdmin() {
+        return true; // CAMBIARE !!! USARE IL CONTROLLO SUL CAMPO APPOSITO
     }
 
     function getNome() {
@@ -102,4 +106,3 @@ class EUtente {
 
 }
 ?>
-

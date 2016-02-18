@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-15 01:10:09
+<?php /* Smarty version 3.1.27, created on 2016-02-18 01:39:27
          compiled from "template/prodotto_list.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:160033128856c11761e569c6_32611725%%*/
+/*%%SmartyHeaderCode:149389481756c512bfe26d37_70223352%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5b5c4d24ab2cf14784abe1928231a1b256c7ae60' => 
     array (
       0 => 'template/prodotto_list.tpl',
-      1 => 1455485291,
+      1 => 1455755965,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '160033128856c11761e569c6_32611725',
+  'nocache_hash' => '149389481756c512bfe26d37_70223352',
   'variables' => 
   array (
     'content_title' => 0,
@@ -23,13 +23,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c11761ef0ad0_18035450',
+  'unifunc' => 'content_56c512bfe4a579_08623485',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c11761ef0ad0_18035450')) {
-function content_56c11761ef0ad0_18035450 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c512bfe4a579_08623485')) {
+function content_56c512bfe4a579_08623485 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '160033128856c11761e569c6_32611725';
+$_smarty_tpl->properties['nocache_hash'] = '149389481756c512bfe26d37_70223352';
 ?>
 <div class="content">
     <div class="content_title"><?php echo $_smarty_tpl->tpl_vars['content_title']->value;?>
@@ -67,6 +67,7 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['i']['last']       = ($_smart
             <?php }?>
         <?php endfor; endif; ?>
     <?php }?>
+    <div class="clear"></div>
     <?php if ($_smarty_tpl->tpl_vars['num_pages']->value != 1) {?>
         <div class="navig_pages">
             <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['pages'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['pages']);

@@ -38,12 +38,12 @@
                     </fieldset>
                 </form>
             </div>
-        {else} 
+        {else}
             <img class ="img_side_content" src="template/img/login.png"/>
             <h1>Ciao {$utente.nome}</h1>
             <div class="loginform">
                 <p>Ciao {$utente.nome} {$utente.cognome}</p>
-                
+
                 <form method="get" action="index.php">
 
                     <input type="hidden" name="controller" value="registrazione"/>
@@ -54,6 +54,12 @@
             </div>
         {/if}
 
+        {if $admin}
+        <div class="admin">
+          <h2>Opzioni Amministratore</h2>
+          <a href="index.php?controller=prodotto&task=all">Gestione Prodotti</a>
+        </div>
+        {/if}
 
     </div>
 

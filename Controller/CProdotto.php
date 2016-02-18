@@ -29,6 +29,16 @@ class CProdotto extends Controller {
         return $VProdotto->processaTemplate();
     }
 
+    public function all() {
+        $FProdotto = USingleton::getInstance('FProdotto');
+        $prodotti = $FProdotto->allItems();
+        $VProdotto = USingleton::getInstance('VProdotto');
+        $VProdotto->impostaDati('prodotti', $prodotti);
+        $VProdotto->set_layout('list_small');
+        return $VProdotto->processaTemplate();
+    }
+
+
     public function randomItems() {
         $FProdotto = USingleton::getInstance('FProdotto');
         $items = $FProdotto->allItems();
@@ -45,10 +55,24 @@ class CProdotto extends Controller {
         return $VProdotto->processaTemplate();
     }
 
+    public function salva(){
+      $prodotto = $_POST;
+      $prodotto->id = $_POST->id;
+      $FProdotto = USingleton::getInstance('FProdotto');
+      $result = $FProdotto->update($prodotto);
+      if($this->isAjax()){
+        echo $this->respondeAjaxObject($result);
+      }
+    }
+
     public function smista() {
         list($azione, $categoria) = explode('.', $this->getTask());
         if ($azione == 'lista') {
             return $this->visualizza($categoria);
+        }else if ($azione == 'all') {
+            return $this->all();
+        }else if ($azione == 'salva') {
+            return $this->salva();
         } else {
             switch ($this->getTask()) {
                 default :

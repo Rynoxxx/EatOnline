@@ -8,6 +8,7 @@
             {/if}
         {/section}
     {/if}
+    <div class="clear"></div>
     {if $num_pages!=1}
         <div class="navig_pages">
             {section name=pages loop=$num_pages}

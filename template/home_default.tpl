@@ -48,12 +48,12 @@
                 <ul id="nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a class="hsubs" href="#">Cibi</a>
-                        <ul class="subs">
-                            <li><a href="index.php?controller=prodotto&task=lista.primi_piatti">Primi piatti</a></li>
-                            <li><a href="index.php?controller=prodotto&task=lista.secondi_piatti">Secondi piatti</a></li>
-                            <li><a href="index.php?controller=prodotto&task=lista.contorni">Contorni</a></li>
-                            <li><a href="index.php?controller=prodotto&task=lista.pizze">Pizze</a></li>
-                        </ul>
+                        <div class="submenu">
+                            <a href="index.php?controller=prodotto&task=lista.primi_piatti">Primi piatti</a>
+                            <a href="index.php?controller=prodotto&task=lista.secondi_piatti">Secondi piatti</a>
+                            <a href="index.php?controller=prodotto&task=lista.contorni">Contorni</a>
+                            <a href="index.php?controller=prodotto&task=lista.pizze">Pizze</a>
+                        </div>
                     </li>
                     <li><a href="index.php?controller=prodotto&task=lista.bevande">Bevande</a></li>
                     <li><a href="index.php?controller=carrello&task=default">Carrello</a></li>
@@ -79,7 +79,7 @@
                 <!-- BEGIN RIGHT COLUMN -->
                 <div class="rightcolumn">
                     {$right_content.modulo_login}
-                    
+
                     {$right_content.carrello_laterale}
 
                     <ul>

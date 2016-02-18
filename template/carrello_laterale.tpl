@@ -2,13 +2,13 @@
 
     <div class="container_side_items">
         <img class ="img_side_content" src="template/img/carrello_laterale.png"/>
-        <h1>Carrello</h1>
+        <h1 id="carrello_laterale">Carrello</h1>
         <div class="loginform">
 
             <div id="forajax_lat">
             {if $ordine.num_elementi_carrello == 0}
                 <p>Il tuo carrello &egrave; vuoto</p>
-            {else} 
+            {else}
                 <table id="table_carr_lat">
                     <tr>
                         <td class="nome_colonna">Nome prodotto</td>
@@ -23,7 +23,7 @@
                         </tr>
                     {/foreach}
                 </table>
-                <div id="totale_lat">Totale spesa: {$ordine.totale} &euro;</div>    
+                <div id="totale_lat">Totale spesa: {$ordine.totale} &euro;</div>
             {/if}
             </div>
         </div>

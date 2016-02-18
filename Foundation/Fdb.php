@@ -250,14 +250,19 @@ class Fdb {
         foreach ($object as $key => $value) {
             if (!$this->isKey($key) && substr($key, 0, 1) != '_') {
                 if ($i == 0) {
-                    $fields.='`' . $key . '` = \'' . $value . '\'';
+                    $fields.='`' . $key . '` = \'' . mysql_real_escape_string($value) . '\'';
                 } else {
-                    $fields.=', `' . $key . '` = \'' . $value . '\'';
+                    $fields.=', `' . $key . '` = \'' . mysql_real_escape_string($value) . '\'';
                 }
                 $i++;
             }
         }
-        $arrayObject = get_object_vars($object);
+        if(is_array($object)){
+          $arrayObject = $object;
+        }else{
+          $arrayObject = get_object_vars($object);
+        }
+
         $query = 'UPDATE `' . $this->_table . '` SET ' . $fields . ' WHERE ';
 
         if(is_array($this->_key)){
@@ -270,7 +275,6 @@ class Fdb {
         }else{
           $query .= '`' . $this->_key . '` = \'' . $arrayObject[$this->_key] . '\'';
         }
-
 
         return $this->query($query);
     }

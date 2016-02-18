@@ -16,9 +16,13 @@ class CHome extends Controller {
         $CRegistrazione = USingleton::getInstance('CRegistrazione');
         $loggato = $CRegistrazione->checkLogin();
 
+        debug("###");
+        debug($loggato);
+        debug("###");
         if ($loggato) {
             debug('SEI LOGGATO!');
             $this->setLogged(true);
+            $this->setAdmin($loggato->isUserAdmin());
         } else
             debug('NON SEI LOGGATO!');
 

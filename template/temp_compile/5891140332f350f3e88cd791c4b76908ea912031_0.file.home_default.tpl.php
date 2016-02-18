@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-15 01:10:09
+<?php /* Smarty version 3.1.27, created on 2016-02-18 01:14:39
          compiled from "template/home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:136124758756c11761f13348_83377227%%*/
+/*%%SmartyHeaderCode:120846487956c50cef2e1621_83954012%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5891140332f350f3e88cd791c4b76908ea912031' => 
     array (
       0 => 'template/home_default.tpl',
-      1 => 1455485291,
+      1 => 1455754477,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '136124758756c11761f13348_83377227',
+  'nocache_hash' => '120846487956c50cef2e1621_83954012',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c11761f2de94_81152596',
+  'unifunc' => 'content_56c50cef302b82_95335883',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c11761f2de94_81152596')) {
-function content_56c11761f2de94_81152596 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c50cef302b82_95335883')) {
+function content_56c50cef302b82_95335883 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '136124758756c11761f13348_83377227';
+$_smarty_tpl->properties['nocache_hash'] = '120846487956c50cef2e1621_83954012';
 ?>
 <!DOCTYPE html>
 <html>
@@ -46,6 +46,9 @@ $_smarty_tpl->properties['nocache_hash'] = '136124758756c11761f13348_83377227';
 >
         <?php echo '<script'; ?>
  src="js/lib/jquery.validate.js"><?php echo '</script'; ?>
+>
+         <?php echo '<script'; ?>
+ src="js/lib/mustache.min.js"><?php echo '</script'; ?>
 >
         <?php echo '<script'; ?>
  src="js/main.js"><?php echo '</script'; ?>
@@ -91,12 +94,12 @@ $_smarty_tpl->properties['nocache_hash'] = '136124758756c11761f13348_83377227';
                 <ul id="nav">
                     <li><a href="index.php">Home</a></li>
                     <li><a class="hsubs" href="#">Cibi</a>
-                        <ul class="subs">
-                            <li><a href="index.php?controller=prodotto&task=lista.primi_piatti">Primi piatti</a></li>
-                            <li><a href="index.php?controller=prodotto&task=lista.secondi_piatti">Secondi piatti</a></li>
-                            <li><a href="index.php?controller=prodotto&task=lista.contorni">Contorni</a></li>
-                            <li><a href="index.php?controller=prodotto&task=lista.pizze">Pizze</a></li>
-                        </ul>
+                        <div class="submenu">
+                            <a href="index.php?controller=prodotto&task=lista.primi_piatti">Primi piatti</a>
+                            <a href="index.php?controller=prodotto&task=lista.secondi_piatti">Secondi piatti</a>
+                            <a href="index.php?controller=prodotto&task=lista.contorni">Contorni</a>
+                            <a href="index.php?controller=prodotto&task=lista.pizze">Pizze</a>
+                        </div>
                     </li>
                     <li><a href="index.php?controller=prodotto&task=lista.bevande">Bevande</a></li>
                     <li><a href="index.php?controller=carrello&task=default">Carrello</a></li>
@@ -123,7 +126,10 @@ $_smarty_tpl->properties['nocache_hash'] = '136124758756c11761f13348_83377227';
 
                 <!-- BEGIN RIGHT COLUMN -->
                 <div class="rightcolumn">
-                    <?php echo $_smarty_tpl->tpl_vars['right_content']->value;?>
+                    <?php echo $_smarty_tpl->tpl_vars['right_content']->value['modulo_login'];?>
+
+
+                    <?php echo $_smarty_tpl->tpl_vars['right_content']->value['carrello_laterale'];?>
 
 
                     <ul>

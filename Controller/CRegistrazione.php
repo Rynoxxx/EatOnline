@@ -17,7 +17,7 @@ class CRegistrazione extends Controller {
     public function checkLogin() {
         $controller = $this->getController();
         $task = $this->getTask();
-
+        $utente = null;
         //Controlla se ci sono i dati di Logout nella REQUEST
         if ($controller == 'registrazione' && $task == 'logout') {
             $this->logout();
@@ -25,7 +25,7 @@ class CRegistrazione extends Controller {
 
         //Controlla se ci sono i dati di Login nella REQUEST
         if ($controller == 'registrazione' && $task == 'autentica') {
-            $this->login($_REQUEST['numero_tel'], $_REQUEST['password']);
+           $utente =   $this->login($_REQUEST['numero_tel'], $_REQUEST['password']);
         }
 
         //Controlla se c'è un logged user nella SESSION
@@ -34,7 +34,11 @@ class CRegistrazione extends Controller {
         $result = $sessione->leggi_valore('numero_tel');
         debug($_SESSION);
         if ($result != NULL) {
-            return true;
+            if($utente==null){
+              $FUtente = USingleton::getInstance('FUtente');
+              $utente = $FUtente->load($result);
+            }
+            return $utente;
         }
         return false;
     }
@@ -176,7 +180,7 @@ class CRegistrazione extends Controller {
     }
 
     /**
-     * 
+     *
      * @return type
      */
     public function attivazione() {
@@ -186,7 +190,7 @@ class CRegistrazione extends Controller {
     }
 
     /**
-     * 
+     *
      */
     public function checkAttivazione() {
         $utente = $this->checkUtente($_REQUEST['numero_tel']);
@@ -217,7 +221,7 @@ class CRegistrazione extends Controller {
             return $this->respondeAjaxObject(false);
         }
     }
-    
+
     public function checkRegistered() {
         $numero = $_POST['numero_tel'];
         $res = $this->checkUtente($numero);
@@ -250,4 +254,3 @@ class CRegistrazione extends Controller {
 
 }
 ?>
-

@@ -9,6 +9,8 @@
 class Controller {
 
     protected $logged = false;
+    protected $admin = false;
+
 
     public function setLogged($logged){
         $this->logged = $logged;
@@ -16,6 +18,14 @@ class Controller {
 
     public function isLogged(){
         return $this->logged;
+    }
+
+    public function setAdmin($admin){
+      $this->admin = $admin;
+    }
+    
+    public function isAdmin(){
+      return $this->admin;
     }
 
     /*
