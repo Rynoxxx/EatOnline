@@ -46,10 +46,9 @@ class VHome extends View {
         $this->display('home_' . $this->_layout . '.tpl');
     }
 
-    /*
+    /**
      * Imposta la pagina per gli utenti non registrati/autenticati
      */
-
     public function impostaPaginaOspite() {
         $this->assign('title', 'EatOnline');
         $this->assign('content_title', 'Benvenuto ospite');
@@ -61,6 +60,7 @@ class VHome extends View {
 
     public function impostaPaginaLoggato($utente, $ordine) {
         $this->assign('title', 'EatOnline');
+        
         $this->assign('content_title', 'Benvenuto ' . $utente['nome']);
         $this->assign('main_content', $this->_main_content);
         $this->assign('menu', $this->_main_button);
@@ -88,7 +88,7 @@ class VHome extends View {
 
     public function aggiungiTastoRegistrazione() {
         $menu_registrazione = array();
-        $menu_registrazione[] = array('testo' => 'Attivati', 'link' => '?controller=registrazione&task=attivazione');
+        $menu_registrazione[] = array('testo' => 'Attivati', 'link' => '?controller=registrazione&task=modulo_attivazione');
         $this->_side_button[] = array_merge(array('testo' => 'Registrati', 'link' => '?controller=registrazione&task=registra', 'submenu' => $menu_registrazione), $this->_side_button);
     }
 

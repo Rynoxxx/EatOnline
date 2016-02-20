@@ -1,449 +1,457 @@
 /* Consente un cambiamento graduale dello stato degli elementi */
 
 .animated {
-  -webkit-transition: all 200ms ease-in-out;
-  -moz-transition: all 200ms ease-in-out;
-  -o-transition: all 200ms ease-in-out;
-  transition: all 200ms ease-in-out;
+    -webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
 }
 .grow {
-  transform: scale(1.2);
-  -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.2);
 }
 .container_side_items {
-  margin-bottom: 50px;
-  position: relative;
+    margin-bottom: 50px;
+    position: relative;
 }
 .container_side_items img.img_side_content {
-  width: 40px;
-  position: absolute;
-  top: 2px;
-  left: 8px;
+    width: 40px;
+    position: absolute;
+    top: 2px;
+    left: 8px;
 }
 .container_side_items h1 {
-  text-align: center;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  color: white;
-  text-shadow: 0px 0px 13px #888;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: white;
+    text-shadow: 0px 0px 13px #888;
 }
 .loginform {
-  /* background: white; */
-  /* border-radius: 5px; */
-  /* box-shadow: 0px 5px 10px 0px; */
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  width: 100%;
-  margin: auto;
-  margin-top: 15px;
-  margin-bottom: 15px;
+    /* background: white; */
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 5px 10px 0px; */
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin: auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .admin{
-  background:white;
-  margin:10px;
-  padding:10px;
+    background:white;
+    margin:10px;
+    padding:10px;
 }
 .admin h2{
-  font-size:15px;
-  text-shadow:0px 0px 5px #aaa;
-  margin-bottom:10px
+    font-size:15px;
+    text-shadow:0px 0px 5px #aaa;
+    margin-bottom:10px
 }
 .admin a{
-  text-decoration:none;
-  background:gray;
-  color:white;
-  width:100%;
-  display:inline-block;
-  text-align:center;
-  padding:10px;
-  box-sizing:border-box;
+    text-decoration:none;
+    background:gray;
+    color:white;
+    width:100%;
+    display:inline-block;
+    text-align:center;
+    padding:10px;
+    box-sizing:border-box;
 }
 .admin a:hover{
-  opacity:0.8;
+    opacity:0.8;
 }
 .loginform table td {
-  text-align: center;
+    text-align: center;
 }
 .loginform fieldset {
-  border: none;
+    border: none;
 }
 .loginform input {
-  margin-top: 4px;
-  margin-bottom: 8px;
-  padding: 3px;
-  border: 0px;
-  border-bottom: solid 1px #550000;
-  width: 90%;
-  height: 28px;
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding: 3px;
+    border: 0px;
+    border-bottom: solid 1px #550000;
+    width: 90%;
+    height: 28px;
 }
 .loginform .field {
-  color: #550000;
+    color: #550000;
 }
 .loginform .loginform_label {
-  font-weight: bold;
-  font-size: 16px;
-  margin-bottom: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 .loginform button {
-  padding: 3px;
-  box-shadow: 2px 2px 2px 0px #333;
+    padding: 3px;
+    box-shadow: 2px 2px 2px 0px #333;
 }
 .loginform button:hover {
-  cursor: pointer;
+    cursor: pointer;
+}
+.loginform .log_error {
+    color: red;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 10px;
 }
 .loginform table td {
-  color: black;
-  border: 1px solid #550000;
-  font-weight: bold;
-  font-size: 11px;
+    color: black;
+    border: 1px solid #550000;
+    font-weight: bold;
+    font-size: 11px;
 }
 .header #logo {
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  width: 70px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: 70px;
 }
 .header #title {
-  position: absolute;
-  top: 10px;
-  left: 130px;
-  font-size: 40px;
-  color: white;
-  text-shadow: 4px 3px 3px #333;
+    position: absolute;
+    top: 10px;
+    left: 130px;
+    font-size: 40px;
+    color: white;
+    text-shadow: 4px 3px 3px #333;
 }
 .header #searchform {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 180px;
-  height: 30px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 180px;
+    height: 30px;
 }
 .header #searchform input {
-  border: 1px solid #550000;
-  height: 100%;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 5px;
-  color: #801515;
-  box-shadow: 0px 0px 4px #801515;
+    border: 1px solid #550000;
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    color: #801515;
+    box-shadow: 0px 0px 4px #801515;
 }
 .header #breadcrumb {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-  color: #white;
-  font-size: 15px;
-  font-weight: bold;
-  display: none;
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #white;
+    font-size: 15px;
+    font-weight: bold;
+    display: none;
 }
 .content {
-  text-align: center;
+    text-align: center;
 }
 .content .content_title {
-  color: white;
-  font-size: 20px;
-  font-weight: bold;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  text-align: center;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 .prodotto.item  {
-  position: relative;
-  height: 250px;
-  width: 254px;
-  margin: 20px;
-  display: inline-block;
-  vertical-align: top;
-  /* color: #550000; */
-  background: #8DCF8A;
-  border: 1px solid #156711;
-  box-shadow: 0px 0px 13px #333;
-  float: left;
-  -webkit-transition: all 700ms ease-in-out;
-  -moz-transition: all 700ms ease-in-out;
-  -o-transition: all 700ms ease-in-out;
-  transition: all 700ms ease-in-out;
-  transform: scale(1) rotate(0deg);
+    position: relative;
+    height: 250px;
+    width: 254px;
+    margin: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background: #8DCF8A;
+    border: 1px solid #156711;
+    box-shadow: 0px 0px 13px #333;
+    float: left;
+    -webkit-transition: all 700ms ease-in-out;
+    -moz-transition: all 700ms ease-in-out;
+    -o-transition: all 700ms ease-in-out;
+    transition: all 700ms ease-in-out;
+    transform: scale(1) rotate(0deg);
 }
 .prodotto.item.mini{
-  transform: scale(0) rotate(90deg);
+    transform: scale(0) rotate(90deg);
 }
 .prodotto.item p.nome {
-  margin-top: 10px;
-  font-size: 15px;
-  font-weight: bold;
-  position: absolute;
-  top: 155px;
-  height: 29px;
-  background: rgba(1,1,1,0.3);
-  width: 100%;
-  color: white;
+    margin-top: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    position: absolute;
+    top: 155px;
+    height: 29px;
+    background: rgba(1,1,1,0.3);
+    width: 100%;
+    color: white;
 
 }
 
 .prodotto.item p.ingredienti {
-  text-align: justify;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 41px;
-  overflow-y: scroll;
+    text-align: justify;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 41px;
+    overflow-y: scroll;
 }
 .prodotto.item p.prezzo {
-  position: absolute;
-  top: -15px;
-  left: -15px;
-  background: red;
-  width: 50px;
-  height: 50px;
-  text-align: center;
-  line-height: 50px;
-  font-size: 16px;
-  border-radius: 50%;
-  color: white;
-  box-shadow: 0px 0px 20px #222;
-  text-shadow: 0px 0px 10px #222;
-  -ms-transform: rotate(-25deg);/* IE 9 */
-  -webkit-transform: rotate(-25deg);/* Chrome, Safari, Opera */
-  transform:rotate(-25deg);
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    background: red;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 16px;
+    border-radius: 50%;
+    color: white;
+    box-shadow: 0px 0px 20px #222;
+    text-shadow: 0px 0px 10px #222;
+    -ms-transform: rotate(-25deg);/* IE 9 */
+    -webkit-transform: rotate(-25deg);/* Chrome, Safari, Opera */
+    transform:rotate(-25deg);
 }
 .prodotto.item .foto-container {
-  margin-bottom: 8px;
-  width: 100%;
-  height: 193px;
-  overflow: hidden;
-  position: relative;
-  background: white;
+    margin-bottom: 8px;
+    width: 100%;
+    height: 193px;
+    overflow: hidden;
+    position: relative;
+    background: white;
 }
 .prodotto.item .foto {
-  position: absolute;
-  left: 0;
-  height: 100%;
-  right: 0;
-  margin: auto;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    right: 0;
+    margin: auto;
 }
 .prodotto.item img.carrello:hover{
-  opacity:0.8;
+    opacity:0.8;
 }
 .prodotto.item img.carrello {
-  width: 35px;
-  position: absolute;
-  top: -15px;
-  right: -15px;
-  width: 50px;
-  height: 50px;
-  background: #5AAC56;
-  border-radius: 50%;
-  box-shadow: 0px 0px 20px #222;
-  text-shadow: 0px 0px 10px #222;
+    width: 35px;
+    position: absolute;
+    top: -15px;
+    right: -15px;
+    width: 50px;
+    height: 50px;
+    background: #5AAC56;
+    border-radius: 50%;
+    box-shadow: 0px 0px 20px #222;
+    text-shadow: 0px 0px 10px #222;
 }
 .prodotto.item img.carrello:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 .content .interline_space {
-  height: 10px;
+    height: 10px;
 }
 .navig_pages {
-  padding: 10px;
-  margin-top: 20px;
+    padding: 10px;
+    margin-top: 20px;
 }
 .navig_pages a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
-  font-size: 20px;
-  margin-right: 5px;
-  text-shadow: 3px 2px 3px #333;
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-right: 5px;
+    text-shadow: 3px 2px 3px #333;
 }
 
 /* CONTACT FORM */
 
 .contactform {
-  padding: 10px;
+    padding: 10px;
 }
 .contactform h1 {
-  margin: auto;
-  margin-bottom: 12px;
-  text-align: center;
+    margin: auto;
+    margin-bottom: 12px;
+    text-align: center;
+    color: #ffffff;
 }
 .contactform fieldset {
-  padding: 8px;
-  margin-bottom: 10px;
-  position: relative;
-  border-color: #550000;
+    padding: 8px;
+    margin-bottom: 10px;
+    position: relative;
+    border-color: #ffffff;
 }
 .contactform fieldset legend {
-  font-weight: bold;
-  text-align: center;
-  font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    font-size: 15px;
+    color: #ffffff;
 }
 .contactform input {
-  float: left;
-  margin-left: 15px;
-  padding: 2px;
+    float: left;
+    margin-left: 15px;
+    padding: 2px;
 }
 .contactform form .label_form_reg {
-  display: inline-block;
-  width: 140px;
-  float: left;
-  clear: left;
-  text-align: right;
-  font-size: 15px;
-  font-weight: bold;
-  color: #550000;
-  margin-bottom: 20px;
+    display: inline-block;
+    width: 140px;
+    float: left;
+    clear: left;
+    text-align: right;
+    font-size: 15px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 20px;
 }
 .contactform .form_button {
-  padding: 5px;
-  box-shadow: 2px 2px 2px 0px #333;
+    padding: 5px;
+    box-shadow: 2px 2px 2px 0px #333;
 }
 #form_reg label.error {
-  float: left;
-  color: #FF4B04;
-  font-weight: bold;
-  margin-top: 4px;
-  margin-left: 10px;
-  font-style: italic;
+    float: left;
+    color: red;
+    font-weight: bold;
+    margin-top: 4px;
+    margin-left: 10px;
+    font-style: italic;
 }
 
 /* CARRELLO */
 
 .carrello {
-  color: black;
-  text-align: center;
+    color: black;
+    text-align: center;
 }
 .carrello h1 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 .carrello table {
-  width: 100%;
-  color: black;
+    width: 100%;
+    color: black;
 }
 .carrello table td {
-  border: 1px solid #333;
-  text-align: center;
+    border: 1px solid #333;
+    text-align: center;
 }
 .carrello table td.buttons button {
-  background: white;
-  display: inline-block;
-  font-size: 20px;
-  width: 35px;
-  height: 35px;
-  text-align: center;
-  line-height: 35px;
-  text-decoration: none;
-  box-shadow: 0px 0px 5px #aaa;
-  border: none;
+    background: white;
+    display: inline-block;
+    font-size: 20px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    text-decoration: none;
+    box-shadow: 0px 0px 5px #aaa;
+    border: none;
 }
 .carrello table td.buttons button:hover {
-  cursor: pointer;
-  box-shadow: none;
-  background: #ddd;
+    cursor: pointer;
+    box-shadow: none;
+    background: #ddd;
 }
 .carrello table td.quantita {
-  font-size: 30px;
-  font-weight: bold;
+    font-size: 30px;
+    font-weight: bold;
 }
 .carrello .item {}
 .carrello .item img {
-  height: 50px;
+    height: 50px;
 }
 .carrello .subTotale, .prezzo, .nome {
-  font-weight: bold;
+    font-weight: bold;
 }
 .carrello #totale {
-  font-weight: bold;
-  font-size: 20px;
-  margin: auto;
-  margin-top: 10px;
-  border: solid 1px #333;
-  width: 250px;
+    font-weight: bold;
+    font-size: 20px;
+    margin: auto;
+    margin-top: 10px;
+    border: solid 1px #333;
+    width: 250px;
 }
 .carrello #conferma {
-  padding: 5px;
-  margin-top: 10px;
-  margin-bottom: 5px;
-  box-shadow: 1px 1px 5px #aaa;
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    box-shadow: 1px 1px 5px #aaa;
 }
 .carrello #conferma:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 .carrello #forajax {
-  font-weight: bold;
-  font-size: 20px;
+    font-weight: bold;
+    font-size: 20px;
 }
 
 /* CARRELLO LATERALE */
 
 .loginform table#table_carr_lat td {
-  border: 0;
+    border: 0;
 }
 .loginform table#table_carr_lat td.nome_colonna {
-  border-bottom: solid 1px #550000;
+    border-bottom: solid 1px #550000;
 }
 .carrello #forajax_lat {
-  font-weight: bold;
-  font-size: 10px;
+    font-weight: bold;
+    font-size: 10px;
 }
 #totale_lat {
-  font-weight: bold;
-  font-size: 15px;
-  margin: auto;
-  margin-top: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    margin: auto;
+    margin-top: 10px;
 }
 
 /* POPUP */
 
 .popup {
-  opacity: 0.9;
-  position: absolute;
-  width: 300px;
-  height: 180px;
-  background: white;
-  z-index: 1000;
-  top: 100px;
-  left: 100px;
-  box-sizing: border-box;
-  box-shadow: 0px 0px 20px #333;
-  background: #8DCF8A;
+    opacity: 0.9;
+    position: absolute;
+    width: 300px;
+    height: 180px;
+    background: white;
+    z-index: 1000;
+    top: 100px;
+    left: 100px;
+    box-sizing: border-box;
+    box-shadow: 0px 0px 20px #333;
+    background: #8DCF8A;
 }
 .popup .title {
-  color: white;
-  background: #034500;
-  padding: 10px;
-  text-align: center;
+    color: white;
+    background: #034500;
+    padding: 10px;
+    text-align: center;
 }
 .popup .content {
-  color: black;
-  padding: 10px;
-  font-size: 25px;
-  text-align: center;
-  font-weight: bold;
+    color: black;
+    padding: 10px;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
 }
 
 /* PRODOTTO FORM */
 .prodotto-edit{
-text-align:center;
-border-bottom: 2px dashed #5AAC56;margin: 10px;padding: 10px;position: relative;}
+    text-align:center;
+    border-bottom: 2px dashed #5AAC56;margin: 10px;padding: 10px;position: relative;
+}
 .prodotto-edit .prodotto-form {
-  width: 400px;
-  box-shadow: 0px 0px 10px #333;
-  background: #eee;
-  text-align: left;
-  padding: 10px;
+    width: 400px;
+    box-shadow: 0px 0px 10px #333;
+    background: #eee;
+    text-align: left;
+    padding: 10px;
 }
 .prodotto-edit .prodotto-form input,.prodotto-edit .prodotto-form textarea {
-  box-shadow:0px 0px 13px #ccc
+    box-shadow:0px 0px 13px #ccc
 }
 .prodotto-edit  .saved{
-  background:#5AAC56;
-  color:white;
-  width:100%;
-  height:30px;
-  line-height:30px;
-  margin-top:5px;
-  text-align:center;
+    background:#5AAC56;
+    color:white;
+    width:100%;
+    height:30px;
+    line-height:30px;
+    margin-top:5px;
+    text-align:center;
 }
 .prodotto-edit .prodotto-form .id {
     width: 50px;
@@ -489,6 +497,6 @@ border-bottom: 2px dashed #5AAC56;margin: 10px;padding: 10px;position: relative;
     box-shadow: 0px 0px 5px #555;
 }
 .prodotto-edit .salva:hover{
-   background: #55AA55;
-   cursor: pointer;
+    background: #55AA55;
+    cursor: pointer;
 }

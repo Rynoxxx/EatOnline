@@ -2,15 +2,6 @@
 
 class CCarrello extends Controller {
 
-    /**
-     * PER ORA NON LA USO
-     * @return type
-     */
-    function microtime_float() {
-        list($usec, $sec) = explode(" ", microtime());
-        return ((float) $usec + (float) $sec);
-    }
-
     public function getCarrello() {
         $session = USingleton::getInstance('USession');
         $numero = $session->leggi_valore('numero_tel');

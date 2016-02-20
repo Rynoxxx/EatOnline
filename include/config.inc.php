@@ -24,7 +24,7 @@ $config['mysql']['password']='rino87';
 $config['mysql']['host']='localhost';
 $config['mysql']['database']='eatonline';
 
-$config['debug'] = false;
+$config['debug'] = true;
 function debug($var) {
     global $config;
     if($config['debug']) {

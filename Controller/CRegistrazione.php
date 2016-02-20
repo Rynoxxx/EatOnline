@@ -118,6 +118,10 @@ class CRegistrazione extends Controller {
                 }
 
                 $utente->generaCodiceAttivazione();
+                $utente->setTipo_utente('registered');
+                debug('porco diooooooooooooooo');
+                debug($utente->getTipo_utente());
+                debug('porco dioooooooooooo');
                 $FUtente = new FUtente();
                 $result = $FUtente->store($utente);
                 $this->emailAttivazione($utente);
@@ -233,16 +237,18 @@ class CRegistrazione extends Controller {
         }
     }
 
-    /*
-     * A seconda del task, questo metodo smista le richieste ai vari metodi della classe.
+    /**
+     * 
+     * @return type
      */
-
     public function smista() {
         switch ($this->getTask()) {
             case 'registra':
                 return $this->moduloRegistrazione();
             case 'attivazione':
                 return $this->checkAttivazione();
+            case 'modulo_attivazione':
+                return $this->attivazione();
             case 'salva':
                 return $this->creaUtente();
             case 'isLogged':

@@ -16,9 +16,6 @@ class CHome extends Controller {
         $CRegistrazione = USingleton::getInstance('CRegistrazione');
         $loggato = $CRegistrazione->checkLogin();
 
-        debug("###");
-        debug($loggato);
-        debug("###");
         if ($loggato) {
             debug('SEI LOGGATO!');
             $this->setLogged(true);
@@ -33,8 +30,18 @@ class CHome extends Controller {
 
         // Se il controller è REGISTRAZIONE e il task AUTENTICA o LOGOUT, imposto controllori e task precedenti
         if (($this->getController() == 'registrazione') && ($this->getTask() == 'autentica' || $this->getTask() == 'logout')) {
-            $_REQUEST['controller'] = $previousController;
-            $_REQUEST['task'] = $previousTask;
+            if (($previousController == 'registrazione') && ($previousTask == 'salva' || $previousTask == 'registra' || $previousTask == 'attivazione')) {
+                if ($this->isLogged() || ($previousTask == 'salva')) {
+                    $_REQUEST['controller'] = '';
+                    $_REQUEST['task'] = '';
+                } else {
+                    $_REQUEST['controller'] = $previousController;
+                    $_REQUEST['task'] = $previousTask;
+                }
+            } else {
+                $_REQUEST['controller'] = $previousController;
+                $_REQUEST['task'] = $previousTask;
+            }
         }
 
         // Imposta il contenuto della pagina
@@ -63,7 +70,7 @@ class CHome extends Controller {
             $VHome->mostraPagina();
         }
 
-        // Salva nella sessione l'attuale controller e il relativo task
+        // Salva nella sessione gli attuali controller e task che serviranno poi nella prossima chiamata di impostaPagina()
         if ($this->isAjax()) {
             $sessione->imposta_valore('prevController', $previousController);
             $sessione->imposta_valore('prevTask', $previousTask);

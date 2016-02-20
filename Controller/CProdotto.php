@@ -2,7 +2,7 @@
 
 class CProdotto extends Controller {
 
-    private $_items_for_page = 9;
+    private $_items_for_page = 10;
 
     /*
      * Questa funzione ha come argomento la categoria da visualizzare.

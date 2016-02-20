@@ -32,9 +32,6 @@
 
                 <div id="breadcrumb">
                     <p>> {$breadcrumb}</p>
-                    {if $logged}
-                        Ciao pirla!
-                    {/if}
                 </div>
 
                 <div id="searchform">
@@ -61,7 +58,7 @@
                     <li><a href="index.php?controller=carrello&task=default">Carrello</a></li>
                     {if !$logged}
                         <li><a href="index.php?controller=registrazione&task=registra">Registrati</a></li>
-                        <li><a href="index.php?controller=prodotto&task=lista.bevande">Attivati</a></li>
+                        <li><a href="index.php?controller=registrazione&task=modulo_attivazione">Attivati</a></li>
                     {/if}
                     <li><a href="#">Contatti</a></li>
                 </ul>

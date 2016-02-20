@@ -1,4 +1,4 @@
-<tr id="prodotto-{$prodotto->getId()}" class="prodotto item">
+<tr id="prodotto-{$prodotto->getId()}" class="item">
   <td class="nome">{$prodotto->getNome()}</td>
   <td class="image">
     <img id="foto" src="template/img/prodotti/{$prodotto->getImmagine()}" />

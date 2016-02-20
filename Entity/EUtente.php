@@ -22,6 +22,13 @@ class EUtente {
     public $citta;
     public $codice_attivazione;
     public $stato = true;
+    
+    /**
+     * Indica il tipo di utente, può essere REGISTRATO (registered) o AMMINISTRATORE (admin)
+     * @var String
+     */
+    public $tipo_utente;
+    
     public $_ordini = array();
 
     /*
@@ -40,12 +47,20 @@ class EUtente {
         return $this->_ordini;
     }
 
+    public function getTipo_utente() {
+        return $this->tipo_utente;
+    }
+
     public function isUserActivated() {
         return $this->stato > 0;
     }
 
     public function isUserAdmin() {
-        return true; // CAMBIARE !!! USARE IL CONTROLLO SUL CAMPO APPOSITO
+        if ($this->getTipo_utente() == 'admin') {
+            return true;
+        } else {
+            return false;
+        }
     }
 
     function getNome() {
@@ -102,6 +117,10 @@ class EUtente {
 
     function setCitta($citta) {
         $this->citta = $citta;
+    }
+
+    function setTipo_utente($tipo_utente) {
+        $this->tipo_utente = $tipo_utente;
     }
 
 }

@@ -229,8 +229,8 @@ $(document).ready(function() {
 
   /**
    * Sottomette una form prodotto
-   * @param  {[type]} id [description]
-   * @return {[type]}    [description]
+   * @param {type} id
+   * @returns {undefined}
    */
   formProdottoSubmit = function(id) {
     var form = $("#prodotto-form-" + id);

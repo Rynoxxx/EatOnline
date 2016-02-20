@@ -3,12 +3,6 @@
 
     <div class="container_side_items">
 
-
-
-        {if $errore!=NULL}
-            <p>{$errore}</p>
-        {/if}
-
         {if !$logged}
             <img class ="img_side_content" src="template/img/login.png"/>
             <h1>Login</h1>
@@ -37,10 +31,17 @@
 
                     </fieldset>
                 </form>
+
+                <div class="log_error">
+                    {if $errore!=NULL}
+                        <p>{$errore}</p>
+                    {/if}
+                </div>
+
             </div>
         {else}
             <img class ="img_side_content" src="template/img/login.png"/>
-            <h1>Ciao {$utente.nome}</h1>
+            <h1>Area Utente</h1>
             <div class="loginform">
                 <p>Ciao {$utente.nome} {$utente.cognome}</p>
 
@@ -55,10 +56,10 @@
         {/if}
 
         {if $admin}
-        <div class="admin">
-          <h2>Opzioni Amministratore</h2>
-          <a href="index.php?controller=prodotto&task=all">Gestione Prodotti</a>
-        </div>
+            <div class="admin">
+                <h2>Opzioni Amministratore</h2>
+                <a href="index.php?controller=prodotto&task=all">Gestione Prodotti</a>
+            </div>
         {/if}
 
     </div>
