@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.0.10deb1
+-- version 4.5.1
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generato il: Feb 10, 2016 alle 00:50
--- Versione del server: 5.5.46-0ubuntu0.14.04.2
--- Versione PHP: 5.5.9-1ubuntu4.14
+-- Host: 127.0.0.1
+-- Creato il: Feb 21, 2016 alle 17:57
+-- Versione del server: 10.1.9-MariaDB
+-- Versione PHP: 5.6.15
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -14,7 +14,7 @@ SET time_zone = "+00:00";
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
+/*!40101 SET NAMES utf8mb4 */;
 
 --
 -- Database: `eatonline`
@@ -26,11 +26,10 @@ SET time_zone = "+00:00";
 -- Struttura della tabella `carta`
 --
 
-CREATE TABLE IF NOT EXISTS `carta` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `numero` varchar(50) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+CREATE TABLE `carta` (
+  `id` int(11) NOT NULL,
+  `numero` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `carta`
@@ -45,13 +44,12 @@ INSERT INTO `carta` (`id`, `numero`) VALUES
 -- Struttura della tabella `categoria`
 --
 
-CREATE TABLE IF NOT EXISTS `categoria` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `categoria` (
+  `id` int(11) NOT NULL,
   `nome` varchar(20) NOT NULL,
   `descrizione` varchar(40) NOT NULL,
-  `immagine` varchar(80) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=6 ;
+  `immagine` varchar(80) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `categoria`
@@ -70,22 +68,24 @@ INSERT INTO `categoria` (`id`, `nome`, `descrizione`, `immagine`) VALUES
 -- Struttura della tabella `ordine`
 --
 
-CREATE TABLE IF NOT EXISTS `ordine` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `ordine` (
+  `id` int(11) NOT NULL,
   `data` bigint(20) NOT NULL,
   `pagato` tinyint(1) NOT NULL,
   `confermato` tinyint(1) NOT NULL,
   `id_utente` varchar(50) NOT NULL,
-  `id_carta` int(11) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+  `id_carta` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `ordine`
 --
 
 INSERT INTO `ordine` (`id`, `data`, `pagato`, `confermato`, `id_utente`, `id_carta`) VALUES
-(1, 1455054883, 0, 0, '3471173932', 1);
+(1, 1455054883, 0, 0, '3471173932', 1),
+(5, 0, 0, 0, '', 0),
+(6, 0, 0, 0, '3899365280', 0),
+(7, 0, 0, 0, '11111', 0);
 
 -- --------------------------------------------------------
 
@@ -93,13 +93,10 @@ INSERT INTO `ordine` (`id`, `data`, `pagato`, `confermato`, `id_utente`, `id_car
 -- Struttura della tabella `ordine_prodotto`
 --
 
-CREATE TABLE IF NOT EXISTS `ordine_prodotto` (
+CREATE TABLE `ordine_prodotto` (
   `id_ordine` int(11) NOT NULL,
   `id_prodotto` int(11) NOT NULL,
-  `quantita` int(11) NOT NULL,
-  PRIMARY KEY (`id_ordine`,`id_prodotto`),
-  KEY `id_ordine` (`id_ordine`),
-  KEY `id_prodotto` (`id_prodotto`)
+  `quantita` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -107,10 +104,14 @@ CREATE TABLE IF NOT EXISTS `ordine_prodotto` (
 --
 
 INSERT INTO `ordine_prodotto` (`id_ordine`, `id_prodotto`, `quantita`) VALUES
-(1, 2, 1),
+(1, 1, 1),
+(1, 5, 1),
 (1, 6, 1),
-(1, 26, 2),
-(5, 0, 2);
+(7, 1, 1),
+(7, 3, 2),
+(7, 8, 2),
+(7, 10, 2),
+(7, 16, 1);
 
 -- --------------------------------------------------------
 
@@ -118,23 +119,22 @@ INSERT INTO `ordine_prodotto` (`id_ordine`, `id_prodotto`, `quantita`) VALUES
 -- Struttura della tabella `prodotto`
 --
 
-CREATE TABLE IF NOT EXISTS `prodotto` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `prodotto` (
+  `id` int(11) NOT NULL,
   `id_categoria` int(11) NOT NULL,
   `nome` varchar(50) NOT NULL,
   `ingredienti` varchar(200) NOT NULL,
   `prezzo` double NOT NULL,
   `disponibile` tinyint(1) NOT NULL,
-  `immagine` varchar(200) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=28 ;
+  `immagine` varchar(200) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `prodotto`
 --
 
 INSERT INTO `prodotto` (`id`, `id_categoria`, `nome`, `ingredienti`, `prezzo`, `disponibile`, `immagine`) VALUES
-(1, 1, 'Spaghetti alla carbonara', 'Uova, guanciale, pepe nero, sale, olio extravergine d''oliva.', 8.5, 0, 'primi/carbonara.jpg'),
+(1, 1, 'Spaghetti alla carbonara', 'Uova, guanciale, pepe nero, sale, olio extravergine d''oliva.', 7.5, 0, 'primi/carbonara.jpg'),
 (2, 1, 'Fettuccine alla pecorara', 'Guanciale, uova, pecorino, ricotta.', 7.5, 0, 'primi/fettuccine_alla_pecorara.jpg'),
 (3, 1, 'Lasagne al ragù', 'Basilico, olio extravergine d''oliva, macinato di bocino, passata di pomodoro.', 8.5, 0, 'primi/lasagne_ragu.jpg'),
 (4, 2, 'Tagliata di pollo', 'Pollo, glassa di aceto balsamico, rucola.', 10, 0, 'secondi/tagliata_di_pollo.jpg'),
@@ -168,10 +168,10 @@ INSERT INTO `prodotto` (`id`, `id_categoria`, `nome`, `ingredienti`, `prezzo`, `
 -- Struttura della tabella `utente`
 --
 
-CREATE TABLE IF NOT EXISTS `utente` (
+CREATE TABLE `utente` (
   `numero_tel` varchar(20) NOT NULL,
-  `nome` varchar(20) NOT NULL,
-  `cognome` varchar(20) NOT NULL,
+  `nome` varchar(40) NOT NULL,
+  `cognome` varchar(40) NOT NULL,
   `password` varchar(20) NOT NULL,
   `email` varchar(40) NOT NULL,
   `via` varchar(40) NOT NULL,
@@ -179,16 +179,84 @@ CREATE TABLE IF NOT EXISTS `utente` (
   `cap` varchar(5) NOT NULL,
   `codice_attivazione` varchar(40) NOT NULL,
   `stato` tinyint(1) NOT NULL,
-  PRIMARY KEY (`numero_tel`)
+  `tipo_utente` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dump dei dati per la tabella `utente`
 --
 
-INSERT INTO `utente` (`numero_tel`, `nome`, `cognome`, `password`, `email`, `via`, `citta`, `cap`, `codice_attivazione`, `stato`) VALUES
-('3471173932', 'Rino', 'Manzo', 'bbb', 'gennaro.m87@gmail.com', '', '', '', '419507338', 1);
+INSERT INTO `utente` (`numero_tel`, `nome`, `cognome`, `password`, `email`, `via`, `citta`, `cap`, `codice_attivazione`, `stato`, `tipo_utente`) VALUES
+('11111', 'Rino', '', 'mmm', '', '', '', '', '', 1, 'admin'),
+('3471173932', 'albina', 'carissimi', 'qqqqq', 'gennaro.m87@gmail.com', 'via firenze', 'termoli', '', '1099226836', 1, 'registered'),
+('3899365280', 'Rino', 'Manzo', '55555', 'gennaro.m87@gmail.com', 'Piccolomini', 'Aquila', '86039', '1644714475', 1, 'registered');
 
+--
+-- Indici per le tabelle scaricate
+--
+
+--
+-- Indici per le tabelle `carta`
+--
+ALTER TABLE `carta`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `categoria`
+--
+ALTER TABLE `categoria`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `ordine`
+--
+ALTER TABLE `ordine`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `ordine_prodotto`
+--
+ALTER TABLE `ordine_prodotto`
+  ADD PRIMARY KEY (`id_ordine`,`id_prodotto`),
+  ADD KEY `id_ordine` (`id_ordine`),
+  ADD KEY `id_prodotto` (`id_prodotto`);
+
+--
+-- Indici per le tabelle `prodotto`
+--
+ALTER TABLE `prodotto`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indici per le tabelle `utente`
+--
+ALTER TABLE `utente`
+  ADD PRIMARY KEY (`numero_tel`);
+
+--
+-- AUTO_INCREMENT per le tabelle scaricate
+--
+
+--
+-- AUTO_INCREMENT per la tabella `carta`
+--
+ALTER TABLE `carta`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT per la tabella `categoria`
+--
+ALTER TABLE `categoria`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT per la tabella `ordine`
+--
+ALTER TABLE `ordine`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT per la tabella `prodotto`
+--
+ALTER TABLE `prodotto`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=28;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
