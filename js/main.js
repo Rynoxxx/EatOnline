@@ -173,10 +173,11 @@ $(document).ready(function () {
      * AGGIUNGI).
      */
     addItem = function (id) {
-        cloneItem($("#item-" + id));
         ajax1("registrazione", "isLogged", function (result) {
             var res = JSON.parse(result);
             if (res) {
+                cloneItem($("#item-" + id));
+                console.log('res', res);
                 $.ajax({
                     url: "index.php?controller=carrello&task=aggiungi." + id + "&ajax",
                     context: document.body
@@ -194,7 +195,7 @@ $(document).ready(function () {
 
         });
     };
-    
+
     /**
      * Aggiorna il carrello laterale, o meglio fa il refresh dello stesso. Una volta terminata la funzione invocata
      * da controller=ordine e task=infoOrdine, il risultato ottenuto viene usato per ricostruire il carrello laterale
@@ -218,7 +219,7 @@ $(document).ready(function () {
     };
 
     /**
-     * Raccoglie tutte le informazioni relative a un ordine
+     * Raccoglie tutte le informazioni relative a un ordine. NON usata, i per fare delle prove.
      * @returns {undefined}
      */
     info = function () {

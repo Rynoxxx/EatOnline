@@ -12,6 +12,8 @@
     -webkit-transform: scale(1.2);
 }
 
+/* CONTAINER PER GLI ELEMENTI LATERALI */
+
 .container_side_items {
     margin-bottom: 50px;
     position: relative;
@@ -157,7 +159,7 @@
     position: absolute;
     bottom: 10px;
     left: 10px;
-    color: #white;
+    color: white;
     font-size: 15px;
     font-weight: bold;
     display: none;
@@ -260,7 +262,6 @@
 }
 
 .prodotto.item img.carrello {
-    width: 35px;
     position: absolute;
     top: -15px;
     right: -15px;
@@ -522,9 +523,13 @@
 }
 
 /* PRODOTTO FORM */
+
 .prodotto-edit{
     text-align:center;
-    border-bottom: 2px dashed #5AAC56;margin: 10px;padding: 10px;position: relative;
+    border-bottom: 2px dashed #5AAC56;
+    margin: 10px;
+    padding: 10px;
+    position: relative;
 }
 
 .prodotto-edit .prodotto-form {
@@ -539,10 +544,10 @@
     box-shadow:0px 0px 13px #ccc
 }
 
-.prodotto-edit  .saved{
+.prodotto-edit .saved {
     background:#5AAC56;
     color:white;
-    width:100%;
+    width:384px;
     height:30px;
     line-height:30px;
     margin-top:5px;
@@ -575,7 +580,7 @@
 }
 
 .prodotto-edit .prodotto-form .prezzo {
-    width: 385px;
+    width: 384px;
     margin-top: 0px;
     height: 50px;
     border: none;

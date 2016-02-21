@@ -233,6 +233,7 @@ class CRegistrazione extends Controller {
 
     /**
      * Utilizzata da ajax per capire se c'è un utente loggato
+     * @return type
      */
     public function checkLog() {
         $sessione = USingleton::getInstance('USession');
