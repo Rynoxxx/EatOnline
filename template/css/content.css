@@ -123,16 +123,16 @@
     position: absolute;
     top: 10px;
     left: 10px;
-    width: 70px;
+    width: 190px;
 }
 
 .header #title {
     position: absolute;
-    top: 10px;
-    left: 130px;
-    font-size: 40px;
+    top: 30px;
+    left: 190px;
+    font-size: 45px;
     color: white;
-    text-shadow: 4px 3px 3px #333;
+    text-shadow: 6px 5px 5px #333;
 }
 
 .header #searchform {

@@ -29,11 +29,17 @@ class FProdotto extends Fdb {
     }
     
     /**
-     * Ritorna tutti i prodotti presenti nel database
+     * Ritorna tutti i prodotti presenti nel database. Se inoltre è impostato il paramentro
+     * $limit, verranno selezionati solo i prodotti indicati dal parametro stesso (utilizzato per
+     * l'impaginazione).
+     * @param type $limit
      * @return type
      */
-    public function allItems() {
+    public function allItems($limit='') {
         $query = 'SELECT * FROM ' . $this->_table;
+        if ($limit != '') {
+            $query.= ' LIMIT ' . $limit . ' ';
+        }
         $this->query($query);
         $items = $this->getObjectArray();
         return $items;

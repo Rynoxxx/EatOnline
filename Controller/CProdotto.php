@@ -32,8 +32,18 @@ class CProdotto extends Controller {
     public function all() {
         $FProdotto = USingleton::getInstance('FProdotto');
         $prodotti = $FProdotto->allItems();
+        
         $VProdotto = USingleton::getInstance('VProdotto');
-        $VProdotto->impostaDati('prodotti', $prodotti);
+        $limit = $VProdotto->getPage() * $this->_items_for_page . ' , ' . $this->_items_for_page;
+        $num_items = count($prodotti);
+        $num_pages = ceil($num_items / $this->_items_for_page);
+        $displayed_items = $FProdotto->allItems($limit);
+        $VProdotto->impostaDati('content_title', 'Modifica i prodotti');
+        $VProdotto->impostaDati('num_pages', $num_pages);
+        $VProdotto->impostaDati('prodotti', $displayed_items);
+        $VProdotto->impostaDati('task', $this->getTask());
+        /*$VProdotto = USingleton::getInstance('VProdotto');*/
+        /*$VProdotto->impostaDati('prodotti', $prodotti);*/
         $VProdotto->set_layout('list_small');
         return $VProdotto->processaTemplate();
     }

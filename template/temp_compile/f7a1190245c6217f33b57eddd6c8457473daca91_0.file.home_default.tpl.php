@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-21 03:28:56
+<?php /* Smarty version 3.1.27, created on 2016-02-21 14:48:17
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:644656c920e895e5a8_83675550%%*/
+/*%%SmartyHeaderCode:1148556c9c0215eb607_92423361%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1456008336,
+      1 => 1456062480,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '644656c920e895e5a8_83675550',
+  'nocache_hash' => '1148556c9c0215eb607_92423361',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c920e899e207_26592368',
+  'unifunc' => 'content_56c9c02169d6a6_20632174',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c920e899e207_26592368')) {
-function content_56c920e899e207_26592368 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c9c02169d6a6_20632174')) {
+function content_56c9c02169d6a6_20632174 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '644656c920e895e5a8_83675550';
+$_smarty_tpl->properties['nocache_hash'] = '1148556c9c0215eb607_92423361';
 ?>
 <!DOCTYPE html>
 <html>
@@ -71,7 +71,7 @@ $_smarty_tpl->properties['nocache_hash'] = '644656c920e895e5a8_83675550';
         <div class="wrapper">
             <!-- BEGIN HEADER -->
             <div class="header">
-                <img id="logo" src="template/img/logo.gif"/>
+                <img id="logo" src="template/img/logo.png"/>
 
                 <div id="title">EatOnline</div>
 

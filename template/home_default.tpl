@@ -26,7 +26,7 @@
         <div class="wrapper">
             <!-- BEGIN HEADER -->
             <div class="header">
-                <img id="logo" src="template/img/logo.gif"/>
+                <img id="logo" src="template/img/logo.png"/>
 
                 <div id="title">EatOnline</div>
 
