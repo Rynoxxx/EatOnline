@@ -21,7 +21,7 @@ class EUtente {
     public $cap;
     public $citta;
     public $codice_attivazione;
-    public $stato = true;
+    public $stato = false;
     
     /**
      * Indica il tipo di utente, può essere REGISTRATO (registered) o AMMINISTRATORE (admin)

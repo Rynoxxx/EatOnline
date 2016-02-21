@@ -49,7 +49,7 @@
                 
             </fieldset>
 
-            <p><button type="submit" name="submit" id="submit_reg" class="form_button">Registrati</button></p>
+            <p><button type="submit" name="submit" class="form_button">Registrati</button></p>
 
         </form>
 

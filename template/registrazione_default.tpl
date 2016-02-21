@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 
     <div class="container_side_items">
@@ -33,8 +32,8 @@
                 </form>
 
                 <div class="log_error">
-                    {if $errore!=NULL}
-                        <p>{$errore}</p>
+                    {if $errore.login!=NULL}
+                        <p>{$errore.login}</p>
                     {/if}
                 </div>
 
@@ -43,8 +42,11 @@
             <img class ="img_side_content" src="template/img/login.png"/>
             <h1>Area Utente</h1>
             <div class="loginform">
-                <p>Ciao {$utente.nome} {$utente.cognome}</p>
-
+                <div class="infoUtente">
+                    <p>Nome: {$utente.nome}</p>
+                    <p>Cognome: {$utente.cognome}</p>
+                    <p>Tipo Utente: {$utente.tipo_utente}</p>
+                </div>
                 <form method="get" action="index.php">
 
                     <input type="hidden" name="controller" value="registrazione"/>

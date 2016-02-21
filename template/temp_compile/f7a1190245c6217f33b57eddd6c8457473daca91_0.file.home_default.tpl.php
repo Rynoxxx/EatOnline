@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-20 15:16:33
+<?php /* Smarty version 3.1.27, created on 2016-02-21 03:28:56
          compiled from "template\home_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1389756c875418118c7_56541473%%*/
+/*%%SmartyHeaderCode:644656c920e895e5a8_83675550%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f7a1190245c6217f33b57eddd6c8457473daca91' => 
     array (
       0 => 'template\\home_default.tpl',
-      1 => 1455977787,
+      1 => 1456008336,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1389756c875418118c7_56541473',
+  'nocache_hash' => '644656c920e895e5a8_83675550',
   'variables' => 
   array (
     'title' => 0,
@@ -26,13 +26,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c875418ae2e6_49589094',
+  'unifunc' => 'content_56c920e899e207_26592368',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c875418ae2e6_49589094')) {
-function content_56c875418ae2e6_49589094 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c920e899e207_26592368')) {
+function content_56c920e899e207_26592368 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1389756c875418118c7_56541473';
+$_smarty_tpl->properties['nocache_hash'] = '644656c920e895e5a8_83675550';
 ?>
 <!DOCTYPE html>
 <html>
@@ -106,7 +106,7 @@ $_smarty_tpl->properties['nocache_hash'] = '1389756c875418118c7_56541473';
                         <li><a href="index.php?controller=registrazione&task=registra">Registrati</a></li>
                         <li><a href="index.php?controller=registrazione&task=modulo_attivazione">Attivati</a></li>
                     <?php }?>
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="index.php?controller=home&task=contatti">Contatti</a></li>
                 </ul>
             </div>
             <!-- END NAVIGATION -->

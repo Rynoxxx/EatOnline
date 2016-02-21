@@ -11,13 +11,13 @@
             {else}
                 <table id="table_carr_lat">
                     <tr>
-                        <td class="nome_colonna">Nome prodotto</td>
-                        <td class="nome_colonna">Prezzo prodotto</td>
+                        <td class="nome_colonna tdWithWidth">Nome prodotto</td>
+                        <td class="nome_colonna">Prezzo</td>
                         <td class="nome_colonna">Quantit&agrave;</td>
                     </tr>
                     {foreach from = $ordine.prodotti item = prodotto}
                         <tr id="carr_laterale_prodotto-{$prodotto.id_prodotto}">
-                            <td class="nome">{$prodotto.nome_prodotto}</td>
+                            <td class="nome tdWithWidth">{$prodotto.nome_prodotto}</td>
                             <td class="prezzo">{$prodotto.prezzo_prodotto} &euro;</td>
                             <td class="quantita">{$prodotto.quantita_prodotto}</td>
                         </tr>

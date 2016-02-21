@@ -30,7 +30,7 @@ class CHome extends Controller {
 
         // Se il controller è REGISTRAZIONE e il task AUTENTICA o LOGOUT, imposto controllori e task precedenti
         if (($this->getController() == 'registrazione') && ($this->getTask() == 'autentica' || $this->getTask() == 'logout')) {
-            if (($previousController == 'registrazione') && ($previousTask == 'salva' || $previousTask == 'registra' || $previousTask == 'attivazione')) {
+            if (($previousController == 'registrazione') && ($previousTask == 'salva' || $previousTask == 'registra' || $previousTask == 'modulo_attivazione')) {
                 if ($this->isLogged() || ($previousTask == 'salva')) {
                     $_REQUEST['controller'] = '';
                     $_REQUEST['task'] = '';
@@ -49,7 +49,7 @@ class CHome extends Controller {
 
         $controller = $this->getController();
         $task = $this->getTask();
-
+        
         //Se non è AJAX risponde la pagina web secondo il flusso normale, altrimenti non risponde niente (pagina bianca)
         if (!$this->isAjax()) {
             $VHome = USingleton::getInstance('VHome');
@@ -80,12 +80,37 @@ class CHome extends Controller {
         }
     }
 
-    /*
-     * Smista le richieste ai vari controller
+    /**
+     * Mostra la pagine dei contatti
+     * @return type
      */
+    public function contatti() {
+        $view = USingleton::getInstance('VHome');
+        $view->set_layout('contatti');
+        $view->assign('content_title', 'Contatti');
+        return $view->processaTemplate();
+    }
 
+    /**
+     * Smista fra le funzioni di CHome a seconda del task
+     * @return type
+     */
+    public function smistaInHome() {
+        $task = $this->getTask();
+        switch ($task) {
+            case 'contatti':
+                return $this->contatti();
+        }
+    }
+
+    /**
+     * Smista le richieste ai vari controller
+     * @return type
+     */
     public function smista() {
         switch ($this->getController()) {
+            case 'home':
+                return $this->smistaInHome();
             case 'registrazione':
                 $CRegistrazione = USingleton::getInstance('CRegistrazione');
                 return $CRegistrazione->smista();

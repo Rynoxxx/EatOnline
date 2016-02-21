@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-19 23:47:16
+<?php /* Smarty version 3.1.27, created on 2016-02-21 03:28:56
          compiled from "template\carrello_laterale.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:138056c79b7468eca9_38829548%%*/
+/*%%SmartyHeaderCode:2039356c920e891fb39_93427885%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'bda3ffd5b42d4605d9d5b3219e51160815ee97e1' => 
     array (
       0 => 'template\\carrello_laterale.tpl',
-      1 => 1455761025,
+      1 => 1456020123,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '138056c79b7468eca9_38829548',
+  'nocache_hash' => '2039356c920e891fb39_93427885',
   'variables' => 
   array (
     'ordine' => 0,
@@ -21,13 +21,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c79b747056e5_30705507',
+  'unifunc' => 'content_56c920e894abf8_28468758',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c79b747056e5_30705507')) {
-function content_56c79b747056e5_30705507 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c920e894abf8_28468758')) {
+function content_56c920e894abf8_28468758 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '138056c79b7468eca9_38829548';
+$_smarty_tpl->properties['nocache_hash'] = '2039356c920e891fb39_93427885';
 ?>
 <html>
 
@@ -42,8 +42,8 @@ $_smarty_tpl->properties['nocache_hash'] = '138056c79b7468eca9_38829548';
             <?php } else { ?>
                 <table id="table_carr_lat">
                     <tr>
-                        <td class="nome_colonna">Nome prodotto</td>
-                        <td class="nome_colonna">Prezzo prodotto</td>
+                        <td class="nome_colonna tdWithWidth">Nome prodotto</td>
+                        <td class="nome_colonna">Prezzo</td>
                         <td class="nome_colonna">Quantit&agrave;</td>
                     </tr>
                     <?php
@@ -59,7 +59,7 @@ $foreach_prodotto_Sav = $_smarty_tpl->tpl_vars['prodotto'];
 ?>
                         <tr id="carr_laterale_prodotto-<?php echo $_smarty_tpl->tpl_vars['prodotto']->value['id_prodotto'];?>
 ">
-                            <td class="nome"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value['nome_prodotto'];?>
+                            <td class="nome tdWithWidth"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value['nome_prodotto'];?>
 </td>
                             <td class="prezzo"><?php echo $_smarty_tpl->tpl_vars['prodotto']->value['prezzo_prodotto'];?>
  &euro;</td>

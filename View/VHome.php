@@ -23,9 +23,22 @@ class VHome extends View {
         parent::__construct();
     }
 
-    /*
-     * Funzioni della classe VHome
+    /**
+     * Setta il layout della pagina, ovvero imposta il file .tpl che deve essere ritornato
+     * @param type $_layout
      */
+    function set_layout($_layout) {
+        $this->_layout = $_layout;
+    }
+
+    /**
+     * Ritorna il file .tpl di cui sopra
+     * @return type
+     */
+    public function processaTemplate() {
+        $contenuto = $this->fetch('home_' . $this->_layout . '.tpl');
+        return $contenuto;
+    }
 
     /*
      * Imposta il contenuto principale assegnandolo alla
@@ -43,6 +56,7 @@ class VHome extends View {
     public function mostraPagina() {
         $this->assign('right_content', $this->_side_content);
         $this->assign('tasti_laterali', $this->_side_button);
+        $this->set_layout('default');
         $this->display('home_' . $this->_layout . '.tpl');
     }
 
@@ -60,14 +74,17 @@ class VHome extends View {
 
     public function impostaPaginaLoggato($utente, $ordine) {
         $this->assign('title', 'EatOnline');
-        
-        $this->assign('content_title', 'Benvenuto ' . $utente['nome']);
+        if ($utente['tipo_utente'] == 'admin') {
+            $this->assign('content_title', 'Ciao ' . $utente['nome'] . ' (ADMIN)');
+        } else {
+            $this->assign('content_title', 'Benvenuto ' . $utente['nome']);
+        }
         $this->assign('main_content', $this->_main_content);
         $this->assign('menu', $this->_main_button);
-        $this->aggiungiModuloLogin($utente, $ordine);
+        $this->aggiungiModuloLogin($utente);
         $this->aggiungiCarrelloLaterale($ordine);
     }
-    
+
     /**
      * Aggiunge il carrello laterale che verrà modificato runtime con ajax
      * Solo per gli utenti loggati

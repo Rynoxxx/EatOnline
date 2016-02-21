@@ -25,7 +25,7 @@ class CRegistrazione extends Controller {
 
         //Controlla se ci sono i dati di Login nella REQUEST
         if ($controller == 'registrazione' && $task == 'autentica') {
-           $utente =   $this->login($_REQUEST['numero_tel'], $_REQUEST['password']);
+            $utente = $this->login($_REQUEST['numero_tel'], $_REQUEST['password']);
         }
 
         //Controlla se c'è un logged user nella SESSION
@@ -34,9 +34,9 @@ class CRegistrazione extends Controller {
         $result = $sessione->leggi_valore('numero_tel');
         debug($_SESSION);
         if ($result != NULL) {
-            if($utente==null){
-              $FUtente = USingleton::getInstance('FUtente');
-              $utente = $FUtente->load($result);
+            if ($utente == null) {
+                $FUtente = USingleton::getInstance('FUtente');
+                $utente = $FUtente->load($result);
             }
             return $utente;
         }
@@ -63,15 +63,18 @@ class CRegistrazione extends Controller {
                     return $utente;
                 } else {
                     $view = USingleton::getInstance('VRegistrazione');
-                    $view->setErrore('UTENTE NON ATTIVO');
+                    $this->_errore['login'] = 'UTENTE NON ATTIVO';
+                    $view->setErrore($this->_errore);
                 }
             } else {
                 $view = USingleton::getInstance('VRegistrazione');
-                $view->setErrore('PASSWORD ERRATA');
+                $this->_errore['login'] = 'PASSWORD ERRATA';
+                $view->setErrore($this->_errore);
             }
         } else {
             $view = USingleton::getInstance('VRegistrazione');
-            $view->setErrore('UTENTE NON REGISTRATO');
+            $this->_errore['login'] = 'UTENTE NON REGISTRATO';
+            $view->setErrore($this->_errore);
         }
     }
 
@@ -85,10 +88,10 @@ class CRegistrazione extends Controller {
         return true;
     }
 
-    /*
+    /**
      * Mostra il modulo di registrazione
+     * @return type
      */
-
     public function moduloRegistrazione() {
         $view = USingleton::getInstance('VRegistrazione');
         $view->set_layout('modulo');
@@ -119,9 +122,6 @@ class CRegistrazione extends Controller {
 
                 $utente->generaCodiceAttivazione();
                 $utente->setTipo_utente('registered');
-                debug('porco diooooooooooooooo');
-                debug($utente->getTipo_utente());
-                debug('porco dioooooooooooo');
                 $FUtente = new FUtente();
                 $result = $FUtente->store($utente);
                 $this->emailAttivazione($utente);
@@ -136,6 +136,11 @@ class CRegistrazione extends Controller {
         return $this->checkReg($registrato);
     }
 
+    /**
+     * 
+     * @param type $registrato
+     * @return type
+     */
     public function checkReg($registrato) {
         $view = USingleton::getInstance('VRegistrazione');
         if (!$registrato) {
@@ -194,23 +199,36 @@ class CRegistrazione extends Controller {
     }
 
     /**
-     *
+     * Controlla che l'attivazione abbia avuto successo. In caso affermativo mostra una pagina con l'avvenuta conferma,
+     * altrimenti mostra una pagina in cui è indicato l'errore che si è verificato.
+     * @return type
      */
     public function checkAttivazione() {
+        $view = USingleton::getInstance('VRegistrazione');
         $utente = $this->checkUtente($_REQUEST['numero_tel']);
         if ($utente != NULL) {
             if ($utente->codice_attivazione == $_REQUEST['codice_attivazione']) {
                 $utente->stato = TRUE;
                 $FUtente = USingleton::getInstance('FUtente');
                 $FUtente->update($utente);
+                $view->set_layout('attiv_conferma');
+                $result = $view->processaTemplate();
+                return $result;
             } else {
                 debug('codice di attivazione non corretto');
-                $this->_errore = 'ATTIVAZIONE NON CORRETTA';
+                $this->_errore['attivazione'] = 'CODICE DI ATTIVAZIONE ERRATO'; 
+                $view->setErrore($this->_errore);
             }
         } else {
             debug('utente non esistente');
-            $this->_errore = 'UTENTE NON ESISTENTE';
+            $this->_errore['attivazione'] = 'UTENTE NON ESISTENTE';
+            $view->setErrore($this->_errore);
         }
+        $view->set_layout('problemi');
+        $result = $view->processaTemplate();
+        $view->set_layout('attivazione');
+        $result.= $view->processaTemplate();
+        return $result;
     }
 
     /**
@@ -259,4 +277,5 @@ class CRegistrazione extends Controller {
     }
 
 }
+
 ?>

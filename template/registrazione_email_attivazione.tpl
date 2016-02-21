@@ -9,7 +9,7 @@ Per completare la registrazione, clicca sul link sottostante:
 
 **** Il collegamento non funziona? ****
 Se il collegamento non dovesse funzionare, visita questo link:
-{$url}index.php?controller=registrazione&task=attivazione
+{$url}index.php?controller=registrazione&task=modulo_attivazione
 
 Dovrai scrivere il tuo numero di telefono e codice di attivazione nella pagina che apparir&agrave; cliccando sul collegamento qui sopra.
 Assicurati di non aggiungere spazi aggiuntivi.

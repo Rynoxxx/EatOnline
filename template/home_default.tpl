@@ -60,7 +60,7 @@
                         <li><a href="index.php?controller=registrazione&task=registra">Registrati</a></li>
                         <li><a href="index.php?controller=registrazione&task=modulo_attivazione">Attivati</a></li>
                     {/if}
-                    <li><a href="#">Contatti</a></li>
+                    <li><a href="index.php?controller=home&task=contatti">Contatti</a></li>
                 </ul>
             </div>
             <!-- END NAVIGATION -->

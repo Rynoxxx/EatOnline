@@ -18,7 +18,8 @@ class CUtente extends Controller {
             'email' => $utente->getEmail(),
             'via' => $utente->getVia(),
             'citta' => $utente->getCitta(),
-            'cap' => $utente->getCap()
+            'cap' => $utente->getCap(),
+            'tipo_utente' => $utente->getTipo_utente()                
         );
         if ($this->isAjax()) {
             $this->respondeAjaxObject($obj);

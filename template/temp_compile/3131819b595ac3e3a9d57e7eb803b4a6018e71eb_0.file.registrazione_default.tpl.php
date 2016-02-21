@@ -1,7 +1,7 @@
-<?php /* Smarty version 3.1.27, created on 2016-02-20 01:14:08
+<?php /* Smarty version 3.1.27, created on 2016-02-21 04:41:56
          compiled from "template\registrazione_default.tpl" */ ?>
 <?php
-/*%%SmartyHeaderCode:1187156c7afd022f619_78814947%%*/
+/*%%SmartyHeaderCode:1245656c93204d38708_97869327%%*/
 if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
@@ -9,11 +9,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3131819b595ac3e3a9d57e7eb803b4a6018e71eb' => 
     array (
       0 => 'template\\registrazione_default.tpl',
-      1 => 1455927244,
+      1 => 1456026029,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1187156c7afd022f619_78814947',
+  'nocache_hash' => '1245656c93204d38708_97869327',
   'variables' => 
   array (
     'logged' => 0,
@@ -23,15 +23,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => '3.1.27',
-  'unifunc' => 'content_56c7afd02b0905_11799727',
+  'unifunc' => 'content_56c93204db3125_75995843',
 ),false);
 /*/%%SmartyHeaderCode%%*/
-if ($_valid && !is_callable('content_56c7afd02b0905_11799727')) {
-function content_56c7afd02b0905_11799727 ($_smarty_tpl) {
+if ($_valid && !is_callable('content_56c93204db3125_75995843')) {
+function content_56c93204db3125_75995843 ($_smarty_tpl) {
 
-$_smarty_tpl->properties['nocache_hash'] = '1187156c7afd022f619_78814947';
+$_smarty_tpl->properties['nocache_hash'] = '1245656c93204d38708_97869327';
 ?>
-<!DOCTYPE html>
 <html>
 
     <div class="container_side_items">
@@ -66,8 +65,8 @@ $_smarty_tpl->properties['nocache_hash'] = '1187156c7afd022f619_78814947';
                 </form>
 
                 <div class="log_error">
-                    <?php if ($_smarty_tpl->tpl_vars['errore']->value != NULL) {?>
-                        <p><?php echo $_smarty_tpl->tpl_vars['errore']->value;?>
+                    <?php if ($_smarty_tpl->tpl_vars['errore']->value['login'] != NULL) {?>
+                        <p><?php echo $_smarty_tpl->tpl_vars['errore']->value['login'];?>
 </p>
                     <?php }?>
                 </div>
@@ -77,10 +76,14 @@ $_smarty_tpl->properties['nocache_hash'] = '1187156c7afd022f619_78814947';
             <img class ="img_side_content" src="template/img/login.png"/>
             <h1>Area Utente</h1>
             <div class="loginform">
-                <p>Ciao <?php echo $_smarty_tpl->tpl_vars['utente']->value['nome'];?>
- <?php echo $_smarty_tpl->tpl_vars['utente']->value['cognome'];?>
+                <div class="infoUtente">
+                    <p>Nome: <?php echo $_smarty_tpl->tpl_vars['utente']->value['nome'];?>
 </p>
-
+                    <p>Cognome: <?php echo $_smarty_tpl->tpl_vars['utente']->value['cognome'];?>
+</p>
+                    <p>Tipo Utente: <?php echo $_smarty_tpl->tpl_vars['utente']->value['tipo_utente'];?>
+</p>
+                </div>
                 <form method="get" action="index.php">
 
                     <input type="hidden" name="controller" value="registrazione"/>
